@@ -15,7 +15,7 @@ class HqVlansController < ApplicationController
   # GET /hq_vlans/1
   # GET /hq_vlans/1.xml
   def show
-    @item = @object = @hq_vlan = HqVlan.find(params[:id])
+    @object = @hq_vlan = HqVlan.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -27,7 +27,7 @@ class HqVlansController < ApplicationController
   # GET /hq_vlans/new
   # GET /hq_vlans/new.xml
   def new
-    @item = @object = @hq_vlan = HqVlan.new
+    @object = @hq_vlan = HqVlan.new
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_vlan }
@@ -37,7 +37,7 @@ class HqVlansController < ApplicationController
   # GET /hq_vlans/1/edit
   def edit
     
-    @item = @object = @hq_vlan = HqVlan.find(params[:id])
+    @object = @hq_vlan = HqVlan.find(params[:id])
     
     
     @hq_slices = HqSlice.by_site(cookies[:hq_site_id])
@@ -73,7 +73,7 @@ class HqVlansController < ApplicationController
   # PUT /hq_vlans/1.xml
   def update
     @list = HqVlan.all(:order => :name)
-    @item = HqVlan.find(params[:id])
+    @object = HqVlan.find(params[:id])
     
     params[:hq_vlan][:assigned_hq_nic] ||= {}
     

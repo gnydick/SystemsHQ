@@ -42,7 +42,7 @@ class HqTasksController < ApplicationController
   # GET /hq_tasks/new
   # GET /hq_tasks/new.xml
   def new
-    @item = @object = @hq_task = HqTask.new
+    @object = @hq_task = HqTask.new
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_task }
@@ -51,7 +51,7 @@ class HqTasksController < ApplicationController
   
   # GET /hq_tasks/1/edit
   def edit
-    @item = @object = @hq_task = HqTask.find(params[:id])
+    @object = @hq_task = HqTask.find(params[:id])
     respond_to do |format|
       format.js { render :template => 'reflected/edit' } if request.xhr?
       format.html { render :template => 'reflected/edit' }
@@ -85,7 +85,7 @@ class HqTasksController < ApplicationController
   # PUT /hq_tasks/1.xml
   def update
     @list = HqTask.all(:order => :name)
-    @item = HqTask.find(params[:id])
+    @object = HqTask.find(params[:id])
     
     params[:hq_task][:new_hq_proc_attributes] ||= {}
     params[:hq_task][:existing_hq_proc_attributes] ||= {}

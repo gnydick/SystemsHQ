@@ -987,9 +987,9 @@ span.run100 {
 </span><span class="inferred1"><a name="line387"></a>387       #
 </span><span class="inferred0"><a name="line388"></a>388       # ==== Examples
 </span><span class="inferred1"><a name="line389"></a>389       #   # Alternate CSS classes for even and odd numbers...
-</span><span class="inferred0"><a name="line390"></a>390       #   @items = [1,2,3,4]
+</span><span class="inferred0"><a name="line390"></a>390       #   @objects = [1,2,3,4]
 </span><span class="inferred1"><a name="line391"></a>391       #   &lt;table&gt;
-</span><span class="inferred0"><a name="line392"></a>392       #   &lt;% @items.each do |item| %&gt;
+</span><span class="inferred0"><a name="line392"></a>392       #   &lt;% @objects.each do |item| %&gt;
 </span><span class="inferred1"><a name="line393"></a>393       #     &lt;tr class=&quot;&lt;%= cycle(&quot;even&quot;, &quot;odd&quot;) -%&gt;&quot;&gt;
 </span><span class="inferred0"><a name="line394"></a>394       #       &lt;td&gt;item&lt;/td&gt;
 </span><span class="inferred1"><a name="line395"></a>395       #     &lt;/tr&gt;
@@ -998,10 +998,10 @@ span.run100 {
 </span><span class="inferred0"><a name="line398"></a>398       #
 </span><span class="inferred1"><a name="line399"></a>399       #
 </span><span class="inferred0"><a name="line400"></a>400       #   # Cycle CSS classes for rows, and text colors for values within each row
-</span><span class="inferred1"><a name="line401"></a>401       #   @items = x = [{:first =&gt; 'Robert', :middle =&gt; 'Daniel', :last =&gt; 'James'},
+</span><span class="inferred1"><a name="line401"></a>401       #   @objects = x = [{:first =&gt; 'Robert', :middle =&gt; 'Daniel', :last =&gt; 'James'},
 </span><span class="inferred0"><a name="line402"></a>402       #                {:first =&gt; 'Emily', :middle =&gt; 'Shannon', :maiden =&gt; 'Pike', :last =&gt; 'Hicks'},
 </span><span class="inferred1"><a name="line403"></a>403       #               {:first =&gt; 'June', :middle =&gt; 'Dae', :last =&gt; 'Jones'}]
-</span><span class="inferred0"><a name="line404"></a>404       #   &lt;% @items.each do |item| %&gt;
+</span><span class="inferred0"><a name="line404"></a>404       #   &lt;% @objects.each do |item| %&gt;
 </span><span class="inferred1"><a name="line405"></a>405       #     &lt;tr class=&quot;&lt;%= cycle(&quot;even&quot;, &quot;odd&quot;, :name =&gt; &quot;row_class&quot;) -%&gt;&quot;&gt;
 </span><span class="inferred0"><a name="line406"></a>406       #       &lt;td&gt;
 </span><span class="inferred1"><a name="line407"></a>407       #         &lt;% item.values.each do |value| %&gt;
@@ -1036,8 +1036,8 @@ span.run100 {
 </span><span class="inferred0"><a name="line436"></a>436       #
 </span><span class="inferred1"><a name="line437"></a>437       # ==== Example
 </span><span class="inferred0"><a name="line438"></a>438       #   # Alternate background colors
-</span><span class="inferred1"><a name="line439"></a>439       #   @items = [1,2,3,4]
-</span><span class="inferred0"><a name="line440"></a>440       #   &lt;% @items.each do |item| %&gt;
+</span><span class="inferred1"><a name="line439"></a>439       #   @objects = [1,2,3,4]
+</span><span class="inferred0"><a name="line440"></a>440       #   &lt;% @objects.each do |item| %&gt;
 </span><span class="inferred1"><a name="line441"></a>441       #     &lt;div style=&quot;background-color:&lt;%= cycle(&quot;red&quot;,&quot;white&quot;,&quot;blue&quot;) %&gt;&quot;&gt;
 </span><span class="inferred0"><a name="line442"></a>442       #       &lt;span style=&quot;background-color:&lt;%= current_cycle %&gt;&quot;&gt;&lt;%= item %&gt;&lt;/span&gt;
 </span><span class="inferred1"><a name="line443"></a>443       #     &lt;/div&gt;
@@ -1052,9 +1052,9 @@ span.run100 {
 </span><span class="inferred0"><a name="line452"></a>452       #
 </span><span class="inferred1"><a name="line453"></a>453       # ==== Example
 </span><span class="inferred0"><a name="line454"></a>454       #   # Alternate CSS classes for even and odd numbers...
-</span><span class="inferred1"><a name="line455"></a>455       #   @items = [[1,2,3,4], [5,6,3], [3,4,5,6,7,4]]
+</span><span class="inferred1"><a name="line455"></a>455       #   @objects = [[1,2,3,4], [5,6,3], [3,4,5,6,7,4]]
 </span><span class="inferred0"><a name="line456"></a>456       #   &lt;table&gt;
-</span><span class="inferred1"><a name="line457"></a>457       #   &lt;% @items.each do |item| %&gt;
+</span><span class="inferred1"><a name="line457"></a>457       #   &lt;% @objects.each do |item| %&gt;
 </span><span class="inferred0"><a name="line458"></a>458       #     &lt;tr class=&quot;&lt;%= cycle(&quot;even&quot;, &quot;odd&quot;) -%&gt;&quot;&gt;
 </span><span class="inferred1"><a name="line459"></a>459       #         &lt;% item.each do |value| %&gt;
 </span><span class="inferred0"><a name="line460"></a>460       #           &lt;span style=&quot;color:&lt;%= cycle(&quot;#333&quot;, &quot;#666&quot;, &quot;#999&quot;, :name =&gt; &quot;colors&quot;) -%&gt;&quot;&gt;

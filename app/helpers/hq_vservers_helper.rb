@@ -2,7 +2,7 @@ module HqVserversHelper
   
   def add_hq_vserver_hq_vnic_link(name) 
     link_to_function name do |page| 
-      vnic = HqVnic.new(:hq_vserver_id => @item.id)
+      vnic = HqVnic.new(:hq_vserver_id => @object.id)
       page.insert_html :top, :hq_vnics, :partial => 'hq_vservers/line/hq_vnic', :object => vnic
     end 
   end 

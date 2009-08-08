@@ -18,7 +18,7 @@ class HqSwitchesController < ApplicationController
   # GET /hq_switches/1
   # GET /hq_switches/1.xml
   def show
-    @item = @object = @hq_switch = HqSwitch.find(params[:id])
+    @object = @hq_switch = HqSwitch.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -30,7 +30,7 @@ class HqSwitchesController < ApplicationController
   # GET /hq_switches/new
   # GET /hq_switches/new.xml
   def new
-    @item = @object = @hq_switch = HqSwitch.new(:hq_site_id => @hq_site.id)    
+    @object = @hq_switch = HqSwitch.new(:hq_site_id => @hq_site.id)    
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_switch }
@@ -39,7 +39,7 @@ class HqSwitchesController < ApplicationController
   
   # GET /hq_switches/1/edit
   def edit
-    @item = @object = @hq_switch = HqSwitch.find(params[:id])
+    @object = @hq_switch = HqSwitch.find(params[:id])
     @hq_racks = @hq_switch.hq_site.hq_racks
     respond_to do |format|
       format.js { render :template => 'reflected/edit' } if request.xhr?

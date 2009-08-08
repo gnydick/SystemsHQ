@@ -16,7 +16,7 @@ class HqServersController < ApplicationController
   # GET /hq_servers/1
   # GET /hq_servers/1.xml
   def show
-    @item = @object = @hq_server = HqServer.find(params[:id])
+    @object = @hq_server = HqServer.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -28,7 +28,7 @@ class HqServersController < ApplicationController
   # GET /hq_servers/new
   # GET /hq_servers/new.xml
   def new
-    @item = @object = @hq_server = HqServer.new(:hq_site_id => @hq_site.id)    
+    @object = @hq_server = HqServer.new(:hq_site_id => @hq_site.id)    
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_server }
@@ -37,7 +37,7 @@ class HqServersController < ApplicationController
   
   # GET /hq_servers/1/edit
   def edit
-    @item = @object = @hq_server = HqServer.find(params[:id])
+    @object = @hq_server = HqServer.find(params[:id])
     @hq_racks = @hq_server.hq_site.hq_racks
     respond_to do |format|
       format.js { render :template => 'reflected/edit' } if request.xhr?

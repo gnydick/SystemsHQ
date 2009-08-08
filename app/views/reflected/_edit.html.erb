@@ -1,7 +1,7 @@
-<% form_for( @item, :url => { :action => :update, :id => @item, :page => params[:page] },
+<% form_for( @object, :url => { :action => :update, :id => @object, :page => params[:page] },
 :success => visual_effect(:blind_up, 'activity', :duration => 0.5),
 :html => { :method => :put, :class => "edit_#{@CcObjectClass.to_s.underscore}" }) do |f| %>
-<%= hidden_field @item.class.name.underscore.to_sym, :position  if @item.attributes.include?('position') %>
+<%= hidden_field @object.class.name.underscore.to_sym, :position  if @object.attributes.include?('position') %>
 <div id="myfields" class="container">
     <div class="title">
         <%= @object.screen_name %>

@@ -1,6 +1,6 @@
-<% remote_form_for @item.class.to_s.underscore, @item,
-:url => {:action => :change_name, :id => @item}, :html => { :method => :put}, 
+<% remote_form_for @object.class.to_s.underscore, @object,
+:url => {:action => :change_name, :id => @object}, :html => { :method => :put}, 
 :success => visual_effect(:blind_up, 'activity', :duration => 0.5 ),
-:update => "#{@item.class.to_s.underscore}_#{@item.id}" do |f| %>
+:update => "#{@object.class.to_s.underscore}_#{@object.id}" do |f| %>
 <%= f.text_field :name %>
 <% end -%>

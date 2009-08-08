@@ -1,4 +1,4 @@
-<% form_for(@item, :url => { :action => :create, :id => @item, :page => params[:page] },
+<% form_for(@object, :url => { :action => :create, :id => @object, :page => params[:page] },
 :success => visual_effect(:blind_up, 'activity', :duration => 0.5),
 :html => { :method => :post, :class => "new_#{@CcObjectClass.to_s.underscore}" }) do |f| %>
 

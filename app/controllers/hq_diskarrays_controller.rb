@@ -24,7 +24,7 @@ class HqDiskarraysController < ApplicationController
   # GET /hq_diskarrays/1
   # GET /hq_diskarrays/1.xml
   def show
-    @item = @object = @hq_diskarray = HqDiskarray.find(params[:id])
+    @object = @hq_diskarray = HqDiskarray.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -36,7 +36,7 @@ class HqDiskarraysController < ApplicationController
   # GET /hq_diskarrays/new
   # GET /hq_diskarrays/new.xml
   def new
-    @item = @object = @hq_diskarray = HqDiskarray.new
+    @object = @hq_diskarray = HqDiskarray.new
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_diskarray }
@@ -45,7 +45,7 @@ class HqDiskarraysController < ApplicationController
   
   # GET /hq_diskarrays/1/edit
   def edit
-    @item = @object = @hq_diskarray = HqDiskarray.find(params[:id])
+    @object = @hq_diskarray = HqDiskarray.find(params[:id])
     
     
     
@@ -83,7 +83,7 @@ class HqDiskarraysController < ApplicationController
   # PUT /hq_diskarrays/1.xml
   def update
     @list = HqDiskarray.all(:order => :name)
-    @item = HqDiskarray.find(params[:id])
+    @object = HqDiskarray.find(params[:id])
     
     params[:hq_diskarray][:existing_hq_nic_attributes] ||= {}
     params[:hq_diskarray][:new_hq_nic_attributes] ||= {}

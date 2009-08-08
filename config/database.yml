@@ -41,8 +41,8 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: SystemsHQ_production
+  database: systemshq_production
   pool: 5
-  username: root
-  password: 
-  socket: /tmp/mysql.sock
+  username: systemshq
+  password: fUzz33#!$
+  host: db

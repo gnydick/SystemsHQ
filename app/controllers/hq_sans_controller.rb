@@ -19,7 +19,7 @@ class HqSansController < ApplicationController
   # GET /hq_sans/1
   # GET /hq_sans/1.xml
   def show
-    @item = @object = @hq_san = HqSan.find(params[:id])
+    @object = @hq_san = HqSan.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -31,7 +31,7 @@ class HqSansController < ApplicationController
   # GET /hq_sans/new
   # GET /hq_sans/new.xml
   def new
-    @item = @object = @hq_san = HqSan.new
+    @object = @hq_san = HqSan.new
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_san }
@@ -40,7 +40,7 @@ class HqSansController < ApplicationController
   
   # GET /hq_sans/1/edit
   def edit
-    @item = @object = @hq_san = HqSan.find(params[:id])
+    @object = @hq_san = HqSan.find(params[:id])
     
     
     
@@ -78,7 +78,7 @@ class HqSansController < ApplicationController
   # PUT /hq_sans/1.xml
   def update
     @list = HqSan.all(:order => :name)
-    @item = HqSan.find(params[:id])
+    @object = HqSan.find(params[:id])
     
     params[:hq_san][:existing_hq_diskarray_attributes] ||= {}
     params[:hq_san][:existing_hq_slice_attributes] ||= {}

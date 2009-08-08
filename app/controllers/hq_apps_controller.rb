@@ -22,7 +22,7 @@ class HqAppsController < ApplicationController
   # GET /hq_apps/1
   # GET /hq_apps/1.xml
   def show
-    @item = @object = HqApp.find(params[:id])
+    @object = HqApp.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' } if request.xhr?
@@ -34,7 +34,7 @@ class HqAppsController < ApplicationController
   # GET /hq_apps/new
   # GET /hq_apps/new.xml
   def new
-    @item = @object = @hq_app = HqApp.new
+    @object = @hq_app = HqApp.new
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_app }
@@ -43,7 +43,7 @@ class HqAppsController < ApplicationController
   
   # GET /hq_apps/1/edit
   def edit
-    @item = @object = @hq_app = HqApp.find(params[:id])
+    @object = @hq_app = HqApp.find(params[:id])
     
     
     
@@ -81,7 +81,7 @@ class HqAppsController < ApplicationController
   # PUT /hq_apps/1.xml
   def update
     @list = HqApp.all(:order => :name)
-    @item = HqApp.find(params[:id])
+    @object = HqApp.find(params[:id])
     
     params[:hq_app][:new_hq_task_attributes] ||= {}
     params[:hq_app][:existing_hq_task_attributes] ||= {}

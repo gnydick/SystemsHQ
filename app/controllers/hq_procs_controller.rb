@@ -33,7 +33,7 @@ class HqProcsController < ApplicationController
   # GET /hq_procs/1
   # GET /hq_procs/1.xml
   def show
-    @item = @object = @hq_proc = HqProc.find(params[:id])
+    @object = @hq_proc = HqProc.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -45,7 +45,7 @@ class HqProcsController < ApplicationController
   # GET /hq_procs/new
   # GET /hq_procs/new.xml
   def new
-    @item = @object = @hq_proc = HqProc.new
+    @object = @hq_proc = HqProc.new
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_proc }
@@ -54,7 +54,7 @@ class HqProcsController < ApplicationController
   
   # GET /hq_procs/1/edit
   def edit
-    @item = @object = @hq_proc = HqProc.find(params[:id])
+    @object = @hq_proc = HqProc.find(params[:id])
     respond_to do |format|
       format.js { render :template => 'reflected/edit' } if request.xhr?
       format.html { render :template => 'reflected/edit' }
@@ -89,7 +89,7 @@ class HqProcsController < ApplicationController
   # PUT /hq_procs/1.xml
   def update
     @list = HqProc.all(:order => :name)
-    @item = HqProc.find(params[:id])
+    @object = HqProc.find(params[:id])
     
     
     params[:hq_proc][:new_hq_rsrc_usage_attributes] ||= {}

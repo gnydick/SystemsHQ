@@ -20,7 +20,7 @@ class HqRacksController < ApplicationController
   # GET /hq_racks/1
   # GET /hq_racks/1.xml
   def show
-    @item = @object = HqRack.find(params[:id])
+    @object = HqRack.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -32,7 +32,7 @@ class HqRacksController < ApplicationController
   # GET /hq_racks/new
   # GET /hq_racks/new.xml
   def new
-    @item = @object = @hq_rack = HqRack.new(:hq_site_id => @hq_site.id)    
+    @object = @hq_rack = HqRack.new(:hq_site_id => @hq_site.id)    
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_rack }
@@ -41,7 +41,7 @@ class HqRacksController < ApplicationController
   
   # GET /hq_racks/1/edit
   def edit
-    @item = @object = @hq_rack = HqRack.find(params[:id])
+    @object = @hq_rack = HqRack.find(params[:id])
     @hq_racks = @hq_rack.hq_site.hq_racks
     respond_to do |format|
       format.js { render :template => 'reflected/edit' } if request.xhr?

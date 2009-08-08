@@ -19,7 +19,7 @@ class PptClassesController < ApplicationController
   # GET /ppt_classes/1
   # GET /ppt_classes/1.xml
   def show
-    @item = @object = @ppt_class = PptClass.find(params[:id])
+    @object = @ppt_class = PptClass.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -31,7 +31,7 @@ class PptClassesController < ApplicationController
   # GET /ppt_classes/new
   # GET /ppt_classes/new.xml
   def new
-    @item = @object = @ppt_class = PptClass.new    
+    @object = @ppt_class = PptClass.new    
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @ppt_class }
@@ -40,7 +40,7 @@ class PptClassesController < ApplicationController
   
   # GET /ppt_classes/1/edit
   def edit
-    @item = @object = @ppt_class = PptClass.find(params[:id])
+    @object = @ppt_class = PptClass.find(params[:id])
     
     respond_to do |format|
       format.js { render :template => 'reflected/edit' } if request.xhr?

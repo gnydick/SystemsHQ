@@ -19,7 +19,7 @@ class HqRsrcsController < ApplicationController
   # GET /hq_rsrcs/1
   # GET /hq_rsrcs/1.xml
   def show
-    @item = @object = @hq_rsrc = HqRsrc.find(params[:id])
+    @object = @hq_rsrc = HqRsrc.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -31,7 +31,7 @@ class HqRsrcsController < ApplicationController
   # GET /hq_rsrcs/new
   # GET /hq_rsrcs/new.xml
   def new
-    @item = @object = @hq_rsrc = HqRsrc.new
+    @object = @hq_rsrc = HqRsrc.new
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_rsrc }
@@ -40,7 +40,7 @@ class HqRsrcsController < ApplicationController
   
   # GET /hq_rsrcs/1/edit
   def edit
-    @item = @object = @hq_rsrc = HqRsrc.find(params[:id])
+    @object = @hq_rsrc = HqRsrc.find(params[:id])
     
     
     
@@ -78,7 +78,7 @@ class HqRsrcsController < ApplicationController
   # PUT /hq_rsrcs/1.xml
   def update
     @list = HqRsrc.all(:order => :name)
-    @item = HqRsrc.find(params[:id])
+    @object = HqRsrc.find(params[:id])
     params[:hq_rsrc][:new_hq_rsrc_usage_attributes] ||= {}
     params[:hq_rsrc][:existing_hq_rsrc_usage_attributes] ||= {}
     

@@ -2,7 +2,7 @@ module HqVlansHelper
   
   def add_hq_vlan_hq_vlan_assignment_link(name) 
     link_to_function name do |page| 
-      vlan_assignment = HqVlanAssignment.new(:hq_vlan_id => @item.id)
+      vlan_assignment = HqVlanAssignment.new(:hq_vlan_id => @object.id)
       page.insert_html :top, :hq_vlan_assignments, :partial => 'hq_vlans/line/hq_vlan_assignment', :object => vlan_assignment
     end 
   end 

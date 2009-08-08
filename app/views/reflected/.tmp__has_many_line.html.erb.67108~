@@ -1,12 +1,12 @@
 <div class="line">
     <% new_or_existing = x.new_record? ? 'new' : 'existing' %>
-    <% prefix = "#{@item.class.name.to_s.underscore}[#{new_or_existing}_#{x.class.name.underscore}_attributes][#{x.id}]" %>
+    <% prefix = "#{@object.class.name.to_s.underscore}[#{new_or_existing}_#{x.class.name.underscore}_attributes][#{x.id}]" %>
     <% keys = x.attributes.keys.reject {|y|  y.match('^id$').nil? == false or y.match('_type').nil? == false or y.match('_at').nil? == false} -%>
     <% keys.each do |key| -%>
 		<% if key.match('_id$') -%>
 			<% collection_class = key.gsub(/_id$/,'').camelize -%>		
-			<% if key == @item.class.name.underscore+'_id' %>
-				<%= hidden_field_tag prefix+"[#{key}]", @item.id%>
+			<% if key == @object.class.name.underscore+'_id' %>
+				<%= hidden_field_tag prefix+"[#{key}]", @object.id%>
 			<% else -%>			
 				<%= label_tag prefix+"[#{key}]", eval(collection_class).screen_name %>: <%= inline_collection_select(prefix,key,collection_class, x.send(key))%>			
 			<% end -%>

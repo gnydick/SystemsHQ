@@ -16,6 +16,7 @@ class HqSystem < ActiveRecord::Base
   end
   
   has_many :hq_apps
+  has_many :hq_tasks, :through => :hq_apps
   
   validates_associated :hq_apps
   validates_presence_of :name

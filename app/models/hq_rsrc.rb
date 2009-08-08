@@ -19,6 +19,7 @@ class HqRsrc < ActiveRecord::Base
     filters << :hq_proc
   end
   
+  named_scope :by_name, :order => 'name ASC'
   
   validates_associated :hq_rsrc_usages
   validates_presence_of :name

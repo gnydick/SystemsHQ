@@ -10,7 +10,7 @@
 		<% end -%>
         <div id="sortlist_hq_procs" class="content">
         	<ul id="hq_procs">
-            <%= render :partial => 'hq_tasks/line/hq_proc', :collection => @item.hq_procs %>
+            <%= render :partial => 'hq_tasks/line/hq_proc', :collection => @object.hq_procs %>
 			</ul>
         </div>
 		<%= sortable_element('hq_procs', :url => { :controller => :hq_procs, :action => :order }) %>

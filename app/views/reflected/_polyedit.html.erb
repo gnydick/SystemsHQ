@@ -1,4 +1,4 @@
-<% polymorphic_has_many_associations(@item.class).each do |polyowns| -%>
+<% polymorphic_has_many_associations(@object.class).each do |polyowns| -%>
 <div class="container">
     <div class="title">
         <%= eval(polyowns.name.to_s.camelize.singularize).screen_name %>
@@ -8,7 +8,7 @@
             <%= add_poly_has_many_link(polyowns) %>
         </div>
         <div id="<%= polyowns.name.to_s %>_list" class="editorlist content">
-        <% @item.send(polyowns.name).each do |x| -%>
+        <% @object.send(polyowns.name).each do |x| -%>
         <% prefix = "#{polyowns.name.to_s.singularize}[existing_#{x.class.name.underscore}_attributes][#{x.id}]" %>
         <% fields_for prefix, x do |x_fields| %>
         <% keys = x.attributes.keys.reject {|y|  y.match('id$').nil? == false or y.match('_type').nil? == false or y.match('_at').nil? == false} -%>

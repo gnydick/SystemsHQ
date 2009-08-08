@@ -43,7 +43,7 @@ class HqSitesController < ApplicationController
   # GET /hq_sites/1
   # GET /hq_sites/1.xml
   def show
-    @item = @object = @hq_site = HqSite.find(params[:id])
+    @object = @hq_site = HqSite.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -55,7 +55,7 @@ class HqSitesController < ApplicationController
   # GET /hq_sites/new
   # GET /hq_sites/new.xml
   def new
-    @item = @object = @hq_site = HqSite.new
+    @object = @hq_site = HqSite.new
     
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
@@ -65,7 +65,7 @@ class HqSitesController < ApplicationController
   
   # GET /hq_sites/1/edit
   def edit
-    @item = @object = @hq_site = HqSite.find(params[:id])
+    @object = @hq_site = HqSite.find(params[:id])
     
     
     
@@ -115,7 +115,7 @@ class HqSitesController < ApplicationController
   # PUT /hq_sites/1.xml
   def update
     @list = HqSite.all(:order => :name)
-    @item = HqSite.find(params[:id])
+    @object = HqSite.find(params[:id])
     
     
     params[:hq_site][:new_hq_switch_attributes] ||= {}

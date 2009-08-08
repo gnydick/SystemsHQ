@@ -25,14 +25,14 @@ module ApplicationHelper
   def add_has_many_link(owns)
     link_to_function "New #{eval(owns.name.to_s.singularize.camelize).screen_name}" do |page| 
       page.insert_html :top, owns.name.to_s+'_list', :partial => 'reflected/has_many_line',
-      :locals => { :x => @item.send(owns.name).new }  
+      :locals => { :x => @object.send(owns.name).new }  
     end 
   end 
   
   def add_poly_has_many_link(owns)
     link_to_function "New #{eval(owns.name.to_s.singularize.camelize).screen_name}" do |page| 
       page.insert_html :top, owns.name.to_s+'_list', :partial => 'reflected/poly_has_many_line',
-      :locals => { :x => @item.send(owns.name).new }      
+      :locals => { :x => @object.send(owns.name).new }      
     end 
   end 
   
@@ -103,7 +103,7 @@ module ApplicationHelper
   
   def bridge_selector(prefix,selected = {}, options = {}, html_options = {})
     group_options = '<optgroup label="PleaseChoose"><option>From Physical Server</optgroup>'
-    group_options = group_options + option_groups_from_collection_for_select([@item.hq_server], :hq_nics, :name, :id, :name, :selected => selected)
+    group_options = group_options + option_groups_from_collection_for_select([@object.hq_server], :hq_nics, :name, :id, :name, :selected => selected)
     return select_tag(prefix+"[hq_bridge_id]", group_options)
   end
   
@@ -163,7 +163,7 @@ module ApplicationHelper
   end
   
   def polymorphic_belongs_to_select(form,owner)
-    select = form.label(@item.send(owner.to_sym).screen_name)+'<br />'
+    select = form.label(@object.send(owner.to_sym).screen_name)+'<br />'
     select = select + form.collection_select(owner.underscore+'_id', 
     owner.all(:order => :name), :id, :name, {:prompt => true})+'<br />'
     return select
@@ -174,7 +174,7 @@ module ApplicationHelper
     select = form.label(owned.screen_name)+'<br />'
     select = select + form.collection_select(owned.to_s.pluralize.underscore.to_sym,
                                              owned.all(:order => :name), :id, :name,
-    {:selected => @item.send(owned.to_s.underscore.pluralize.to_sym).collect {|x| x.id }},
+    {:selected => @object.send(owned.to_s.underscore.pluralize.to_sym).collect {|x| x.id }},
     {:size => 10, :multiple => :true  })+'<br />'
     return select
   end
@@ -183,7 +183,7 @@ module ApplicationHelper
     select = form.label(owned.screen_name)+'<br />'
     select = select + form.collection_select(owned.to_s.pluralize.underscore.to_sym,
                                              owned.all(:conditions => "#{@CcObjectClass.to_s.underscore}_id is null", :order => :name), :id, :name,
-    {:selected => @item.send(owned.to_s.underscore.pluralize.to_sym).collect {|x| x.id }},
+    {:selected => @object.send(owned.to_s.underscore.pluralize.to_sym).collect {|x| x.id }},
     {:size => 10, :multiple => :true})+'<br />'
     return select
   end

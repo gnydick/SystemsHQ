@@ -29,7 +29,7 @@ module HqProcsHelper
   
   def assign_hq_proc_hq_rsrc_select
     options = options_for_select([['Please Choose','']])
-    hq_proc_hq_rsrc_select(HqRsrc.all,nil,options)
+    hq_proc_hq_rsrc_select(HqRsrc.by_name,nil,options)
   end
   
   def hq_proc_hq_rsrc_select(hq_rsrcs, selected = {}, options = '')

@@ -17,7 +17,7 @@ class HqVserversController < ApplicationController
   # GET /hq_vservers/1
   # GET /hq_vservers/1.xml
   def show
-    @item = @object = @hq_vserver = HqVserver.find(params[:id])
+    @object = @hq_vserver = HqVserver.find(params[:id])
     
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
@@ -29,7 +29,7 @@ class HqVserversController < ApplicationController
   # GET /hq_vservers/new
   # GET /hq_vservers/new.xml
   def new
-    @item = @object = @hq_vserver = HqVserver.new
+    @object = @hq_vserver = HqVserver.new
     respond_to do |format|
       format.html { render :template => 'reflected/new' }
       format.xml  { render :xml => @hq_vserver }
@@ -39,7 +39,7 @@ class HqVserversController < ApplicationController
   # GET /hq_vservers/1/edit
   def edit
     
-    @item = @object = @hq_vserver = HqVserver.find(params[:id])
+    @object = @hq_vserver = HqVserver.find(params[:id])
     
     
     
@@ -77,7 +77,7 @@ class HqVserversController < ApplicationController
   # PUT /hq_vservers/1.xml
   def update
     @list = HqVserver.all(:order => :name)
-    @item = HqVserver.find(params[:id])
+    @object = HqVserver.find(params[:id])
     
     params[:hq_vserver][:existing_hq_vnic_attributes] ||= {}
     params[:hq_vserver][:existing_hq_slice_attributes] ||= {}
