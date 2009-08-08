@@ -1,0 +1,16 @@
+<div class="ppt_node">
+    <% new_or_existing = ppt_node.new_record? ? 'new' : 'existing' %>
+    <% prefix = "ppt_class[#{new_or_existing}_ppt_node_attributes][#{ppt_node.id}]" %>
+    <% fields_for prefix, ppt_node do |ppt_node_form| -%>
+    <p>
+ 
+            <%= ppt_node.puppetized_node.name %>
+			
+           
+ 
+        <% if params[:action] == 'edit' -%>
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.ppt_node').remove()" %></span>
+        <% end -%>
+    </p>
+    <% end -%>
+</div>

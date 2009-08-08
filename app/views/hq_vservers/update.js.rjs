@@ -1,0 +1,2 @@
+
+page.replace_html :maincontent, :partial => 'reflected/index_table'

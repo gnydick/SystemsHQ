@@ -1,0 +1,35 @@
+etlpipeline:
+  hq_system: etl
+  name: ETL Pipeline
+
+eventshttpd:
+  hq_system: dads
+  name: EventsHTTPd
+  
+caster:
+  hq_system: dads
+  name: Stormcaster
+  
+clickhttpd:
+  hq_system: dads
+  name: ClickHTTPd
+
+opsportal:
+  hq_system: infra   
+  name: OpsPortal
+  
+puppet:
+  hq_system: infra
+  name: Puppet Automation
+  
+cacti:
+  hq_system: infra
+  name: Cacti Monitoring - Trending
+  
+nagios:
+  hq_system: infra
+  name: Nagios Monitoring - Alerts
+  
+nagiosconfig:
+  hq_system: infra
+  name: Nagios Configuration Tool

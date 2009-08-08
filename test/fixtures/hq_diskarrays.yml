@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+storage1:
+  hq_san: drbd1
+  hq_site: lw
+  hq_rack: lscage_rack1
+  name: storage1.lw.ls.bak
+
+storage2:
+  hq_san: drbd1
+  hq_site: lw
+  hq_rack: lscage_rack2
+  name: storage2.lw.ls.bak

@@ -1,0 +1,11 @@
+<tr>
+    <td class="detail">
+        <%= progress_link(hq_vlan.name.to_s, hq_vlan_path(hq_vlan)) %>
+    </td>
+    <td class="command">
+        <%= link_to 'Edit', edit_hq_vlan_path(hq_vlan) %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', hq_vlan, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

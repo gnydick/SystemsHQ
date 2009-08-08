@@ -1,0 +1,4 @@
+<span id="hq_sites"><%= collection_select(:hq_switch, :hq_site_id, HqSite.all, :id, :name,
+    {:prompt => true}, :onchange => remote_function(:url => {:action => :get_site_inventory, :id => @hq_switch.new_record? ? 0 : @hq_switch.id},
+    :method => :post, :with => "'hq_site_id=' + this.value"
+    )) %></span>

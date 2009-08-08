@@ -1,0 +1,62 @@
+<div id="hq_server_container" class="container">
+    <div class="title">
+        Server Name
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_server_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+<div id="hq_rack_container" class="container">
+    <div class="title">
+        Rack
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_racks_editor" class="editor">
+        <div id="hq_racks" class="content">
+            <%= render :partial => 'hq_servers/line/hq_rack' %>
+        </div>
+    </div>
+</div>
+<div id="hq_nic_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Interfaces', visual_effect(:toggle_blind, :hq_nics_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_nics_editor" style="display:none;" class="editor">
+        <div class="header">
+            <%= add_hq_server_hq_nic_link "Add a Network Interface" %>
+        </div>
+        <div id="hq_nics" class="content">
+            <%= render :partial => 'hq_servers/line/hq_nic', :collection => @hq_server.hq_nics %>
+        </div>
+    </div>
+</div>
+<div id="hq_vserver_container" class="container">
+    <div id="list">
+        <div class="title">
+            <%= link_to_function 'Virtual Servers', visual_effect(:toggle_blind, :hq_vservers_editor) %>
+            <div style="float:right" class="button">
+                <%= submit_tag "Update", :class => "button" %>
+            </div>
+        </div>
+        <div id="hq_vservers_editor" style="display:none;" class="editor">
+            <div id="hq_vserver_details" class="details morph" style="background-color:#B3C7EB; display:none; overflow:hidden;  z-index: 2;  opacity: 0;  width:700px;  position:absolute;">
+			
+            </div>
+			<%= draggable_element("hq_vserver_details", :revert => 'false') %>
+            <div class="header">
+                <%= add_hq_server_hq_vserver_link "Add a Virtual Server" %>
+            </div>
+            <div id="hq_vservers">
+                <%= render :partial => 'hq_servers/line/hq_vserver', :collection => @hq_server.hq_vservers %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div id="myfields" class="showcontainer">
+    <div class="showtitle">
+        <%= @object.screen_name %>
+        
+    </div>
+    <div class="shower">
+        <%= render :partial => 'reflected/record_line' %>
+    </div>
+</div>
+
+<!--  belongs_to fields -->
+<%= render :partial => 'reflected/belongsshow' %>
+<!-- end belongs_to fields -->
+
+
+<!--  has_many fields -->
+<%= render :partial => 'reflected/hasshow' %>
+<!-- end has_many fields -->
+
+<!-- has_many fields polymorphic -->
+<%= render :partial => 'reflected/polyshow' %>
+<!-- end has_many fields polymorphic -->

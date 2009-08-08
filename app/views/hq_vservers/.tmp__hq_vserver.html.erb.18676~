@@ -1,0 +1,8 @@
+<div class="hq_vserver">
+  <% fields_for_vserver(hq_vserver) do |vserver_form| %>
+  <p>
+    Virtual Server: <%= vserver_form.text_field :name %>
+    <%= link_to_function "remove", "$(this).up('.task').remove()" %>
+  </p>
+  <% end %>
+</div>

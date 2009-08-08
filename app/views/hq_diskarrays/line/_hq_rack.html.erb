@@ -1,0 +1,1 @@
+<span id="hq_racks"><%= hq_rack_for_hq_diskarray_select(HqRack.by_site(cookies[:hq_site_id]), @hq_diskarray.new_record? ? 0 : @hq_diskarray.hq_rack.id) %></span>

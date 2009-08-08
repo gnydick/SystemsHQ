@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <meta name="generator" content="HTML Tidy, see www.w3.org">
+
+        <title></title>
+    </head>
+
+    <body>
+        <p>Name: <%= f.text_field :name %></p>
+
+        <h2>Rack</h2>
+
+        <div id="hq_rack">
+             Rack: <%= f.collection_select(:hq_rack_id, HqRack.all, :id, :name, {:prompt => true}) %>
+        </div>
+        <hr>
+        <h2>Interfaces</h2> 
+
+        <div id="hq_nics">
+            <%= render :partial => 'hq_nic', :collection => @hq_server.hq_nics %>
+        </div>
+
+        <p><%= add_hq_nic_link "Add a Network Interface" %></p>
+        <hr>
+        <h2>Virtual Servers </h2>
+
+        <div id="hq_vservers">
+            <%= render :partial => 'hq_vserver', :collection => @hq_server.hq_vservers %>
+        </div>
+
+        <p><%= add_hq_vserver_link "Add a Virtual Server" %></p>
+    </body>
+</html>
+

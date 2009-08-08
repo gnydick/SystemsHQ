@@ -1,0 +1,31 @@
+<div id="hq_vnic_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Interfaces', visual_effect(:toggle_blind, :hq_vnics_editor) %>
+    </div>
+    <div id="hq_vnics_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        <div class="header">
+            <%= add_hq_vserver_hq_vnic_link "Add a Network Interface" %>
+        </div>
+		<% end -%>
+        <div id="hq_vnics" class="content">
+            <%= render :partial => 'hq_vservers/line/hq_vnic', :collection => @hq_vserver.hq_vnics %>
+        </div>
+    </div>
+</div>
+
+<div id="ppt_class_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Puppet Classes', visual_effect(:toggle_blind, :ppt_classes_editor) %>
+    </div>
+    <div id="ppt_classes_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        <div class="header">
+            <%= add_hq_vserver_ppt_class_link "Add Puppet Class" %>
+        </div>
+		<% end -%>
+        <div id="ppt_classes" class="content">
+            <%= render :partial => 'hq_vservers/line/ppt_class', :collection => @hq_vserver.ppt_classes %>
+        </div>
+    </div>
+</div>

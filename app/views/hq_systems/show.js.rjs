@@ -1,0 +1,2 @@
+page.replace_html 'preview_detail', :partial => 'reflected/show', :object => @item
+page.insert_html :top, 'preview_detail', :partial => 'reflected/closebutton'

@@ -1,0 +1,20 @@
+<% polymorphic_has_many_associations(@CcObjectClass).each do |polyowns| -%>
+<div class="showcontainer">
+    <div class="showtitle">
+        <%= eval(polyowns.name.to_s.camelize.singularize).screen_name %>
+    </div>
+    <div class="shower">
+        <div id="<%= polyowns.name.to_s %>_list" class="editorlist content">
+        <% @item.send(polyowns.name).each do |x| -%>
+       
+ 
+        <% keys = x.attributes.keys.reject {|y|  y.match('id$').nil? == false or y.match('_type').nil? == false or y.match('_at').nil? == false} -%>
+
+        <%= render :partial => 'reflected/poly_has_many_line', :locals => { :x => x  } %>
+
+        </ul>
+        <% end -%>
+    </div>
+</div>
+</div>
+<% end -%>

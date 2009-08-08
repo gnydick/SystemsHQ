@@ -1,0 +1,73 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+<% for I in 11..20 %>
+
+node_ads<%= I %>:
+  ppt_class: ads
+  puppetized_node: ads<%= I %>.lw.ls.bak
+  puppetized_node_type: HqVserver
+
+<% end %>
+
+
+<% for I in 11..14 %>
+
+node_caster<%= I %>:
+  ppt_class: caster
+  puppetized_node: caster<%= I %>.lw.ls.bak
+  puppetized_node_type: HqVserver
+
+<% end %>
+
+
+<% for I in 11..16 %>
+
+node_etl<%= I %>:
+  ppt_class: etl
+  puppetized_node: etl<%= I %>.lw.ls.bak
+  puppetized_node_type: HqVserver
+
+<% end %>
+
+<% for I in 14..15 %>
+
+node_ldap<%= I %>:
+  ppt_class: ldap
+  puppetized_node: ldap<%= I %>.lw.ls.bak
+  puppetized_node_type: HqVserver
+
+<% end %>
+
+
+<% for I in 11..13 %>
+node_ns<%= I %>:
+  ppt_class: ns
+  puppetized_node: ns<%= I %>.lw.ls.bak
+  puppetized_node_type: HqVserver
+
+<% end %>
+
+
+<% for I in 3..5 %>
+node_ns<%= I %>:
+  ppt_class: ns
+  puppetized_node: ns<%= I %>.lw.ls.bak
+  puppetized_node_type: HqVserver
+
+<% end %>
+
+<% for I in 13..15 %>
+node_img<%= I %>:
+  ppt_class: img
+  puppetized_node: img<%= I %>.lw.ls.bak
+  puppetized_node_type: HqVserver
+
+<% end %>
+
+<% for I in 11..14 %>
+node_click<%= I %>:
+  ppt_class: click
+  puppetized_node: click<%= I %>.lw.ls.bak
+  puppetized_node_type: HqVserver
+
+<% end %>

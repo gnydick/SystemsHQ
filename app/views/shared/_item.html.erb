@@ -1,0 +1,11 @@
+<tr>
+    <td class="detail">
+        <%= progress_link(item.name.to_s, item) %>
+    </td>
+    <td class="command">
+        <%= progress_edit_link 'Edit', eval('edit_'+item.class.name.underscore+'_path'+'(item)') %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

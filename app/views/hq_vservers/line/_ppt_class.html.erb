@@ -1,0 +1,11 @@
+<div class="ppt_class">
+   
+    
+    <p>
+        <%= assign_hq_vserver_ppt_class_select(ppt_class.new_record? ? 0 : ppt_class.id) %>
+        <% if params[:action] == 'edit' -%>
+		<span class="remove"><%= link_to_function "remove", "$(this).up('.ppt_class').remove()" %></span>
+		<% end -%>
+    </p>
+
+</div>

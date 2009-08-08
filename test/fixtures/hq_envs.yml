@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+prod:
+  name: Production
+
+stage:
+  name: Stage
+
+demo:
+  name: Demo

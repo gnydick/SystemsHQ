@@ -1,0 +1,10 @@
+<span style="float:right"><%= close_link %></span>
+Virtual Server FQDN: <%= detail.name %>
+<br/>
+<ul>
+    Interfaces<% detail.hq_nics.each do |nic| -%>
+    <li>
+        <%= "#{nic.name} - #{nic.ipaddr}, Bridged through: #{detail.hq_server.hq_nics.find(nic.hq_remotenic_id).name}" %>
+    </li>
+    <% end -%>
+</ul>

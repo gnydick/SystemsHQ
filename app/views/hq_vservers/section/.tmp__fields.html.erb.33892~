@@ -1,0 +1,67 @@
+<div id="hq_vserver_container" class="container">
+    <div class="title">
+        <div class="label">Name</div>
+		
+		<% if params[:action] == 'edit' -%>
+        <div class="update" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+		<% end -%>
+		
+		<% if params[:action] == 'new' -%>
+		<div class="create" class="button">
+            <%= submit_tag "Create", :class => "button" %>
+        </div>
+		<% end -%>
+		
+    </div>
+    <div id="hq_vserver_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+<div id="hq_server_container" class="container">
+    <div class="title">
+        <div>Hosted On</div>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_server_editor" class="editor">
+        <div id="hq_server" class="content">
+            <%= render :partial => 'hq_vservers/line/hq_server', :object => @hq_vserver.hq_server %>
+        </div>
+    </div>
+</div>
+<div id="hq_nic_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Interfaces', visual_effect(:toggle_blind, :hq_nics_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_nics_editor" style="display:none;" class="editor">
+        <div class="header">
+            <%= add_hq_vserver_hq_nic_link "Add a Network Interface" %>
+        </div>
+        <div id="hq_nics" class="content">
+            <%= render :partial => 'hq_vservers/line/hq_nic', :collection => @hq_vserver.hq_nics %>
+        </div>
+    </div>
+</div>
+<!--- slices  --->
+<div id="hq_slice_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Slices', visual_effect(:toggle_blind, :hq_slices_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_slices_editor" class="editor">
+        <div class="header">
+            <%#= new_hq_vserver_hq_slice_link("Create New Backing Slice") %>| <%= assign_hq_vserver_hq_slice_link("Assign an Backing Slice") %>
+        </div>
+        <div id="hq_slices_list" class="content">
+            <%= render :partial => 'hq_vservers/line/hq_slice', :collection => @hq_vserver.hq_slices %>
+        </div>
+    </div>
+</div>

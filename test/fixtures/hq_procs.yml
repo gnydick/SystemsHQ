@@ -1,0 +1,29 @@
+transferlocallogs:
+  hq_task: bootstrapnightly
+  name: Transfer local log files to ETL master
+
+transferremotelogs:
+  hq_task: bootstrapnightly
+  name: Transfer remote log files to ETL master
+
+runmove_events:
+  hq_task: collect_events_logs
+  name: runMove.sh - events
+  
+  
+runmove_click:
+  hq_task: collect_click_logs
+  name: runMove.sh - click
+  
+  
+  
+puppet_dist_sudoers:
+  hq_task: autopuppet
+  name: sudo config distribution 
+
+  
+  
+  
+puppet_dist_snmp:
+  hq_task: autopuppet
+  name: snmpd config distribution

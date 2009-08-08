@@ -1,0 +1,3 @@
+<div id="closebutton" class="closebutton" style="float:right;" >
+    <%= link_to_function 'Close', visual_effect(:fade, "preview_detail", :duration => 0.5 ) %>
+</div>

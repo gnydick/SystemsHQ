@@ -1,0 +1,11 @@
+<tr>
+    <td class="detail">
+        <%= progress_link(ppt_class.name.to_s, ppt_class_path(ppt_class)) %>
+    </td>
+    <td class="command">
+        <%= link_to 'Edit', edit_ppt_class_path(ppt_class) %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', ppt_class, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

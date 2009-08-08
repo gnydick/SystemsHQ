@@ -1,0 +1,5 @@
+<li class="hq_server" style="list-style: none;">
+    <%= assign_hq_rack_hq_server_select(@hq_servers.reject {|x| @hq_rack.hq_servers.include?(x)}) %>
+    <span class="remove">
+    <%= link_to_function "remove", "$(this).up('.hq_server').remove()" %></span>
+</li>

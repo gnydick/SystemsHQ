@@ -1,0 +1,33 @@
+<div id="hq_proc_container" class="container">
+    <div class="title">
+        Name
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_proc_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+<div id="hq_task_container" class="container">
+    <div class="title">
+        Task
+    </div>
+    <div id="hq_tasks_editor" class="editor">
+        <div id="hq_tasks" class="content">
+            <%= render :partial => 'hq_procs/line/hq_task' %>
+        </div>
+    </div>
+</div>
+<div id="hq_proc_container" class="container">
+    <div class="title">
+        Resources
+    </div>
+    <div id="hq_procs_editor" class="editor">
+    	<%= assign_hq_proc_hq_rsrc_link "Assign a Resource" %>
+        <div id="hq_procs" class="content">
+            
+            <%= render :partial => 'hq_procs/line/hq_rsrc', :collection => @hq_proc.rsrcs %>
+        </div>
+    </div>
+</div>

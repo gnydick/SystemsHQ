@@ -1,0 +1,5 @@
+<li class="hq_app" style="list-style: none;">
+    <%= assign_hq_system_hq_app_select(@hq_apps) %>
+    <span class="remove">
+    <%= link_to_function "remove", "$(this).up('.hq_app').remove()" %></span>
+</li>

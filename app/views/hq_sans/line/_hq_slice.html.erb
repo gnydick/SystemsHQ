@@ -1,0 +1,12 @@
+<div class="hq_slice">
+    <% new_or_existing = hq_slice.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_san[#{new_or_existing}_hq_slice_attributes][#{hq_slice.id}]" %>
+    <% fields_for prefix, hq_slice do |hq_slice_form| -%>
+    <p>
+        Disk Slice: <%= hq_slice_form.text_field :name %> Size (GB): <%= hq_slice_form.text_field :size, :size => 6 %>
+		
+       
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_slice').remove()" %></span>
+    </p>
+    <% end -%>
+</div>

@@ -1,0 +1,1 @@
+<span id="hq_racks"><%= collection_select(:hq_server, :hq_rack_id, HqRack.by_site(@hq_site), :id, :label,{:prompt => true, :selected => @hq_server.new_record? ? 0 : @hq_server.hq_rack.id}) %></span>

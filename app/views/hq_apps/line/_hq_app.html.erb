@@ -1,0 +1,12 @@
+<tr>
+    <td class="detail">
+        <%= link_to_remote hq_app.name.to_s, :url => hq_app_path(hq_app), :method => :get, :loading => visual_effect(:appear, 'spinner', :duration => 0),
+		:loaded => visual_effect(:appear, :preview_detail, {:opacity => ".95"}), :complete => visual_effect(:fade, 'spinner', :duration => 0.5) %>
+    </td>
+    <td class="command">
+        <%= link_to 'Edit', edit_hq_app_path(hq_app) %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', hq_app, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

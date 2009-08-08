@@ -1,0 +1,87 @@
+<% for CN in [['eth0','g0/1','lb1.lw.ls.priv'],['eth1','g0/2','lb1.lw.ls.priv'],['eth0','g0/3','app1.lw.ls.priv'],['eth1','g0/4','app1.lw.ls.priv'],['ipmi','g0/5','app1.lw.ls.priv'],['eth0','g0/6','app3.lw.ls.priv'],['eth1','g0/7','app3.lw.ls.priv'],['ipmi','g0/8','app3.lw.ls.priv'],['eth0','g0/9','app5.lw.ls.priv'],['eth1','g0/10','app5.lw.ls.priv'],['ipmi','g0/11','app5.lw.ls.priv'],['eth0','g0/12','archive1.lw.ls.priv'],['eth1','g0/13','archive1.lw.ls.priv'],['ipmi','g0/14','archive1.lw.ls.priv'],['eth0','g0/15','storage1.lw.ls.priv'],['eth1','g0/16','storage1.lw.ls.priv'],['ipmi','g0/17','storage1.lw.ls.priv'],['eth0','g0/18','db1.lw.ls.priv'],['eth1','g0/19','db1.lw.ls.priv'],['ipmi','g0/20','db1.lw.ls.priv'],['eth2','g0/21','lb1.lw.ls.priv'],['eth3','g0/22','lb1.lw.ls.priv'],['eth3','g0/22','storage1.lw.ls.priv']] %>
+connected_nic_<%= CN[2] %>_<%= CN[0] %>:
+  hq_nic: <%= CN[2].gsub(/.lw.ls.priv/,'') %>_<%= CN[0] %>
+  hq_netconnection: net_con_<%= CN[2].gsub(/.lw.ls.priv/,'') %>_sw1_<%= CN[1].gsub(/g0\//,'').gsub(/g\//,'') %>
+  
+connected_nic_<%= CN[2] %>_<%= CN[1] %>:
+  hq_nic: nic_switch1_port<%= CN[1].gsub(/g0\//,'').gsub(/g\//,'') %>
+  hq_netconnection: net_con_<%= CN[2].gsub(/.lw.ls.priv/,'') %>_sw1_<%= CN[1].gsub(/g0\//,'').gsub(/g\//,'') %>
+  
+<% end %>
+
+
+<% for CN in [['eth0','g0/1','lb2.lw.ls.priv'],['eth1','g0/2','lb2.lw.ls.priv'],['eth0','g0/3','app2.lw.ls.priv'],['eth1','g0/4','app2.lw.ls.priv'],['ipmi','g0/5','app2.lw.ls.priv'],['eth0','g0/6','app4.lw.ls.priv'],['eth1','g0/7','app4.lw.ls.priv'],['ipmi','g0/8','app4.lw.ls.priv'],['eth0','g0/9','app5.lw.ls.priv'],['eth1','g0/10','app5.lw.ls.priv'],['ipmi','g0/11','app5.lw.ls.priv'],['eth0','g0/12','archive2.lw.ls.priv'],['eth1','g0/13','archive2.lw.ls.priv'],['ipmi','g0/14','archive2.lw.ls.priv'],['eth0','g0/15','storage2.lw.ls.priv'],['eth1','g0/16','storage2.lw.ls.priv'],['ipmi','g0/17','storage2.lw.ls.priv'],['eth0','g0/18','db2.lw.ls.priv'],['eth1','g0/19','db2.lw.ls.priv'],['ipmi','g0/20','db2.lw.ls.priv'],['eth2','g0/21','lb2.lw.ls.priv'],['eth3','g0/22','lb2.lw.ls.priv'],['eth3','g0/22','storage2.lw.ls.priv']] %>
+connected_nic_<%= CN[2] %>_<%= CN[0] %>:
+  hq_nic: <%= CN[2].gsub(/.lw.ls.priv/,'') %>_<%= CN[0] %>
+  hq_netconnection: net_con_<%= CN[2].gsub(/.lw.ls.priv/,'') %>_sw2_<%= CN[1].gsub(/g0\//,'').gsub(/g\//,'') %>
+  
+connected_nic_<%= CN[2] %>_<%= CN[1] %>:
+  hq_nic: nic_switch2_port<%= CN[1].gsub(/g0\//,'').gsub(/g\//,'') %>
+  hq_netconnection: net_con_<%= CN[2].gsub(/.lw.ls.priv/,'') %>_sw2_<%= CN[1].gsub(/g0\//,'').gsub(/g\//,'') %>
+  
+<% end %>
+
+
+
+connected_nic_switch_core3_port24:
+  hq_nic: nic_switch_core3_port24
+  hq_netconnection: netconnection_sw1_core3
+  
+connected_nic_switch_core4_port24:
+  hq_nic: nic_switch_core4_port24
+  hq_netconnection: netconnection_sw2_core4
+  
+connected_nic_switch_core4_port24:
+  hq_nic: nic_switch_core4_port24
+  hq_netconnection: netconnection_sw2_core4
+  
+connected_nic_sw1_port41:
+  hq_nic: nic_switch1_port41
+  hq_netconnection: net_con_sw1_g041_fw1_eth00
+  
+connected_nic_sw1_port42:
+  hq_nic: nic_switch1_port42
+  hq_netconnection: net_con_sw1_g042_fw1_eth01
+  
+connected_nic_sw1_port44:
+  hq_nic: nic_switch1_port44
+  hq_netconnection: net_con_sw1_g044_fw1_eth03
+  
+connected_nic_sw1_port46:
+  hq_nic: nic_switch1_port46
+  hq_netconnection: netconnection_sw1_core3
+  
+  
+connected_nic_sw2_port41:
+  hq_nic: nic_switch1_port41
+  hq_netconnection: net_con_sw2_g041_fw2_eth00
+  
+connected_nic_sw2_port42:
+  hq_nic: nic_switch1_port42
+  hq_netconnection: net_con_sw2_g042_fw2_eth01
+  
+connected_nic_sw2_port44:
+  hq_nic: nic_switch1_port44
+  hq_netconnection: net_con_sw2_g044_fw2_eth03
+  
+connected_nic_sw2_port46:
+  hq_nic: nic_switch1_port46
+  hq_netconnection: netconnection_sw2_core4
+
+<% for I in 1..2 %>
+
+connected_nic_fw<%= I %>_eth00:
+  hq_nic: nic_eth00_fw<%= I %>
+  hq_netconnection: net_con_sw<%= I %>_g041_fw<%= I %>_eth00
+  
+connected_nic_fw<%= I %>_eth01:
+  hq_nic: nic_eth01_fw<%= I %>
+  hq_netconnection: net_con_sw<%= I %>_g042_fw<%= I %>_eth01
+  
+connected_nic_fw<%= I %>_eth03:
+  hq_nic: nic_eth03_fw<%= I %>
+  hq_netconnection: net_con_sw<%= I %>_g044_fw<%= I %>_eth03
+  
+<% end %>
+  
+  

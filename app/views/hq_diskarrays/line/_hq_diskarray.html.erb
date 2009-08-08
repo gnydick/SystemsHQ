@@ -1,0 +1,11 @@
+<tr>
+    <td class="detail">        
+		<%= progress_link(hq_diskarray.name.to_s, hq_diskarray_path(hq_diskarray)) %>
+    </td>
+    <td class="command">
+        <%= progress_link('Edit', edit_hq_diskarray_path(hq_diskarray)) %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', hq_diskarray, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

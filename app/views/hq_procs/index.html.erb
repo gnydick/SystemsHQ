@@ -1,0 +1,22 @@
+<h1>Listing hq_procs</h1>
+
+<table>
+  <tr>
+    <th>Hq task</th>
+    <th>Name</th>
+  </tr>
+
+<% @hq_procs.each do |hq_proc| %>
+  <tr>
+    <td><%=h hq_proc.hq_task_id %></td>
+    <td><%=h hq_proc.name %></td>
+    <td><%= link_to 'Show', hq_proc %></td>
+    <td><%= link_to 'Edit', edit_hq_proc_path(hq_proc) %></td>
+    <td><%= link_to 'Destroy', hq_proc, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hq_proc', new_hq_proc_path %>

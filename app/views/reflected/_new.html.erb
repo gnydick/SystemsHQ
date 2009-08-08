@@ -1,0 +1,30 @@
+<% form_for(@item, :url => { :action => :create, :id => @item, :page => params[:page] },
+:success => visual_effect(:blind_up, 'activity', :duration => 0.5),
+:html => { :method => :post, :class => "new_#{@CcObjectClass.to_s.underscore}" }) do |f| %>
+
+<div id="name_container" class="container">
+    <div class="title">
+        <%= @object.screen_name %>
+        
+    </div>
+    <div id="hq_proc_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+
+<!--  belongs_to fields -->
+<%= render :partial => 'reflected/belongsedit', :locals => { :f => f } %>
+<!-- end belongs_to fields -->
+
+
+<!--  has_many fields -->
+<%= render :partial => 'reflected/hasedit' %>
+<!-- end has_many fields -->
+
+<!-- has_many fields polymorphic -->
+<%= render :partial => 'reflected/polyedit' %>
+<!-- end has_many fields polymorphic -->
+<p>
+    <%= f.submit 'Create' %>
+</p>
+<% end %>

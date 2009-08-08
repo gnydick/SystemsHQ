@@ -1,0 +1,16 @@
+<div class="hq_vlan_assignment">
+    <% new_or_existing = hq_vlan_assignment.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_vlan[#{new_or_existing}_hq_vlan_assignment_attributes][#{hq_vlan_assignment.id}]" %>
+    <% fields_for prefix, hq_vlan_assignment do |hq_vlan_assignment_form| -%>
+    <p>
+ 
+            <%= assign_hq_vlan_hq_vlan_assignment_select(hq_vlan_assignment.hq_nic ? hq_vlan_assignment.hq_nic.id : 0) %>
+			<%= hq_vlan_assignment.hq_nic.nil? ? nil : "on <b><i>#{hq_vlan_assignment.hq_nic.hq_nichaving.name}</i></b>" %>
+           
+ 
+        <% if params[:action] == 'edit' -%>
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_vlan_assignment').remove()" %></span>
+        <% end -%>
+    </p>
+    <% end -%>
+</div>

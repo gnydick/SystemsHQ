@@ -1,0 +1,11 @@
+<tr>
+    <td class="detail">
+        <%= progress_link(hq_rsrc.name.to_s, hq_rsrc_path(hq_rsrc)) %>
+    </td>
+    <td class="command">
+        <%= link_to 'Edit', edit_hq_rsrc_path(hq_rsrc) %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', hq_rsrc, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

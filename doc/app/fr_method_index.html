@@ -1,0 +1,219 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Methods
+
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div id="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+    <a href="classes/HqRack.html#M000001">absolute_label (HqRack)</a><br />
+    <a href="classes/HqSitesHelper.html#M000176">add_hq_cage_link (HqSitesHelper)</a><br />
+    <a href="classes/HqProcsHelper.html#M000161">add_hq_proc_hq_rsrc_link (HqProcsHelper)</a><br />
+    <a href="classes/HqTasksHelper.html#M000179">add_hq_proc_link (HqTasksHelper)</a><br />
+    <a href="classes/HqServersHelper.html#M000191">add_hq_server_hq_nic_link (HqServersHelper)</a><br />
+    <a href="classes/HqServersHelper.html#M000190">add_hq_server_hq_vserver_link (HqServersHelper)</a><br />
+    <a href="classes/HqSwitchesHelper.html#M000171">add_hq_switch_hq_nic_link (HqSwitchesHelper)</a><br />
+    <a href="classes/HqTasksHelper.html#M000182">add_hq_task_hq_proc_link (HqTasksHelper)</a><br />
+    <a href="classes/HqVserversHelper.html#M000172">add_hq_vserver_hq_nic_link (HqVserversHelper)</a><br />
+    <a href="classes/HqSystemsHelper.html#M000187">assign_hq_app_link (HqSystemsHelper)</a><br />
+    <a href="classes/HqSitesHelper.html#M000177">assign_hq_cage_select (HqSitesHelper)</a><br />
+    <a href="classes/HqProcsHelper.html#M000164">assign_hq_proc_hq_rsrc_link (HqProcsHelper)</a><br />
+    <a href="classes/HqProcsHelper.html#M000165">assign_hq_proc_hq_rsrc_select (HqProcsHelper)</a><br />
+    <a href="classes/HqProcsHelper.html#M000162">assign_hq_proc_hq_task_select (HqProcsHelper)</a><br />
+    <a href="classes/HqServersHelper.html#M000192">assign_hq_rack_for_hq_server_select (HqServersHelper)</a><br />
+    <a href="classes/HqSwitchesHelper.html#M000169">assign_hq_rack_for_hq_switch_select (HqSwitchesHelper)</a><br />
+    <a href="classes/HqRacksHelper.html#M000157">assign_hq_rack_hq_server_link (HqRacksHelper)</a><br />
+    <a href="classes/HqRacksHelper.html#M000158">assign_hq_rack_hq_server_select (HqRacksHelper)</a><br />
+    <a href="classes/HqRacksHelper.html#M000153">assign_hq_rack_hq_switch_link (HqRacksHelper)</a><br />
+    <a href="classes/HqRacksHelper.html#M000154">assign_hq_rack_hq_switch_select (HqRacksHelper)</a><br />
+    <a href="classes/HqSystemsHelper.html#M000188">assign_hq_system_hq_app_select (HqSystemsHelper)</a><br />
+    <a href="classes/HqTasksHelper.html#M000180">assign_hq_task_hq_app_select (HqTasksHelper)</a><br />
+    <a href="classes/HqSystem.html#M000087">assigned_hq_app= (HqSystem)</a><br />
+    <a href="classes/HqProc.html#M000037">assigned_hq_rsrcs= (HqProc)</a><br />
+    <a href="classes/HqRack.html#M000006">assigned_hq_server= (HqRack)</a><br />
+    <a href="classes/HqRack.html#M000005">assigned_hq_switch= (HqRack)</a><br />
+    <a href="classes/HqTasksController.html#M000027">create (HqTasksController)</a><br />
+    <a href="classes/HqSitesController.html#M000128">create (HqSitesController)</a><br />
+    <a href="classes/HqServersController.html#M000058">create (HqServersController)</a><br />
+    <a href="classes/HqRsrcsController.html#M000051">create (HqRsrcsController)</a><br />
+    <a href="classes/HqSwitchesController.html#M000109">create (HqSwitchesController)</a><br />
+    <a href="classes/HqProcsController.html#M000083">create (HqProcsController)</a><br />
+    <a href="classes/HqEnvsController.html#M000065">create (HqEnvsController)</a><br />
+    <a href="classes/HqAppsController.html#M000034">create (HqAppsController)</a><br />
+    <a href="classes/HqNicsController.html#M000142">create (HqNicsController)</a><br />
+    <a href="classes/HqVserversController.html#M000044">create (HqVserversController)</a><br />
+    <a href="classes/HqRsrcUsagesController.html#M000135">create (HqRsrcUsagesController)</a><br />
+    <a href="classes/HqSystemsController.html#M000076">create (HqSystemsController)</a><br />
+    <a href="classes/HqRacksController.html#M000116">create (HqRacksController)</a><br />
+    <a href="classes/HqCagesController.html#M000149">create (HqCagesController)</a><br />
+    <a href="classes/HqSystemsController.html#M000078">destroy (HqSystemsController)</a><br />
+    <a href="classes/HqRacksController.html#M000118">destroy (HqRacksController)</a><br />
+    <a href="classes/HqServersController.html#M000060">destroy (HqServersController)</a><br />
+    <a href="classes/HqAppsController.html#M000036">destroy (HqAppsController)</a><br />
+    <a href="classes/HqNicsController.html#M000144">destroy (HqNicsController)</a><br />
+    <a href="classes/HqVserversController.html#M000046">destroy (HqVserversController)</a><br />
+    <a href="classes/HqCagesController.html#M000151">destroy (HqCagesController)</a><br />
+    <a href="classes/HqTasksController.html#M000029">destroy (HqTasksController)</a><br />
+    <a href="classes/HqRsrcUsagesController.html#M000137">destroy (HqRsrcUsagesController)</a><br />
+    <a href="classes/HqEnvsController.html#M000067">destroy (HqEnvsController)</a><br />
+    <a href="classes/HqSwitchesController.html#M000111">destroy (HqSwitchesController)</a><br />
+    <a href="classes/HqProcsController.html#M000085">destroy (HqProcsController)</a><br />
+    <a href="classes/HqRsrcsController.html#M000053">destroy (HqRsrcsController)</a><br />
+    <a href="classes/HqSitesController.html#M000130">destroy (HqSitesController)</a><br />
+    <a href="classes/HqCagesController.html#M000148">edit (HqCagesController)</a><br />
+    <a href="classes/HqRsrcsController.html#M000050">edit (HqRsrcsController)</a><br />
+    <a href="classes/HqServersController.html#M000057">edit (HqServersController)</a><br />
+    <a href="classes/HqNicsController.html#M000141">edit (HqNicsController)</a><br />
+    <a href="classes/HqSitesController.html#M000127">edit (HqSitesController)</a><br />
+    <a href="classes/HqVserversController.html#M000043">edit (HqVserversController)</a><br />
+    <a href="classes/HqSystemsController.html#M000075">edit (HqSystemsController)</a><br />
+    <a href="classes/HqRsrcUsagesController.html#M000134">edit (HqRsrcUsagesController)</a><br />
+    <a href="classes/HqSwitchesController.html#M000108">edit (HqSwitchesController)</a><br />
+    <a href="classes/HqEnvsController.html#M000064">edit (HqEnvsController)</a><br />
+    <a href="classes/HqAppsController.html#M000033">edit (HqAppsController)</a><br />
+    <a href="classes/HqRacksController.html#M000115">edit (HqRacksController)</a><br />
+    <a href="classes/HqTasksController.html#M000026">edit (HqTasksController)</a><br />
+    <a href="classes/HqProcsController.html#M000082">edit (HqProcsController)</a><br />
+    <a href="classes/HqSystem.html#M000089">existing_hq_app_attributes= (HqSystem)</a><br />
+    <a href="classes/HqSite.html#M000120">existing_hq_cage_attributes= (HqSite)</a><br />
+    <a href="classes/HqVserver.html#M000070">existing_hq_nic_attributes= (HqVserver)</a><br />
+    <a href="classes/HqServer.html#M000021">existing_hq_nic_attributes= (HqServer)</a><br />
+    <a href="classes/HqSwitch.html#M000102">existing_hq_nic_attributes= (HqSwitch)</a><br />
+    <a href="classes/HqTask.html#M000095">existing_hq_proc_attributes= (HqTask)</a><br />
+    <a href="classes/HqRack.html#M000011">existing_hq_server_attributes= (HqRack)</a><br />
+    <a href="classes/HqRack.html#M000008">existing_hq_switch_attributes= (HqRack)</a><br />
+    <a href="classes/HqApp.html#M000092">existing_hq_task_attributes= (HqApp)</a><br />
+    <a href="classes/HqServer.html#M000018">existing_hq_vserver_attributes= (HqServer)</a><br />
+    <a href="classes/HqSitesHelper.html#M000178">hq_cage_select (HqSitesHelper)</a><br />
+    <a href="classes/HqNic.html#M000039">hq_nichaving_label (HqNic)</a><br />
+    <a href="classes/HqProcsHelper.html#M000166">hq_proc_hq_rsrc_select (HqProcsHelper)</a><br />
+    <a href="classes/HqProcsHelper.html#M000163">hq_proc_hq_task_select (HqProcsHelper)</a><br />
+    <a href="classes/HqServersHelper.html#M000193">hq_rack_for_hq_server_select (HqServersHelper)</a><br />
+    <a href="classes/HqSwitchesHelper.html#M000170">hq_rack_for_hq_switch_select (HqSwitchesHelper)</a><br />
+    <a href="classes/HqRacksHelper.html#M000160">hq_rack_hq_cage_select (HqRacksHelper)</a><br />
+    <a href="classes/HqRacksHelper.html#M000159">hq_rack_hq_server_select (HqRacksHelper)</a><br />
+    <a href="classes/HqRacksHelper.html#M000155">hq_rack_hq_switch_select (HqRacksHelper)</a><br />
+    <a href="classes/HqRack.html#M000004">hq_servers_in_my_cage (HqRack)</a><br />
+    <a href="classes/HqRack.html#M000003">hq_switches_in_my_cage (HqRack)</a><br />
+    <a href="classes/HqSystemsHelper.html#M000189">hq_system_hq_app_select (HqSystemsHelper)</a><br />
+    <a href="classes/HqTasksHelper.html#M000181">hq_task_hq_app_select (HqTasksHelper)</a><br />
+    <a href="classes/HqVserversHelper.html#M000173">hq_vserver_hq_server_select (HqVserversHelper)</a><br />
+    <a href="classes/HqVserversHelper.html#M000174">hq_vserver_remotenic_selector (HqVserversHelper)</a><br />
+    <a href="classes/HqServer.html#M000014">id_rack_id (HqServer)</a><br />
+    <a href="classes/HqSwitch.html#M000098">id_rack_id (HqSwitch)</a><br />
+    <a href="classes/HqSwitch.html#M000100">in_my_cage (HqSwitch)</a><br />
+    <a href="classes/HqServer.html#M000016">in_my_cage (HqServer)</a><br />
+    <a href="classes/HqServer.html#M000015">in_my_rack (HqServer)</a><br />
+    <a href="classes/HqSwitch.html#M000099">in_my_rack (HqSwitch)</a><br />
+    <a href="classes/HqAppsController.html#M000030">index (HqAppsController)</a><br />
+    <a href="classes/HqRsrcsController.html#M000047">index (HqRsrcsController)</a><br />
+    <a href="classes/HqSystemsController.html#M000072">index (HqSystemsController)</a><br />
+    <a href="classes/HqEnvsController.html#M000061">index (HqEnvsController)</a><br />
+    <a href="classes/HqSitesController.html#M000124">index (HqSitesController)</a><br />
+    <a href="classes/HqSwitchesController.html#M000105">index (HqSwitchesController)</a><br />
+    <a href="classes/HqCagesController.html#M000145">index (HqCagesController)</a><br />
+    <a href="classes/HqNicsController.html#M000138">index (HqNicsController)</a><br />
+    <a href="classes/HqVserversController.html#M000040">index (HqVserversController)</a><br />
+    <a href="classes/HqTasksController.html#M000023">index (HqTasksController)</a><br />
+    <a href="classes/HqProcsController.html#M000079">index (HqProcsController)</a><br />
+    <a href="classes/HqRsrcUsagesController.html#M000131">index (HqRsrcUsagesController)</a><br />
+    <a href="classes/HqRacksController.html#M000112">index (HqRacksController)</a><br />
+    <a href="classes/HqServersController.html#M000054">index (HqServersController)</a><br />
+    <a href="classes/HqServer.html#M000013">label (HqServer)</a><br />
+    <a href="classes/HqRack.html#M000002">label (HqRack)</a><br />
+    <a href="classes/HqSwitch.html#M000104">label (HqSwitch)</a><br />
+    <a href="classes/HqSwitch.html#M000097">label (HqSwitch)</a><br />
+    <a href="classes/HqNicsController.html#M000140">new (HqNicsController)</a><br />
+    <a href="classes/HqSwitchesController.html#M000107">new (HqSwitchesController)</a><br />
+    <a href="classes/HqProcsController.html#M000081">new (HqProcsController)</a><br />
+    <a href="classes/HqRsrcsController.html#M000049">new (HqRsrcsController)</a><br />
+    <a href="classes/HqAppsController.html#M000032">new (HqAppsController)</a><br />
+    <a href="classes/HqCagesController.html#M000147">new (HqCagesController)</a><br />
+    <a href="classes/HqEnvsController.html#M000063">new (HqEnvsController)</a><br />
+    <a href="classes/HqVserversController.html#M000042">new (HqVserversController)</a><br />
+    <a href="classes/HqSitesController.html#M000126">new (HqSitesController)</a><br />
+    <a href="classes/HqRsrcUsagesController.html#M000133">new (HqRsrcUsagesController)</a><br />
+    <a href="classes/HqServersController.html#M000056">new (HqServersController)</a><br />
+    <a href="classes/HqRacksController.html#M000114">new (HqRacksController)</a><br />
+    <a href="classes/HqTasksController.html#M000025">new (HqTasksController)</a><br />
+    <a href="classes/HqSystemsController.html#M000074">new (HqSystemsController)</a><br />
+    <a href="classes/HqSystem.html#M000088">new_hq_app_attributes= (HqSystem)</a><br />
+    <a href="classes/HqAppsHelper.html#M000168">new_hq_app_hq_task_link (HqAppsHelper)</a><br />
+    <a href="classes/HqSystemsHelper.html#M000186">new_hq_app_link (HqSystemsHelper)</a><br />
+    <a href="classes/HqSite.html#M000119">new_hq_cage_attributes= (HqSite)</a><br />
+    <a href="classes/HqVserver.html#M000069">new_hq_nic_attributes= (HqVserver)</a><br />
+    <a href="classes/HqServer.html#M000020">new_hq_nic_attributes= (HqServer)</a><br />
+    <a href="classes/HqSwitch.html#M000101">new_hq_nic_attributes= (HqSwitch)</a><br />
+    <a href="classes/HqTask.html#M000094">new_hq_proc_attributes= (HqTask)</a><br />
+    <a href="classes/HqRacksHelper.html#M000156">new_hq_rack_hq_server_link (HqRacksHelper)</a><br />
+    <a href="classes/HqRacksHelper.html#M000152">new_hq_rack_hq_switch_link (HqRacksHelper)</a><br />
+    <a href="classes/HqRack.html#M000010">new_hq_server_attributes= (HqRack)</a><br />
+    <a href="classes/HqRack.html#M000007">new_hq_switch_attributes= (HqRack)</a><br />
+    <a href="classes/HqApp.html#M000091">new_hq_task_attributes= (HqApp)</a><br />
+    <a href="classes/HqServer.html#M000017">new_hq_vserver_attributes= (HqServer)</a><br />
+    <a href="classes/HqSitesHelper.html#M000175">rack_selector (HqSitesHelper)</a><br />
+    <a href="classes/ApplicationHelper.html#M000183">remotenic_selector (ApplicationHelper)</a><br />
+    <a href="classes/HqProc.html#M000038">rsrcs (HqProc)</a><br />
+    <a href="classes/HqSystem.html#M000090">save_hq_apps (HqSystem)</a><br />
+    <a href="classes/HqSite.html#M000121">save_hq_cages (HqSite)</a><br />
+    <a href="classes/HqServer.html#M000022">save_hq_nics (HqServer)</a><br />
+    <a href="classes/HqVserver.html#M000071">save_hq_nics (HqVserver)</a><br />
+    <a href="classes/HqSwitch.html#M000103">save_hq_nics (HqSwitch)</a><br />
+    <a href="classes/HqTask.html#M000096">save_hq_procs (HqTask)</a><br />
+    <a href="classes/HqRack.html#M000012">save_hq_servers (HqRack)</a><br />
+    <a href="classes/HqRack.html#M000009">save_hq_switches (HqRack)</a><br />
+    <a href="classes/HqApp.html#M000093">save_hq_tasks (HqApp)</a><br />
+    <a href="classes/HqServer.html#M000019">save_hq_vservers (HqServer)</a><br />
+    <a href="classes/HqSitesController.html#M000122">select (HqSitesController)</a><br />
+    <a href="classes/ApplicationController.html#M000086">select_site (ApplicationController)</a><br />
+    <a href="classes/HqSitesController.html#M000123">set (HqSitesController)</a><br />
+    <a href="classes/HqVserver.html#M000068">should_destroy? (HqVserver)</a><br />
+    <a href="classes/HqServersController.html#M000055">show (HqServersController)</a><br />
+    <a href="classes/HqTasksController.html#M000024">show (HqTasksController)</a><br />
+    <a href="classes/HqAppsController.html#M000031">show (HqAppsController)</a><br />
+    <a href="classes/HqProcsController.html#M000080">show (HqProcsController)</a><br />
+    <a href="classes/HqSitesController.html#M000125">show (HqSitesController)</a><br />
+    <a href="classes/HqSystemsController.html#M000073">show (HqSystemsController)</a><br />
+    <a href="classes/HqVserversController.html#M000041">show (HqVserversController)</a><br />
+    <a href="classes/HqCagesController.html#M000146">show (HqCagesController)</a><br />
+    <a href="classes/HqRsrcUsagesController.html#M000132">show (HqRsrcUsagesController)</a><br />
+    <a href="classes/HqRacksController.html#M000113">show (HqRacksController)</a><br />
+    <a href="classes/HqRsrcsController.html#M000048">show (HqRsrcsController)</a><br />
+    <a href="classes/HqNicsController.html#M000139">show (HqNicsController)</a><br />
+    <a href="classes/HqEnvsController.html#M000062">show (HqEnvsController)</a><br />
+    <a href="classes/HqSwitchesController.html#M000106">show (HqSwitchesController)</a><br />
+    <a href="classes/ApplicationHelper.html#M000185">site_referrer_hiddens (ApplicationHelper)</a><br />
+    <a href="classes/ApplicationHelper.html#M000184">site_select (ApplicationHelper)</a><br />
+    <a href="classes/HqAppsHelper.html#M000167">system_select (HqAppsHelper)</a><br />
+    <a href="classes/HqTasksController.html#M000028">update (HqTasksController)</a><br />
+    <a href="classes/HqSitesController.html#M000129">update (HqSitesController)</a><br />
+    <a href="classes/HqServersController.html#M000059">update (HqServersController)</a><br />
+    <a href="classes/HqRacksController.html#M000117">update (HqRacksController)</a><br />
+    <a href="classes/HqRsrcsController.html#M000052">update (HqRsrcsController)</a><br />
+    <a href="classes/HqRsrcUsagesController.html#M000136">update (HqRsrcUsagesController)</a><br />
+    <a href="classes/HqEnvsController.html#M000066">update (HqEnvsController)</a><br />
+    <a href="classes/HqNicsController.html#M000143">update (HqNicsController)</a><br />
+    <a href="classes/HqSwitchesController.html#M000110">update (HqSwitchesController)</a><br />
+    <a href="classes/HqVserversController.html#M000045">update (HqVserversController)</a><br />
+    <a href="classes/HqCagesController.html#M000150">update (HqCagesController)</a><br />
+    <a href="classes/HqSystemsController.html#M000077">update (HqSystemsController)</a><br />
+    <a href="classes/HqAppsController.html#M000035">update (HqAppsController)</a><br />
+    <a href="classes/HqProcsController.html#M000084">update (HqProcsController)</a><br />
+  </div>
+</div>
+</body>
+</html>

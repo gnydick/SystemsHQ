@@ -1,0 +1,25 @@
+<% has_many_associations(@CcObjectClass). each do |owns| -%>
+<div class="container">
+    <div class="title">
+        
+        <%= link_to_function eval(owns.name.to_s.camelize.singularize).screen_name.pluralize, visual_effect(:toggle_blind, "content_#{owns.name}") %>
+    </div>
+    <div id="<%= "content_#{owns.name}"  %>"  class="editor"  style="display:none;">
+        <div class="header">
+            <%= add_has_many_link(owns) %>
+        </div>
+        <div id="<%= owns.name.to_s %>_list" class="editorlist content">
+        <% @item.send(owns.name).each do |x| -%>
+        <% prefix = "#{owns.name.to_s.singularize}[existing_#{x.class.name.underscore}_attributes][#{x.id}]" %>
+        <% fields_for prefix, x do |x_fields| %>
+        <% keys = x.attributes.keys.reject {|y|  y.match('id$').nil? == false or y.match('_type').nil? == false or y.match('_at').nil? == false} -%>
+        <% keys.each do |key| -%>
+        <% end -%>
+        <%= render :partial => 'reflected/has_many_line', :locals => { :x => x  } %>
+        <% end -%>
+        </ul>
+        <% end -%>
+    </div>
+</div>
+</div>
+<% end -%>

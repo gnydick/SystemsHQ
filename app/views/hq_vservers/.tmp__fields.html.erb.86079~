@@ -1,0 +1,8 @@
+<p>
+  Name: <%= f.text_field :name %>
+</p>
+<div id="hq_vservers">
+  <%= render :partial => 'vserver', :collection => @hq_server.hq_vservers %>
+</div>
+<p><%= add_verver_link "Add a Virtual Server" %></p>
+

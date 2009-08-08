@@ -1,0 +1,16 @@
+<div class="ppt_node">
+    <% new_or_existing = ppt_node_hq_vserver.new_record? ? 'new' : 'existing' %>
+    <% prefix = "ppt_class[#{new_or_existing}_ppt_node_attributes][#{ppt_node_hq_vserver.id}]" %>
+    <% fields_for prefix, ppt_node_hq_vserver do |ppt_node_form| -%>
+    <p>
+ 
+            <%= assign_ppt_class_ppt_node_hq_vserver_select(ppt_node_hq_vserver.ppt_class ? ppt_node_hq_vserver.ppt_class.id : 0) %>
+			<%= ppt_node_hq_vserver.ppt_class.nil? ? nil : "on <b><i>#{ppt_node_hq_vserver.ppt_class.puppetized_node.name}</i></b>" %>
+           
+ 
+        <% if params[:action] == 'edit' -%>
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.ppt_node').remove()" %></span>
+        <% end -%>
+    </p>
+    <% end -%>
+</div>

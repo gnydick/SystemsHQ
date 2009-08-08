@@ -1,0 +1,11 @@
+<div class="hq_task">
+    <% new_or_existing = hq_task.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_app[#{new_or_existing}_hq_task_attributes][#{hq_task.id}]" %>
+    <% fields_for prefix, hq_task do |hq_task_form| -%>
+    <p>
+        Task: <%= hq_task_form.text_field :name %>
+       
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_task').remove()" %></span>
+    </p>
+    <% end -%>
+</div>

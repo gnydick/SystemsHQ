@@ -1,0 +1,52 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ads:
+  name: ads
+
+stgads:
+  name: stgads
+
+prvads:
+  name: prvads
+
+testprodads:
+  name: testprodads
+
+caster:
+  name: caster
+
+routes:
+  name: routes
+
+sudo:
+  name: sudo
+
+hosts:
+  name: hosts
+
+ldapclient:
+  name: ldapclient
+  
+krb5:
+  name: krb5
+
+pam:
+  name: pam
+  
+resolv:
+  name: resolv
+  
+sshd:
+  name: sshd
+  
+nrpe:
+  name: nrpe
+
+ppt:
+  name: ppt
+  
+netsnmp:
+  name: netsnmp
+
+click:
+  name: click

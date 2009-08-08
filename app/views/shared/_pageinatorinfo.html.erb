@@ -1,0 +1,14 @@
+<div class="paginator">
+    <% if eval(controller_name.singularize.camelize).methods.include?('filters') -%>
+    <% remote_form_for(controller_name.underscore.singularize, :html => {:method => :get}, :url => {:action => 'index'}) do |f| -%>
+	<% eval(controller_name.singularize.camelize).filters.each do |filter| -%>
+    <%# prefix = controller_name.underscore.singularize+"[filter]#{filter.to_s}_id]" -%>
+    <% prefix = "#{filter.to_s}_id" -%>
+    <%= label_tag eval(filter.to_s.camelize).screen_name %><%= filter_select(prefix, eval(filter.to_s.camelize).all(:order => :name), params["#{filter}_id"]) %>
+    <% end -%>
+
+    <% end -%>
+    <% end -%>    <br/>
+    <%= page_entries_info @objects, :entry_name => @screen_name %>
+    
+</div>

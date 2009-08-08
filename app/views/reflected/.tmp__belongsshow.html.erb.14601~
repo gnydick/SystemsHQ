@@ -1,0 +1,14 @@
+<% belongs_to_associations(@CcObjectClass).collect {|y| eval(y.name.to_s.camelize)}.each do |owner| -%>
+<div class="container">
+    <div class="title">
+        <%= owner.screen_name %>
+    </div>
+    <div id="hq_<%= owner.class.name.underscore %>_editor" class="editor">
+        
+        <div id="hq_procs" class="content">
+            
+			<%= @object.send(owner.name.to_s.underscore).name %>
+        </div>
+    </div>
+</div>
+<% end -%>

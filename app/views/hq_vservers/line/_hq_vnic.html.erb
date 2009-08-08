@@ -1,0 +1,14 @@
+<div class="hq_vnic">
+    <% new_or_existing = hq_vnic.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_vserver[#{new_or_existing}_hq_vnic_attributes][#{hq_vnic.id}]" %>
+    <% fields_for prefix, hq_vnic do |hq_vnic_form| -%>
+    <p>
+        Interface: <%= hq_vnic_form.text_field :name, :size => 6 %>IP Address: <%= hq_vnic_form.text_field :ipaddr %>
+       
+        Bridge: <%= bridge_selector (prefix, hq_vnic.hq_bridge_id ? hq_vnic.hq_bridge_id : 0 )%>
+        <% if params[:action] == 'edit' -%>
+		<span class="remove"><%= link_to_function "remove", "$(this).up('.hq_vnic').remove()" %></span>
+		<% end -%>
+    </p>
+    <% end -%>
+</div>

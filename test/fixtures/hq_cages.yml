@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+lscage:
+  hq_site: lw
+  name: Linkstorm Infra
+
+lwcage:
+  hq_site: lw
+  name: Logicworks Infra
+

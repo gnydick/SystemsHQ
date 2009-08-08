@@ -1,0 +1,7 @@
+<h1>New hq_server</h1>
+<% form_for :hq_server, :url => hq_servers_path do |f| %>
+  <%= render :partial => 'fields', :locals => { :f => f } %>
+  <p><%= submit_tag "Create Server" %></p>
+<% end %>
+
+<%= link_to 'Back', hq_servers_path %>

@@ -1,0 +1,39 @@
+<div id="hq_system_container" class="container">
+    <div class="title">
+        System
+    </div>
+    <div id="hq_systems_editor"  class="editor">
+        <div id="hq_systems" class="content">
+            <%= render :partial => 'hq_system' %>
+        </div>
+    </div>
+</div>
+
+<div id="hq_app_container" class="container">
+    <div class="title">
+        Name<div style="float:right" class="button"><%= submit_tag "Update", :class => "button" %></div>
+    </div>
+    <div id="hq_app_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+
+
+<div id="hq_task_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Tasks', visual_effect(:toggle_blind, :hq_tasks_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_tasks_editor" style="display:none;" class="editor">
+        <div class="footer">
+            <%= new_hq_app_hq_task_link("Create New Task") %>
+        </div>
+        <div id="hq_tasks" class="content">
+            <ul id="hq_tasks_list">
+                <%= render :partial => 'hq_apps/line/hq_task', :collection => @hq_app.hq_tasks %>
+            </ul>
+        </div>
+    </div>
+</div>

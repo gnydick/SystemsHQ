@@ -1,0 +1,13 @@
+<div class="hq_nic">
+    <% new_or_existing = hq_nic.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_switch[#{new_or_existing}_hq_nic_attributes][#{hq_nic.id}]" %>
+    <% fields_for prefix, hq_nic do |hq_nic_form| -%>
+    <p>
+        Interface: <%= hq_nic_form.text_field :name, :size => 6 %>IP Address: <%= hq_nic_form.text_field :ipaddr, :size => 15 %>
+        Connected To: <%= remotenic_selector(prefix,hq_nic.hq_remote_nic_id, :prompt => true) %>  <%= hq_nic.hq_remote_nic.nil? ? nil : "on <b><i>#{hq_nic.hq_remote_nic.hq_nichaving.name}</i></b>" %>
+        <% if params[:action] == 'edit' -%>
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_nic').remove()" %></span>
+        <% end -%>
+    </p>
+    <% end -%>
+</div>

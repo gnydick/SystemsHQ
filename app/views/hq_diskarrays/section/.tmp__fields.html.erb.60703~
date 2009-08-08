@@ -1,0 +1,38 @@
+<div id="hq_diskarray_container" class="container">
+    <div class="title">
+        Name
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_diskarray_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+<div id="hq_rack_container" class="container">
+    <div class="title">
+        Rack
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_racks_editor" class="editor">
+        <%= render :partial => 'hq_diskarrays/line/hq_rack', :object => @hq_diskarray.hq_rack %>
+    </div>
+</div>
+<div id="hq_nic_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Interfaces', visual_effect(:toggle_blind, :hq_nics_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_nics_editor" style="display:none;" class="editor">
+        <div class="header">
+            <%= add_hq_diskarray_hq_nic_link "Add a Network Interface" %>
+        </div>
+        <div id="hq_nics" class="content">
+            <%= render :partial => 'hq_diskarrays/line/hq_nic', :collection => @hq_diskarray.hq_nics %>
+        </div>
+    </div>
+</div>

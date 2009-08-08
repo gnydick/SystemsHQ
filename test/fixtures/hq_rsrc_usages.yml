@@ -1,0 +1,35 @@
+remote_xfer:
+  hq_rsrc: requests.log.gz
+  hq_proc: transferremotelogs
+
+<% for NAME in ['initreqs','events','sessions','impressions','clicks'] %>
+<% for SUF in ['.log.gz'] %>
+
+local_xfer_<%= NAME %><%= SUF %>:
+  hq_rsrc: <%= NAME %><%= SUF %>
+  hq_proc: transferlocallogs
+<% end %>
+<% end %>
+
+<% for R in ['ads.sudoers.erb','caster.sudoers.erb','corpwww.sudoers.erb','db.sudoers.erb','dmoads.sudoers.erb','dnsexternal.sudoers.erb','dnsinternal.sudoers.erb','etl.sudoers.erb','imgcss.sudoers.erb','lb.sudoers.erb','ldap.sudoers.erb','mail.sudoers.erb','ns.sudoers.erb','reports.sudoers.erb','stageads.sudoers.erb','stormcenter.sudoers.erb','uatstormcenter.sudoers.erb'] %>
+autopuppet_<%= R %>:
+  hq_proc: puppet_dist_sudoers
+  hq_rsrc: file_<%= R %>
+<% end %>  
+
+<% for R in ['ads.snmpd.conf.erb','caster.snmpd.conf.erb','click.snmpd.conf.erb','corpwww.snmpd.conf.erb','dmoads.snmpd.conf.erb','dnsexternal.snmpd.conf.erb','dnsinternal.snmpd.conf.erb','etl.snmpd.conf.erb','imgcss.snmpd.conf.erb','ldap.snmpd.conf.erb','mail.snmpd.conf.erb','monitoring.snmpd.conf.erb','reports.snmpd.conf.erb','scads.snmpd.conf.erb','stageads.snmpd.conf.erb','stormcenter.snmpd.conf.erb','uatstormcenter.snmpd.conf.erb'] %>
+autopuppet_<%= R %>:
+  hq_proc: puppet_dist_snmp
+  hq_rsrc: file_<%= R %>
+  
+<% end %>
+
+
+<% for NAME in ['initreqs','events','sessions','impressions','clicks'] %>
+<% for SUF in ['.log','.log.gz'] %>
+
+usage_<%= NAME %><%= SUF %>:
+  hq_rsrc: <%= NAME %><%= SUF %>
+  hq_proc: runmove_events
+<% end %>
+<% end %>

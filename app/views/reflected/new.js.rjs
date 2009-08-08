@@ -1,0 +1,2 @@
+page.replace_html 'activity', :partial => 'reflected/new'
+page.insert_html :top, 'activity', :partial => 'reflected/ed/closebutton'

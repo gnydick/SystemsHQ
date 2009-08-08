@@ -1,0 +1,5 @@
+<li class="hq_slice" style="list-style: none;">
+    <%= assign_hq_vserver_hq_slice_select(@hq_slices.reject {|x| @hq_vserver.hq_slices.include?(x)}) %>
+    <span class="remove">
+    <%= link_to_function "remove", "$(this).up('.hq_slice').remove()" %></span>
+</li>

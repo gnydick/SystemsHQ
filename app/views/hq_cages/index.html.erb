@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Hq site</th>
+    <th>Name</th>
+  </tr>
+
+<% @hq_cages.each do |hq_cage| %>
+  <tr>
+    <td><%=h hq_cage.hq_site_id %></td>
+    <td><%=h hq_cage.name %></td>
+    <td><%= link_to 'Show', hq_cage %></td>
+    <td><%= link_to 'Edit', edit_hq_cage_path(hq_cage) %></td>
+    <td><%= link_to 'Destroy', hq_cage, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hq_cage', new_hq_cage_path %>

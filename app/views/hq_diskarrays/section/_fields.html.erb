@@ -1,0 +1,15 @@
+<div id="hq_nic_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Interfaces', visual_effect(:toggle_blind, :hq_nics_editor) %>
+    </div>
+    <div id="hq_nics_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        <div class="header">
+            <%= add_hq_diskarray_hq_nic_link "Add a Network Interface" %>
+        </div>
+		<% end -%>
+        <div id="hq_nics" class="content">
+            <%= render :partial => 'hq_diskarrays/line/hq_nic', :collection => @hq_diskarray.hq_nics %>
+        </div>
+    </div>
+</div>

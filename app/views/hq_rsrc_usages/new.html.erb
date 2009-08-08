@@ -1,0 +1,19 @@
+<h1>New hq_rsrc_usage</h1>
+
+<% form_for(@hq_rsrc_usage) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :hq_proc_id %><br />
+    <%= f.text_field :hq_proc_id %>
+  </p>
+  <p>
+    <%= f.label :hq_rsrc_id %><br />
+    <%= f.text_field :hq_rsrc_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', hq_rsrc_usages_path %>

@@ -1,0 +1,34 @@
+<% for VS in [["app1","install11.lw.ls.bak","126"],["app6","reports16.lw.ls.bak","81"],
+["app5","repdev15.lw.ls.bak","85"],["app6","mon16.lw.ls.bak","16"],["app1","ads11.lw.ls.bak","21"],
+["app2","ads12.lw.ls.bak","22"],["app3","ads13.lw.ls.bak","23"],["app4","ads14.lw.ls.bak","24"],
+["app5","ads15.lw.ls.bak","25"],["app6","ads16.lw.ls.bak","26"],["app1","ads17.lw.ls.bak","27"],
+["app2","ads18.lw.ls.bak","28"],["app3","ads19.lw.ls.bak","29"],["app4","ads20.lw.ls.bak","30"],
+["app6","ads26.lw.ls.bak","36"],["app1","caster11.lw.ls.bak","61"],
+["app2","caster12.lw.ls.bak","62"],["app3","caster13.lw.ls.bak","63"],["app4","caster14.lw.ls.bak","64"],
+["app5","dmo15.lw.ls.bak","95"],
+["app6","dmo16.lw.ls.bak","94"],["app1","etl11.lw.ls.bak","51"],["app2","etl12.lw.ls.bak","52"],
+["app3","etl13.lw.ls.bak","53"],["app4","etl14.lw.ls.bak","54"],["app1","lb1.lw.ls.bak","124"],
+["app2","lb2.lw.ls.bak","125"],["app1","ns11.lw.ls.bak","7"],["app2","ns12.lw.ls.bak","8"],
+["app3","ns3.lw.ls.bak","11"],["app4","ns4.lw.ls.bak","12"],["app5","ns5.lw.ls.bak","13"],
+["app6","ns6.lw.ls.bak","14"],["app1","uatstormcenter11.lw.ls.bak","66"],
+["app3","stormcenter13.lw.ls.bak","43"],["app2","dmostormcenter12.lw.ls.bak","42"],
+["app1","stg11.lw.ls.bak","77"],["app5","stg15.lw.ls.bak","78"],["app1","db11.lw.ls.bak","121"],
+["app1","click11.lw.ls.bak","57"],["app2","click12.lw.ls.bak","58"],["app3","click13.lw.ls.bak","59"],
+["app4","click14.lw.ls.bak","60"],["app5","etl15.lw.ls.bak","55"],["app6","etl16.lw.ls.bak","56"],
+["app3","img13.lw.ls.bak","69"],["app4","img14.lw.ls.bak","70"],["app5","img15.lw.ls.bak","71"],
+["app3","ns3.lw.ls.bak","11"],["app4","ns4.lw.ls.bak","12"],["app5","ns5.lw.ls.bak","13"],
+["app6","ns6.lw.ls.bak","14"],["app5","mx15.lw.ls.bak","45"],["app6","mx16.lw.ls.bak","46"],
+["app5","devcaster15.lw.ls.bak","75"],["app4","ca14.lw.ls.bak","34"],["app5","ldap15.lw.ls.bak","35"],
+["app4","ldap14.lw.ls.bak","44"],["app6","uatcaster16.lw.ls.bak","76"],["app2","www12.lw.ls.bak","72"]] %>
+nic_eth0_<%= VS[1] %>:
+  name: eth0
+  ipaddr: 209.81.82.<%= VS[2] %>
+  hq_vserver: <%= VS[1] %>
+  hq_bridge_id: <%= Fixtures.identify(VS[0]+'_xenbr0') %>
+  
+nic_eth1_<%= VS[1] %>:
+  name: eth1
+  ipaddr: 10.64.177.<%= VS[2] %>
+  hq_vserver: <%= VS[1] %>
+  hq_bridge_id: <%= Fixtures.identify(VS[0]+'_xenbr1') %>
+<% end %>

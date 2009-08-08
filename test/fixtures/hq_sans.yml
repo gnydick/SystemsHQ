@@ -1,0 +1,6 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+drbd1:
+  hq_site: lw
+  name: drbd1
+

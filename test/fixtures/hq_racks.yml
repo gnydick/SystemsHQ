@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+<% for I in 1..2 %>
+lscage_rack<%= I %>:
+  hq_site: lw
+  hq_cage: lscage
+  name: Rack <%= I %>
+<% end %>
+
+
+
+<% for I in 1..2 %>
+lwcage_rack<%= I %>:
+  hq_site: lw
+  hq_cage: lwcage
+  name: Rack <%= I %>
+<% end %>
+
+

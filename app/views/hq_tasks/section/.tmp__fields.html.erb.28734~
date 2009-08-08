@@ -1,0 +1,34 @@
+<div id="hq_task_container" class="container">
+    <div class="title">
+        Name
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_task_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+<div id="hq_app_container" class="container">
+    <div class="title">
+        Application
+    </div>
+    <div id="hq_apps_editor" class="editor">
+        <div id="hq_apps" class="content">
+            <%= render :partial => 'hq_tasks/line/hq_app' %>
+        </div>
+    </div>
+</div>
+<div id="hq_proc_container" class="container">
+    <div class="title">
+        Processes
+    </div>
+    <div id="hq_procs_editor" class="editor">
+        <div class="header">
+            <%= add_hq_task_hq_proc_link "Add a Processes" %>
+        </div>
+        <div id="hq_procs" class="content">
+            <%= render :partial => 'hq_tasks/line/hq_proc', :collection => @hq_task.hq_procs %>
+        </div>
+    </div>
+</div>

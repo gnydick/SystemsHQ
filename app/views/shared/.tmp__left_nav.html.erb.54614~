@@ -1,0 +1,45 @@
+<ul>
+    Physical Assets
+    <li>
+        <%= link_to 'Servers', :hq_servers %>
+    </li>
+    <li>
+        <%= link_to 'Virtual Servers', :hq_vservers %>
+    </li>
+    <li>
+        <%= link_to 'Switches', :hq_switches %>
+    </li>
+	<li>
+        <%= link_to 'Firewalls', :hq_firewalls %>
+    </li>
+    <li>
+        <%= link_to 'Sites', :hq_sites %>
+    </li>
+    <li>
+        <%= link_to 'Racks', :hq_racks %>
+    </li>
+	<li>
+        <%= link_to 'SAN', :hq_sans %>
+    </li>
+	<li>
+        <%= link_to 'Disk Arrays', :hq_diskarrays %>
+    </li>
+</ul>
+<ul>
+    Systems Architecture
+    <li>
+        <%= link_to 'Systems', :hq_systems %>
+    </li>
+    <li>
+        <%= link_to 'Applications', :hq_apps %>
+    </li>
+    <li>
+        <%= link_to 'Tasks', :hq_tasks %>
+    </li>
+    <li>
+        <%= link_to 'Processes', :hq_procs %>
+    </li>
+    <li>
+        <%= link_to 'Resources', :hq_rsrcs %>
+    </li>
+</ul>

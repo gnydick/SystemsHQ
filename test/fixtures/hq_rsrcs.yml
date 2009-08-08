@@ -1,0 +1,35 @@
+<% for NAME in ['initreqs','events','sessions','impressions','clicks'] %>
+<% for SUF in ['.log','.log.gz'] %>
+
+<%= NAME %><%= SUF %>:
+  name: <%= NAME %><%= SUF %>
+<% end %>
+<% end %>
+
+requests.log.gz:
+  name: requests.log.gz
+  
+<% for P in ['ads.conf.erb','ads.snmpd.conf.erb','ads.sudoers.erb',
+'caster.snmpd.conf.erb','caster.sudoers.erb','click.snmpd.conf.erb',
+'corpwww.snmpd.conf.erb','corpwww.sudoers.erb','db.sudoers.erb',
+'dmoads.conf.erb','dmoads.snmpd.conf.erb','dmoads.sudoers.erb',
+'dnsexternal.snmpd.conf.erb','dnsexternal.sudoers.erb',
+'dnsinternal.snmpd.conf.erb','dnsinternal.sudoers.erb',
+'etl.snmpd.conf.erb','etl.sudoers.erb','imgcss.snmpd.conf.erb',
+'imgcss.sudoers.erb','iptables_53.erb','iptables_80.erb','iptables_8009.erb',
+'lb.sudoers.erb','ldap.snmpd.conf.erb','ldap.sudoers.erb',
+'mail.snmpd.conf.erb','mail.sudoers.erb','monitoring.snmpd.conf.erb',
+'ns.sudoers.erb','reports.snmpd.conf.erb','reports.sudoers.erb',
+'scads.snmpd.conf.erb','stageads.conf.erb','stageads.snmpd.conf.erb',
+'stageads.sudoers.erb','stormcenter.snmpd.conf.erb',
+'stormcenter.sudoers.erb','uatstormcenter.snmpd.conf.erb','uatstormcenter.sudoers.erb'] %>
+file_<%= P %>:
+  path: /var/lib/puppet/templates
+  name: <%= P %>
+<% end %>
+
+
+ 
+
+
+

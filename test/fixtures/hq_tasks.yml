@@ -1,0 +1,60 @@
+bootstrapnightly:
+  hq_app: etlpipeline
+  name: Bootstrap the Nightly Processing    
+  
+collect_events_logs:
+  hq_app: eventshttpd
+  name: Collect EventsHTTPd logs
+  
+  
+collect_click_logs:
+  hq_app: clickhttpd
+  name: Collect ClickHTTPd logs
+
+prodpub:
+  hq_app: opsportal
+  name: Publish Production Trafficking DB
+  
+demopub:
+  hq_app: opsportal
+  name: Publish Demo Trafficking DB
+
+upload_sb_prod:
+  hq_app: opsportal
+  name: Automated Stormbird Deployment to Production
+  
+upload_sb_prod26:
+  hq_app: opsportal
+  name: Automated Stormbird Deployment to Production Sandbox
+
+upload_sb_stage:
+  hq_app: opsportal
+  name: Automated Stormbird Deployment to Stage
+  
+upload_sb_demo:
+  hq_app: opsportal
+  name: Automated Stormbird Deployment to Demo
+  
+upload_sb_prv:
+  hq_app: opsportal
+  name: Automated Stormbird Deployment to Preview
+  
+upload_sb_dvr:
+  hq_app: opsportal
+  name: Automated Stormbird Deployment to DVR
+  
+systemshq:
+  hq_app: opsportal
+  name: SystemsHQ
+
+adscontdist:
+  hq_app: opsportal
+  name: Upload files to 'ad'.
+  
+password change:
+  hq_app: opsportal
+  name: Change Password for LW.LS.BAK Realm
+  
+autopuppet:
+  hq_app: puppet
+  name: Auto Check-In of puppetd from Each Server  

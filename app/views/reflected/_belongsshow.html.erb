@@ -1,0 +1,15 @@
+<% belongs_to_associations(@CcObjectClass).collect {|y| eval(y.name.to_s.camelize)}.each do |owner| -%>        
+
+<div class="container">
+    <div class="title">
+    	<%= link_to_function owner.screen_name, visual_effect(:toggle_blind, "content_#{owner.id}") %>
+    </div>
+    <div id="content_<%= owner.id %>" class="editor">
+        
+        <div id="hq_procs" class="content">
+            
+			<%= @object.send(owner.name.to_s.underscore).name %>
+        </div>
+    </div>
+</div>
+<% end -%>

@@ -1,0 +1,13 @@
+<p>
+  <b>Hq task:</b>
+  <%=h @hq_proc.hq_task_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @hq_proc.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_hq_proc_path(@hq_proc) %> |
+<%= link_to 'Back', hq_procs_path %>

@@ -1,0 +1,11 @@
+<div class="hq_diskarray">
+    <% new_or_existing = hq_diskarray_new.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_rack[#{new_or_existing}_hq_diskarray_attributes][#{hq_diskarray_new.id}]" %>
+    <% fields_for prefix, hq_diskarray_new do |hq_diskarray_form| -%>
+    <p>
+        Switch: <%= hq_diskarray_form.text_field :name %>
+       
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_diskarray').remove()" %></span>
+    </p>
+    <% end -%>
+</div>

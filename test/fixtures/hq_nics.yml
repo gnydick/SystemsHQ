@@ -1,0 +1,102 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+<% for I in 1..2 %>
+nic_eth00_fw<%= I %>:
+  name: eth0/0
+  hq_nichaving_type: HqFirewall
+  hq_nichaving: firewall<%= I %>
+
+nic_eth01_fw<%= I %>:
+  name: eth0/1
+  hq_nichaving_type: HqFirewall
+  hq_nichaving: firewall<%= I %>
+
+nic_eth03_fw<%= I %>:
+  name: eth0/3
+  hq_nichaving_type: HqFirewall
+  hq_nichaving: firewall<%= I %>
+
+nic_eth1_storage<%= I %>:
+  name: eth1
+  ipaddr: 10.64.176.<%= 207 + I %>
+  hq_nichaving_type: HqDiskarray
+  hq_nichaving: storage<%= I %>
+
+
+<% for X in 1..48 %>
+nic_switch<%= I %>_port<%= X %>:
+  hq_nichaving: lscage_switch<%= I %>
+  hq_nichaving_type: HqSwitch
+  name: g0/<%= X %>
+<% end %>
+
+<% end %>
+
+
+
+nic_switch_core3_port24:
+  hq_nichaving: lwcage_coreswitch3
+  hq_nichaving_type: HqSwitch
+  name: g0/24
+
+
+nic_switch_core4_port24:
+  hq_nichaving: lwcage_coreswitch4
+  hq_nichaving_type: HqSwitch
+  name: g0/24
+
+<% for NIC in [['eth0','g0/1','lb1.lw.ls.priv'],['eth1','g0/2','lb1.lw.ls.priv'],
+['ipmi','g0/5','app1.lw.ls.priv'],['ipmi','g0/8','app3.lw.ls.priv'],
+['ipmi','g0/11','app5.lw.ls.priv'],['eth0','g0/12','archive1.lw.ls.priv'],
+['eth1','g0/13','archive1.lw.ls.priv'],['ipmi','g0/14','archive1.lw.ls.priv'],
+['eth0','g0/15','storage1.lw.ls.priv'],['eth1','g0/16','storage1.lw.ls.priv'],
+['ipmi','g0/17','storage1.lw.ls.priv'],['eth0','g0/18','db1.lw.ls.priv'],
+['eth1','g0/19','db1.lw.ls.priv'],['ipmi','g0/20','db1.lw.ls.priv'],
+['eth2','g0/21','lb1.lw.ls.priv'],['eth3','g0/22','lb1.lw.ls.priv'],
+['eth3','g0/22','storage1.lw.ls.priv']] %>
+
+<%= NIC[2].gsub(/.lw.ls.priv/,'') %>_<%= NIC[0] %>:
+  name: <%= NIC[0] %>
+  hq_nichaving_type: HqServer
+  hq_nichaving: <%= NIC[2].gsub(/.lw.ls.priv/,'') %>
+
+<% end %>
+
+<% for NIC in [['eth0','g0/1','lb2.lw.ls.priv'],['eth1','g0/2','lb2.lw.ls.priv'],
+['ipmi','g0/5','app2.lw.ls.priv'],['ipmi','g0/8','app4.lw.ls.priv'],
+['ipmi','g0/11','app6.lw.ls.priv'],['eth0','g0/12','archive2.lw.ls.priv'],
+['eth1','g0/13','archive2.lw.ls.priv'],['ipmi','g0/14','archive2.lw.ls.priv'],
+['eth0','g0/15','storage2.lw.ls.priv'],['eth1','g0/16','storage2.lw.ls.priv'],
+['ipmi','g0/17','storage2.lw.ls.priv'],['eth0','g0/18','db2.lw.ls.priv'],
+['eth1','g0/19','db2.lw.ls.priv'],['ipmi','g0/20','db2.lw.ls.priv'],
+['eth2','g0/21','lb2.lw.ls.priv'],['eth3','g0/22','lb2.lw.ls.priv'],
+['eth3','g0/22','storage2.lw.ls.priv']] %>
+
+<%= NIC[2].gsub(/.lw.ls.priv/,'') %>_<%= NIC[0] %>:
+  name: <%= NIC[0] %>
+  hq_nichaving_type: HqServer
+  hq_nichaving: <%= NIC[2].gsub(/.lw.ls.priv/,'') %>
+
+<% end %>
+
+
+<% for X in 1..6 %>
+<% for I in [['lo','127.0.0.1'],['eth0',''],['peth1',''],['eth0.618',"209.81.91.#{197+X}"],['peth0.619',''],['eth0.619',''],['eth1',"10.64.176.#{197+X}"],['ipmi','']] %>
+app<%= X %>_<%= I[0] %>:
+  name: <%= I[0] %>
+  ipaddr: <%= I[1] %>
+  hq_nichaving_type: HqServer
+  hq_nichaving: app<%= X %>  
+<% end %>
+<% end %>
+
+<% for X in 1..6 %>
+app<%= X %>_xenbr0:
+  name: xenbr0
+  hq_nichaving_type: HqServer
+  hq_nichaving: app<%= X %>
+
+app<%= X %>_xenbr1:
+  name: xenbr1
+  hq_nichaving_type: HqServer
+  hq_nichaving: app<%= X %>
+<% end %>

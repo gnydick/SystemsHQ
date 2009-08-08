@@ -1,0 +1,9 @@
+<div id="hq_rsrc_container" class="container">
+    <div class="title">
+        Name<div style="float:right" class="button"><%= submit_tag "Update", :class => "button" %></div>
+    </div>
+    <div id="hq_rsrc_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+

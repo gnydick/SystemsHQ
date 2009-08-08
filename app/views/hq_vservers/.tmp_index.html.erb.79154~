@@ -1,0 +1,24 @@
+<h1>Listing hq_servers</h1>
+
+<table>
+  <tr>
+    <th>Hq site</th>
+    <th>Hq switchport</th>
+    <th>Name</th>
+  </tr>
+
+<% @hq_servers.each do |hq_server| %>
+  <tr>
+    <td><%=h hq_server.hq_site_id %></td>
+    <td><%=h hq_server.hq_switchport_id %></td>
+    <td><%=h hq_server.name %></td>
+    <td><%= link_to 'Show', hq_server %></td>
+    <td><%= link_to 'Edit', edit_hq_server_path(hq_server) %></td>
+    <td><%= link_to 'Destroy', hq_server, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hq_server', new_hq_server_path %>

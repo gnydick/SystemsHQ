@@ -1,0 +1,11 @@
+<tr>
+    <td class="detail">
+        <%= object.label %>
+    </td>
+    <td class="command">
+        <%= link_to 'Edit', edit_hq_switch_path(hq_switch) %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', hq_switch, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

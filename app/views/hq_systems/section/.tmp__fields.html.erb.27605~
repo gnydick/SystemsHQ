@@ -1,0 +1,29 @@
+<div id="hq_system_container" class="container">
+    <div class="title">
+        Name
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_system_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+<div id="hq_app_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Applications', visual_effect(:toggle_blind, :hq_apps_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_apps_editor" style="display:none;" class="editor">
+        <div class="footer">
+            <%= new_hq_app_link("Create New Application") %> | <%= assign_hq_app_link("Assign an Existing Application") %>
+        </div>
+        <div id="hq_apps" class="content">
+            <ul id="hq_apps_list">
+                <%= render :partial => 'hq_systems/line/hq_app', :collection => @hq_system.hq_apps %>
+            </ul>
+        </div>
+    </div>
+</div>

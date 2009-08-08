@@ -1,0 +1,15 @@
+<div id="hq_vlan_assignment_container" class="container">
+    <div class="title">
+        <%= link_to_function 'VLAN Assignments', visual_effect(:toggle_blind, :hq_vlan_assignments_editor) %>
+    </div>
+    <div id="hq_vlan_assignments_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        <div class="header">
+            <%= add_hq_vlan_hq_vlan_assignment_link "Add a Network Interface" %>
+        </div>
+		<% end -%>
+        <div id="hq_vlan_assignments" class="content">
+            <%= render :partial => 'hq_vlans/line/hq_vlan_assignment', :collection => @hq_vlan.hq_vlan_assignments %>
+        </div>
+    </div>
+</div>

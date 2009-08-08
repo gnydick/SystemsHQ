@@ -1,0 +1,14 @@
+<table class="indextable">
+        <colgroup>
+            <col class="detail"><col class="command">
+        </colgroup>
+        <tr>
+            <th class="detail">
+                Name 
+            </th>
+            <th class="command" colspan="2">
+                <%= link_to 'New', eval('new_'+@symbol_name+'_path') %>
+            </th>
+        </tr>
+        <%= render :partial => "shared/item", :collection => @objects %>
+    </table>

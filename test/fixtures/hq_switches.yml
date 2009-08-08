@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+lscage_switch1:
+  hq_rack: lscage_rack1
+  name: Switch 1
+  hq_site: lw
+
+lscage_switch2:
+  hq_rack: lscage_rack2
+  name: Switch 2
+  hq_site: lw
+  
+
+lwcage_coreswitch3:
+  hq_rack: lwcage_rack1
+  name: Core Switch 1
+  hq_site: lw
+  
+lwcage_coreswitch4:
+  hq_rack: lwcage_rack2
+  name: Core Switch 2
+  hq_site: lw

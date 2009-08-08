@@ -1,0 +1,16 @@
+<div class="hq_nic">
+    <% new_or_existing = hq_nic.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_server[#{new_or_existing}_hq_nic_attributes][]" %>
+    <% fields_for prefix, hq_nic do |hq_nic_form| -%>
+    <p>
+        Interface: <%= hq_nic_form.text_field :name %> IP Address: <%= hq_nic_form.text_field :ipaddr %><br />
+		<% if new_or_existing == 'existing' -%>
+		<% nics = HqNic.all(:conditions => "id != #{hq_nic.id}", :order => :name) %>
+		<% else -%>
+		<% nics = HqNic.all(:order => :name) %>		
+		<% end -%>
+		Connected To: <%= hq_nic_form.collection_select(:hq_remotenic_id, nics, :id, :hq_nichaving_label)%>
+        <%= link_to_function "remove", "$(this).up('.hq_nic').remove()" %>
+    </p>
+    <% end -%>
+</div>

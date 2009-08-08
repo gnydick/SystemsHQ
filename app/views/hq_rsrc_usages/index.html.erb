@@ -1,0 +1,22 @@
+<h1>Listing hq_rsrc_usages</h1>
+
+<table>
+  <tr>
+    <th>Hq proc</th>
+    <th>Hq rsrc</th>
+  </tr>
+
+<% @hq_rsrc_usages.each do |hq_rsrc_usage| %>
+  <tr>
+    <td><%=h hq_rsrc_usage.hq_proc_id %></td>
+    <td><%=h hq_rsrc_usage.hq_rsrc_id %></td>
+    <td><%= link_to 'Show', hq_rsrc_usage %></td>
+    <td><%= link_to 'Edit', edit_hq_rsrc_usage_path(hq_rsrc_usage) %></td>
+    <td><%= link_to 'Destroy', hq_rsrc_usage, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New hq_rsrc_usage', new_hq_rsrc_usage_path %>

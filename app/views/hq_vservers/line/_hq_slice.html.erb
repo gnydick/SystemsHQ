@@ -1,0 +1,4 @@
+<li class="hq_slice" style="list-style: none;">
+    <%= hq_vserver_hq_slice_select(@hq_slices, hq_slice.id) %><span class="remove">
+    <%= link_to_function "remove", "$(this).up('.hq_slice').remove()" %></span>
+</li>

@@ -1,0 +1,10 @@
+<div class="hq_cage">
+    <% new_or_existing = hq_cage.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_site[#{new_or_existing}_hq_cage_attributes][]" %>
+    <% fields_for prefix, hq_cage do |hq_cage_form| -%>
+    <p>
+        Cage: <%= hq_cage_form.text_field :name %>
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_cage').remove()" %></span>
+    </p>
+    <% end -%>
+</div>

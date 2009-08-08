@@ -1,0 +1,4 @@
+<% form_for :hq_site, :url => {:controller => :hq_sites, :action => :set } do |f| -%>
+Site <%=  site_select %>
+<%= site_referrer_hiddens %>
+<% end -%>

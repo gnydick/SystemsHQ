@@ -1,0 +1,11 @@
+<div class="hq_server">
+    <% new_or_existing = hq_server_new.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_rack[#{new_or_existing}_hq_server_attributes][#{hq_server_new.id}]" %>
+    <% fields_for prefix, hq_server_new do |hq_server_form| -%>
+    <p>
+        Server: <%= hq_server_form.text_field :name %>
+       
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_server').remove()" %></span>
+    </p>
+    <% end -%>
+</div>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+
+619:
+  name: 619
+  tag: 619
+
+620:
+  name: 620
+  tag: 620
+  
+618:
+  name: 618
+  tag: 618
+  
+901:
+  name: 901
+  tag: 901
+  
+trunk:
+  name: trunk

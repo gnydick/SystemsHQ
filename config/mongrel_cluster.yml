@@ -1,0 +1,8 @@
+--- 
+address: 10.64.177.16
+log_file: /var/log/mongrel/SystemsHQ.log
+port: 8020
+cwd: /srv/www/vhosts/opsportal/rails/SystemsHQ/
+environment: production
+pid_file: /var/run/mongrel/tmp/pids/mongrel.pid
+servers: 3

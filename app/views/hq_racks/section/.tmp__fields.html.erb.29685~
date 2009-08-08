@@ -1,0 +1,72 @@
+
+<div id="hq_rack_container" class="container">
+    <div class="title">
+        Name<div style="float:right" class="button"><%= submit_tag "Update", :class => "button" %></div>
+    </div>
+    <div id="hq_rack_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+
+<div id="hq_cage_container" class="container">
+    <div class="title">
+        Cage
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_cages_editor"  class="editor">
+        <%= render :partial => 'hq_racks/line/hq_cage' %>
+    </div>
+</div>
+
+<div id="hq_switch_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Switches	', visual_effect(:toggle_blind, :hq_switches_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_switches_editor" style="display:none;" class="editor">
+        <div class="header">
+            <%= new_hq_rack_hq_switch_link("Create New Switch") %> | <%= assign_hq_rack_hq_switch_link("Assign an Existing Switch") %>
+        </div>
+        <div id="hq_switches_list" class="content">
+            <%= render :partial => 'hq_racks/line/hq_switch', :collection => @hq_rack.hq_switches %>
+        </div>
+    </div>
+</div>
+
+<div id="hq_server_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Servers', visual_effect(:toggle_blind, :hq_servers_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_servers_editor" style="display:none;" class="editor">
+        <div class="header">
+            <%= new_hq_rack_hq_server_link("Create New Server") %> | <%= assign_hq_rack_hq_server_link("Assign an Existing Server") %>
+        </div>
+        <div id="hq_servers_list" class="content">
+            <%= render :partial => 'hq_racks/line/hq_server', :collection => @hq_rack.hq_servers %>
+        </div>
+    </div>
+</div>
+
+<div id="hq_diskarray_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Disk Arrays', visual_effect(:toggle_blind, :hq_diskarrays_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_diskarrays_editor" style="display:none;" class="editor">
+        <div class="header">
+            <%= new_hq_rack_hq_diskarray_link("Create New Disk Array") %> | <%= assign_hq_rack_hq_diskarray_link("Assign an Existing Disk Array") %>
+        </div>
+        <div id="hq_diskarrays_list" class="content">
+            <%= render :partial => 'hq_racks/line/hq_diskarray', :collection => @hq_rack.hq_diskarrays %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<tr>
+    <td class="detail">
+        <%= object.name %>
+    </td>
+    <td class="command">
+        <%= link_to 'Edit', edit_hq_vserver_path(hq_vserver) %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', hq_vserver, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

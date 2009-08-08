@@ -1,0 +1,1 @@
+Rack: <%= render :partial => 'hq_switches/line/hq_rack' %>

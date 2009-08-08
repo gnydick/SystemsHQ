@@ -1,0 +1,15 @@
+<div id="ppt_node_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Puppet Node Classifications', visual_effect(:toggle_blind, :ppt_nodes_editor) %>
+    </div>
+    <div id="ppt_nodes_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        <div class="header">
+            <%= add_ppt_class_ppt_node_hq_server_link "Add a Server to the Class" %> | <%= add_ppt_class_ppt_node_hq_vserver_link "Add a Virtual Server to the Class" %>
+        </div>
+		<% end -%>
+        <div id="ppt_nodes" class="content">
+            <%= render :partial => 'ppt_classes/line/ppt_node', :collection => @ppt_class.ppt_nodes %>
+        </div>
+    </div>
+</div>

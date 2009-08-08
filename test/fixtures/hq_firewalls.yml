@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+firewall1:
+  hq_site: lw
+  hq_rack: lwcage_rack1
+  name: Firewall 1
+
+firewall2:
+  hq_site: lw
+  hq_rack: lwcage_rack2
+  name: Firewall 2

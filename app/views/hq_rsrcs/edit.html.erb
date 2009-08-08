@@ -1,0 +1,16 @@
+<h1>Editing hq_rsrc</h1>
+
+<% form_for(@hq_rsrc) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @hq_rsrc %> |
+<%= link_to 'Back', hq_rsrcs_path %>

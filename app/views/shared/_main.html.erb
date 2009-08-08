@@ -1,0 +1,11 @@
+<div class="pagetitle" id="pageheader">
+    <span class="return"><%= link_to(@screen_name.pluralize,  :controller => @symbols_name, :page => params[:page]) %>
+    </span>
+	<span id="spinner" style="display:none"><%= image_tag('tan_spinner.gif') %></span>
+    <div id="site_scope" style="float:right">
+        <%= render :partial => 'shared/site_select_form' unless [ 'edit', 'select'].include?(params[:action]) %>
+    </div>
+</div>
+<div id="maincontent">
+<%= yield %>
+</div>

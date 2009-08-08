@@ -1,0 +1,11 @@
+<tr>
+    <td class="detail">
+        <%= progress_link(hq_firewall.name.to_s, hq_firewall_path(hq_firewall)) %>
+    </td>
+    <td class="command">
+        <%= progress_edit_link 'Edit', edit_hq_firewall_path(hq_firewall) %>
+    </td>
+		<td class="command">
+        <%= link_to 'Destroy', hq_firewall, :confirm => 'Are you sure?', :method => :delete %>
+    </td>
+</tr>

@@ -1,0 +1,30 @@
+<div id="hq_san_container" class="container">
+    <div class="title">
+        Name
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_san_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+
+<div id="hq_slice_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Disk Slices', visual_effect(:toggle_blind, :hq_slices_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_slices_editor" style="display:none;" class="editor">
+        <div class="header">
+            <%= new_hq_san_hq_slice_link "Create a new disk slice" %>
+        </div>
+        <div id="hq_slices" class="content">
+        	<ul id="hq_slices_list">
+            <%= render :partial => 'hq_sans/line/hq_slice', :collection => @hq_san.hq_slices %>
+			</ul>
+        </div>
+    </div>
+</div>

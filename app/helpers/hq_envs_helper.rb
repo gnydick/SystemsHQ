@@ -1,0 +1,2 @@
+module HqEnvsHelper
+end

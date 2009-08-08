@@ -1,0 +1,27 @@
+<% for VS in [["app1","install11.lw.ls.bak","10.64.177.126"],["app6","reports16.lw.ls.bak","10.64.177.81"],
+["app5","repdev15.lw.ls.bak","10.64.177.85"],["app6","mon16.lw.ls.bak","10.64.177.16"],["app1","ads11.lw.ls.bak","10.64.177.21"],
+["app2","ads12.lw.ls.bak","10.64.177.22"],["app3","ads13.lw.ls.bak","10.64.177.23"],["app4","ads14.lw.ls.bak","10.64.177.24"],
+["app5","ads15.lw.ls.bak","10.64.177.25"],["app6","ads16.lw.ls.bak","10.64.177.26"],["app1","ads17.lw.ls.bak","10.64.177.27"],
+["app2","ads18.lw.ls.bak","10.64.177.28"],["app3","ads19.lw.ls.bak","10.64.177.29"],["app4","ads20.lw.ls.bak","10.64.177.30"],
+["app6","ads26.lw.ls.bak","10.64.177.36"],["app1","caster11.lw.ls.bak","10.64.177.61"],
+["app2","caster12.lw.ls.bak","10.64.177.62"],["app3","caster13.lw.ls.bak","10.64.177.63"],["app4","caster14.lw.ls.bak","10.64.177.64"],
+["app5","dmo15.lw.ls.bak","10.64.177.95"],
+["app6","dmo16.lw.ls.bak","10.64.177.94"],["app1","etl11.lw.ls.bak","10.64.177.51"],["app2","etl12.lw.ls.bak","10.64.177.52"],
+["app3","etl13.lw.ls.bak","10.64.177.53"],["app4","etl14.lw.ls.bak","10.64.177.54"],["app1","lb1.lw.ls.bak","10.64.177.124"],
+["app2","lb2.lw.ls.bak","10.64.177.125"],["app1","ns11.lw.ls.bak","10.64.177.7"],["app2","ns12.lw.ls.bak","10.64.177.8"],
+["app3","ns3.lw.ls.bak","10.64.177.11"],["app4","ns4.lw.ls.bak","10.64.177.12"],["app5","ns5.lw.ls.bak","10.64.177.13"],
+["app6","ns6.lw.ls.bak","10.64.177.14"],["app1","uatstormcenter11.lw.ls.bak","10.64.177.66"],
+["app3","stormcenter13.lw.ls.bak","10.64.177.43"],["app2","dmostormcenter12.lw.ls.bak","10.64.177.42"],
+["app1","stg11.lw.ls.bak","10.64.177.77"],["app5","stg15.lw.ls.bak","10.64.177.78"],["app1","db11.lw.ls.bak","10.64.177.121"],
+["app1","click11.lw.ls.bak","10.64.177.57"],["app2","click12.lw.ls.bak","10.64.177.58"],["app3","click13.lw.ls.bak","10.64.177.59"],
+["app4","click14.lw.ls.bak","10.64.177.60"],["app5","etl15.lw.ls.bak","10.64.177.55"],["app6","etl16.lw.ls.bak","10.64.177.56"],
+["app3","img13.lw.ls.bak","10.64.177.69"],["app4","img14.lw.ls.bak","10.64.177.70"],["app5","img15.lw.ls.bak","10.64.177.71"],
+["app3","ns3.lw.ls.bak","10.64.177.11"],["app4","ns4.lw.ls.bak","10.64.177.12"],["app5","ns5.lw.ls.bak","10.64.177.13"],
+["app6","ns6.lw.ls.bak","10.64.177.14"],["app5","mx15.lw.ls.bak","10.64.177.45"],["app6","mx16.lw.ls.bak","10.64.177.46"],
+["app5","devcaster15.lw.ls.bak","10.64.177.75"],["app4","ca14.lw.ls.bak","10.64.177.34"],["app5","ldap15.lw.ls.bak","10.64.177.35"],
+["app4","ldap14.lw.ls.bak","10.64.177.44"],["app6","uatcaster16.lw.ls.bak","10.64.177.76"],["app2","www12.lw.ls.bak","10.64.177.72"]] %>
+<%= VS[1] %>:
+  name: <%= VS[1] %>
+  hq_server: <%= VS[0] %>
+
+<% end %>

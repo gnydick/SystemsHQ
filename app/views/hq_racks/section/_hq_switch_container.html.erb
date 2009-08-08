@@ -1,0 +1,16 @@
+<div class="title">
+    <%= link_to_function 'Switchs', visual_effect(:toggle_blind, :hq_switches_editor) %>
+    <div style="float:right" class="button">
+        <%= submit_tag "Update", :class => "button" %>
+    </div>
+</div>
+<div id="hq_switches_editor" style="display:none;" class="editor">
+    <div class="header">
+        <%= add_hq_switch_link "New Switch" %> | <%= assign_hq_switch_link "Assign Existing Switch" %>
+    </div>
+    <div id="hq_switches">
+    	
+        <%= render :partial => 'hq_racks/line/hq_switch', :collection => @hq_rack.hq_switches %>
+		
+    </div>
+</div>

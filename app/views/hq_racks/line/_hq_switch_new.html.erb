@@ -1,0 +1,11 @@
+<div class="hq_switch">
+    <% new_or_existing = hq_switch_new.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_rack[#{new_or_existing}_hq_switch_attributes][#{hq_switch_new.id}]" %>
+    <% fields_for prefix, hq_switch_new do |hq_switch_form| -%>
+    <p>
+        Switch: <%= hq_switch_form.text_field :name %>
+       
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_switch').remove()" %></span>
+    </p>
+    <% end -%>
+</div>

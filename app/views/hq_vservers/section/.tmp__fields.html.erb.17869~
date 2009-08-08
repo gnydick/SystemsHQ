@@ -1,0 +1,18 @@
+<div id="hq_nic_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Interfaces', visual_effect(:toggle_blind, :hq_nics_editor) %>
+        <div style="float:right" class="button">
+            <%= submit_tag "Update", :class => "button" %>
+        </div>
+    </div>
+    <div id="hq_nics_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        <div class="header">
+            <%= add_hq_vserver_hq_nic_link "Add a Network Interface" %>
+        </div>
+		<% end -%>
+        <div id="hq_nics" class="content">
+            <%= render :partial => 'hq_vservers/line/hq_nic', :collection => @hq_vserver.hq_nics %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div id="hq_site_container" class="container">
+    <div class="title">
+       Site Name<div style="float:right" class="button"><%= submit_tag "Update", :class => "button" %></div>
+    </div>
+    <div id="hq_site_name" class="editor">
+        <%= f.text_field :name %>
+    </div>
+</div>
+
+<div id="hq_cage_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Cages', visual_effect(:toggle_blind, :hq_cages_editor) %><div style="float:right" class="button"><%= submit_tag "Update", :class => "button" %></div>
+    </div>
+    <div id="hq_cages_editor" style="display:none;" class="editor">
+        <div class="header">
+            <%= add_hq_cage_link "Create a new Cage" %>
+        </div>
+		<div id="hq_cages" class="content">
+            <%= render :partial => 'hq_sites/line/hq_cage', :collection => @hq_site.hq_cages %>
+        </div>
+        
+    </div>
+</div>
+

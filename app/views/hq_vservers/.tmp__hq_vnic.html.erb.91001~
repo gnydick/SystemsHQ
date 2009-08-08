@@ -1,0 +1,10 @@
+<div class="hq_vserver">
+    <% new_or_existing = hq_vserver.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_server[#{new_or_existing}_hq_vserver_attributes][]" %>
+    <% fields_for prefix, hq_vserver do |hq_vserver_form| -%>
+    <p>
+        Virtual Server: <%= hq_vserver_form.text_field :name %>
+        <%= link_to_function "remove", "$(this).up('.hq_vserver').remove()" %>
+    </p>
+    <% end -%>
+</div>

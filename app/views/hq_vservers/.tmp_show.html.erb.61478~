@@ -1,0 +1,18 @@
+<p>
+  <b>Hq site:</b>
+  <%=h @hq_server.hq_site_id %>
+</p>
+
+<p>
+  <b>Hq switchport:</b>
+  <%=h @hq_server.hq_switchport_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @hq_server.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_hq_server_path(@hq_server) %> |
+<%= link_to 'Back', hq_servers_path %>

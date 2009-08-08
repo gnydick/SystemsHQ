@@ -1,0 +1,10 @@
+<div class="hq_app">
+    <% new_or_existing = hq_app.new_record? ? 'new' : 'existing' %>
+    <% prefix = "hq_system[#{new_or_existing}_hq_app_attributes][#{hq_app.id}]" %>
+    <% fields_for prefix, hq_app do |hq_app_form| -%>
+    <p>
+        Name: <%= hq_app_form.text_field :name %>       
+        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_app').remove()" %></span>
+    </p>
+    <% end -%>
+</div>

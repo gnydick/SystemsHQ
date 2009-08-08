@@ -1,0 +1,9 @@
+<div class="line">
+<% new_or_existing = @object.new_record? ? 'new' : 'existing' %>
+<% prefix = "#{@item.class.name.to_s.underscore}" %>
+<% keys = @object.attributes.keys.reject {|y|  y.match('id$').nil? == false or y.match('_type').nil? == false or y.match('_at').nil? == false} -%>
+<% keys.each do |key| -%>
+<%= label_tag prefix+"[#{key}]", key %>: <%= text_field_tag prefix+"[#{key}]",  @object.send(key) %>
+<% end -%>
+
+</div>
