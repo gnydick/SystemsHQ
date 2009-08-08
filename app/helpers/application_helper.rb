@@ -25,7 +25,7 @@ module ApplicationHelper
   def add_has_many_link(owns)
     link_to_function "New #{eval(owns.name.to_s.singularize.camelize).screen_name}" do |page| 
       page.insert_html :top, owns.name.to_s+'_list', :partial => 'reflected/has_many_line',
-      :locals => { :x => @item.send(owns.name).new }      
+      :locals => { :x => @item.send(owns.name).new }  
     end 
   end 
   

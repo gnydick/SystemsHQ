@@ -1,4 +1,7 @@
 class HqProc < ActiveRecord::Base
+  acts_as_list :scope => :hq_task, :order => "position"
+  
+  
   
   @@screen_name = 'Process'
   

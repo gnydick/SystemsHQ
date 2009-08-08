@@ -27,6 +27,7 @@ class PptClass < ActiveRecord::Base
   
   
   validates_associated  :ppt_nodes
+  validates_presence_of :name
   
   after_update :save_ppt_nodes
   

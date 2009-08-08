@@ -33,7 +33,7 @@ class HqDiskarray < ActiveRecord::Base
   belongs_to :hq_rack
   
   has_many :hq_nics, :as => :hq_nichaving, :dependent => :destroy
-  validates_presence_of :name,  :hq_site_id
+  validates_presence_of :name
   
   after_update :save_hq_nics
   

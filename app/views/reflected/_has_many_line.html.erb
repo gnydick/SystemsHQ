@@ -6,7 +6,7 @@
 		<% if key.match('_id$') -%>
 			<% collection_class = key.gsub(/_id$/,'').camelize -%>		
 			<% if key == @item.class.name.underscore+'_id' %>
-				<%= hidden_field_tag prefix+"[#{key}]", @item.id%>
+				<%#= hidden_field_tag( prefix+"[#{key}]", @item.id.to_s )%>
 			<% else -%>			
 				<%= label_tag prefix+"[#{key}]", eval(collection_class).screen_name %>: <%= inline_collection_select(prefix,key,collection_class, x.send(key))%>			
 			<% end -%>

@@ -1,0 +1,18 @@
+<div id="hq_task_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Tasks', visual_effect(:toggle_blind, :hq_tasks_editor) %>
+    </div>
+    <div id="hq_tasks_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        <div class="header">
+            <%= add_hq_app_hq_task_link "Add a Task" %>
+        </div>
+		<% end -%>
+        <div class="content">
+        	<ul id="hq_tasks">
+            <%= render :partial => 'hq_apps/line/hq_task', :collection => @item.hq_tasks %>
+			</ul>
+        </div>
+		<%= sortable_element('hq_tasks', :url => { :controller => :hq_tasks, :action => :order }) %>
+    </div>
+</div>

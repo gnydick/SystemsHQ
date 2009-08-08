@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :syshq_nav_section_items
+
+  map.resources :syshq_nav_sections
+
   
   map.resources :ppt_classes
   

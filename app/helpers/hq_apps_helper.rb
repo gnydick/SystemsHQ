@@ -12,4 +12,10 @@ module HqAppsHelper
   end  
   
   
+  def add_hq_app_hq_task_link(name) 
+    link_to_function name do |page| 
+      page.insert_html :top, :hq_tasks, :partial => 'hq_apps/line/hq_task.html', :object => HqProc.new
+    end 
+  end 
+  
 end

@@ -1,7 +1,21 @@
 class HqProcsController < ApplicationController
-  
-  
   before_filter :set_globals
+  
+  def order
+    params[:hq_procs].each_index do |i|
+      hq_proc = HqProc.find(params[:hq_procs][i])
+      hq_proc.position = i + 1
+      hq_proc.save
+    end
+    
+    respond_to do |format|      
+      format.js   { render :template => 'reflected/order' } if request.xhr? 
+      format.html { render :template => 'reflected/index' }      
+    end
+  end
+  
+  
+  
   # GET /hq_procs
   # GET /hq_procs.xml
   @page = ''

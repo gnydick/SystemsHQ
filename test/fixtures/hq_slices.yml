@@ -1,7 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 <% for VS in [["app1","install11.lw.ls.bak","10.64.177.126"],["app6","reports16.lw.ls.bak","10.64.177.81"],
-["app5","repdev15.lw.ls.bak","10.64.177.85"],["app6","mon16.lw.ls.bak","10.64.177.16"],["app1","ads11.lw.ls.bak","10.64.177.21"],
+["app5","repdev15.lw.ls.bak","10.64.177.85"],["app1","ads11.lw.ls.bak","10.64.177.21"],
 ["app2","ads12.lw.ls.bak","10.64.177.22"],["app3","ads13.lw.ls.bak","10.64.177.23"],["app4","ads14.lw.ls.bak","10.64.177.24"],
 ["app5","ads15.lw.ls.bak","10.64.177.25"],["app6","ads16.lw.ls.bak","10.64.177.26"],["app1","ads17.lw.ls.bak","10.64.177.27"],
 ["app2","ads18.lw.ls.bak","10.64.177.28"],["app3","ads19.lw.ls.bak","10.64.177.29"],["app4","ads20.lw.ls.bak","10.64.177.30"],
@@ -61,5 +61,15 @@ slice_vserver_<%= VS[1] %>_db:
   hq_vserver: <%= VS[1] %>
   name: <%= VS[1].gsub(/.lw.ls.bak/,'') %>_db
   size: 16
+
+<% end %>
+
+
+<% for VS in [["app6","mon16.lw.ls.bak","10.64.177.16"]] %>
+slice_vserver_<%= VS[1] %>_db:
+  hq_san: drbd1
+  hq_vserver: <%= VS[1] %>
+  name: <%= VS[1].gsub(/.lw.ls.bak/,'') %>_db
+  size: 24
 
 <% end %>

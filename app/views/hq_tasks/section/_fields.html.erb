@@ -1,0 +1,19 @@
+<div id="hq_proc_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Processes', visual_effect(:toggle_blind, :hq_procs_editor) %>
+    </div>
+    <div id="hq_procs_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        <div class="header">
+            <%= add_hq_task_hq_proc_link "Add a Process" %>
+        </div>
+		<% end -%>
+        <div id="sortlist_hq_procs" class="content">
+        	<ul id="hq_procs">
+            <%= render :partial => 'hq_tasks/line/hq_proc', :collection => @item.hq_procs %>
+			</ul>
+        </div>
+		<%= sortable_element('hq_procs', :url => { :controller => :hq_procs, :action => :order }) %>
+    </div>
+</div>
+

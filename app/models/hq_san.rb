@@ -23,7 +23,7 @@ class HqSan < ActiveRecord::Base
   
   
   
-  validates_presence_of :name,  :hq_site_id
+  validates_presence_of :name
   validates_associated :hq_slices, :hq_diskarrays
   
   after_update :save_hq_slices, :save_hq_diskarrays

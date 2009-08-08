@@ -21,6 +21,7 @@ class HqRsrc < ActiveRecord::Base
   
   
   validates_associated :hq_rsrc_usages
+  validates_presence_of :name
   
   has_many :hq_rsrc_usages
   has_many :hq_procs, :through => :hq_rsrc_usages

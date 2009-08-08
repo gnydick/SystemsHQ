@@ -1,48 +1,9 @@
-<ul>
-    Physical Assets
+<% SyshqNavSection.display.each do |section| -%>
+<ul><%= section.name %>
+	<% section.displayed_items.each do |item| -%>
     <li>
-        <%= link_to 'Servers', :hq_servers %>
+        <%= link_to item.name, :controller => item.cntrlr, :action => 'index' %>
     </li>
-    <li>
-        <%= link_to 'Virtual Servers', :hq_vservers %>
-    </li>
-    <li>
-        <%= link_to 'Switches', :hq_switches %>
-    </li>
-	<li>
-        <%= link_to 'VLANs', :hq_vlans %>
-    </li>
-	<li>
-        <%= link_to 'Firewalls', :hq_firewalls %>
-    </li>
-    <li>
-        <%= link_to 'Sites', :hq_sites %>
-    </li>
-    <li>
-        <%= link_to 'Racks', :hq_racks %>
-    </li>
-	<li>
-        <%= link_to 'SAN', :hq_sans %>
-    </li>
-	<li>
-        <%= link_to 'Disk Arrays', :hq_diskarrays %>
-    </li>
+    <% end -%>
 </ul>
-<ul>
-    Systems Architecture
-    <li>
-        <%= link_to 'Systems', :hq_systems %>
-    </li>
-    <li>
-        <%= link_to 'Applications', :hq_apps %>
-    </li>
-    <li>
-        <%= link_to 'Tasks', :hq_tasks %>
-    </li>
-    <li>
-        <%= link_to 'Processes', :hq_procs %>
-    </li>
-    <li>
-        <%= link_to 'Resources', :hq_rsrcs %>
-    </li>
-</ul>
+<% end -%>

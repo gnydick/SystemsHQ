@@ -1,15 +1,26 @@
 class HqTasksController < ApplicationController
-  
-  
   before_filter :set_globals
+  
+   def order
+    params[:hq_tasks].each_index do |i|
+      hq_task = HqTask.find(params[:hq_tasks][i])
+      hq_task.position = i + 1
+      hq_task.save
+    end
+    
+    respond_to do |format|      
+      format.js    if request.xhr? 
+      format.html { render :template => 'reflected/index' }      
+    end
+  end
+  
+  
   # GET /hq_tasks
   # GET /hq_tasks.xml
-  @page = ''
   def index
-    @objects = HqTask.all(:order => 'name ASC').paginate :page => params[:page], :per_page => 10
-    
-    
-    
+    app_id = params[:hq_app_id].to_i > 0 ? params[:hq_app_id].to_i : HqApp.all.collect(&:id)
+    hq_tasks = HqTask.by_application(app_id)
+    @objects = hq_tasks.paginate :page => params[:page], :per_page => 10
     respond_to do |format|
       format.html { render :template => 'reflected/index' }
       format.xml  { render :xml => @objects }
@@ -41,10 +52,6 @@ class HqTasksController < ApplicationController
   # GET /hq_tasks/1/edit
   def edit
     @item = @object = @hq_task = HqTask.find(params[:id])
-    
-    
-    
-    @hq_slices = HqSlice.by_site(cookies[:hq_site_id])
     respond_to do |format|
       format.js { render :template => 'reflected/edit' } if request.xhr?
       format.html { render :template => 'reflected/edit' }

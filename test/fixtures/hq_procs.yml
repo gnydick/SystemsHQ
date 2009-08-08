@@ -21,9 +21,26 @@ puppet_dist_sudoers:
   hq_task: autopuppet
   name: sudo config distribution 
 
-  
-  
-  
 puppet_dist_snmp:
   hq_task: autopuppet
   name: snmpd config distribution
+  
+puppet_dist_nrpe.cfg:
+  hq_task: autopuppet
+  name: nrpe config distribution
+
+puppet_dist_puppet_configs:
+  hq_task: autopuppet
+  name: puppet config distribution
+
+puppet_dist_resolv.conf:
+  hq_task: autopuppet
+  name: resolv.conf distribution
+
+puppet_dist_routes:
+  hq_task: autopuppet
+  name: static routes distribution
+
+puppet_dist_sshd_conf:
+  hq_task: autopuppet
+  name: sshd config distribution

@@ -1,4 +1,5 @@
 class HqVserver < ActiveRecord::Base
+  default_scope :order => 'name ASC'
   named_scope :by_site, lambda { |site| {:joins => :hq_server,  :conditions => ['hq_servers.hq_site_id=?', site], :order => 'name ASC' }}
   named_scope :by_server, lambda { |server| {:conditions => ['hq_server_id in (?)', server], :order => 'name ASC' }}
   
@@ -12,7 +13,7 @@ class HqVserver < ActiveRecord::Base
   has_many :hq_slices
   
   validates_associated  :hq_vnics, :hq_slices, :ppt_nodes
-  validates_presence_of :name, :hq_server_id
+  validates_presence_of :name
   
   after_update :save_hq_vnics, :save_hq_slices, :save_ppt_nodes
   
@@ -25,7 +26,7 @@ class HqVserver < ActiveRecord::Base
   
   @@screen_name = 'Virtual Server'
   
-  
+ 
   
   def screen_name
     return @@screen_name

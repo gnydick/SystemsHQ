@@ -1,4 +1,5 @@
 class PptNode < ActiveRecord::Base
+
   
   belongs_to :puppetized_node, :polymorphic => :true
   belongs_to :ppt_class
@@ -16,5 +17,6 @@ class PptNode < ActiveRecord::Base
   def self.excluded_from_reflected
     return [:ppt_nodes]
   end
+
   
 end

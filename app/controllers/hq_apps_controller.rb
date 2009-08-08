@@ -8,6 +8,9 @@ class HqAppsController < ApplicationController
   def index
     @objects = HqApp.all(:order => 'name ASC').paginate :page => params[:page], :per_page => 10
     
+    system_id = params[:hq_system_id].to_i > 0 ? params[:hq_system_id].to_i : HqSystem.all.collect(&:id)
+    hq_apps = HqApp.by_system(system_id)
+    @objects = hq_apps.paginate :page => params[:page], :per_page => 10
     
     
     respond_to do |format|
@@ -40,7 +43,7 @@ class HqAppsController < ApplicationController
   
   # GET /hq_apps/1/edit
   def edit
-   @item = @object = @hq_app = HqApp.find(params[:id])
+    @item = @object = @hq_app = HqApp.find(params[:id])
     
     
     
@@ -80,14 +83,14 @@ class HqAppsController < ApplicationController
     @list = HqApp.all(:order => :name)
     @item = HqApp.find(params[:id])
     
-   params[:hq_app][:new_hq_task_attributes] ||= {}
+    params[:hq_app][:new_hq_task_attributes] ||= {}
     params[:hq_app][:existing_hq_task_attributes] ||= {}
     
     
     @hq_app = HqApp.find(params[:id])
     respond_to do |format|
       if @hq_app.update_attributes(params[:hq_app])
-     
+        
         flash[:notice] = 'Application was successfully updated.'
         format.js if request.xhr?
         format.html { redirect_to :action => "edit", :template => 'reflected/edit' }

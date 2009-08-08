@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090807005249) do
+ActiveRecord::Schema.define(:version => 20090808163337) do
 
   create_table "hq_apps", :force => true do |t|
     t.integer  "hq_system_id"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20090807005249) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
   end
 
   create_table "hq_racks", :force => true do |t|
@@ -152,6 +153,7 @@ ActiveRecord::Schema.define(:version => 20090807005249) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
   end
 
   create_table "hq_vlan_assignments", :force => true do |t|
@@ -207,5 +209,23 @@ ActiveRecord::Schema.define(:version => 20090807005249) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "syshq_nav_section_items", :force => true do |t|
+    t.integer  "syshq_nav_section_id"
+    t.boolean  "view"
+    t.integer  "position"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "cntrlr"
+  end
+
+  create_table "syshq_nav_sections", :force => true do |t|
+    t.boolean  "view"
+    t.integer  "position"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
