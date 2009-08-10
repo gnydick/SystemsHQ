@@ -3,7 +3,7 @@ class HqEnvsController < ApplicationController
   # GET /hq_envs
   # GET /hq_envs.xml
   def index
-    @hq_envs = HqEnv.paginate :page => params[:page], :per_page => 10
+    @hq_envs = HqEnv.paginate :page => params[:page], :per_page => 20
     
     respond_to do |format|
       format.html { render :template => 'shared/index' }

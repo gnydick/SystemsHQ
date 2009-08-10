@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="title">
+        <%= process.name %><%= toggle_blind_link(': Resources', "resources_#{process.id}") %>
+    </div>
+    <div id="<%= "resources_#{process.id}"  %>" class="editor" style="display:none;">
+        <%= render :partial => 'hq_systems/section/resource', :collection => process.hq_rsrcs.sort {|x,y| x.name <=> y.name } %>
+    </div>
+</div>

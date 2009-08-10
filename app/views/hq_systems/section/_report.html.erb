@@ -1,0 +1,9 @@
+<div class="container" style="font-size:1.8em;">
+    <div class="title">
+        <%= @object.name %>: Applications
+    </div>
+    <div class="editor">
+    	
+        <%= render :partial => 'hq_systems/section/application', :collection => @object.hq_apps.sort {|x,y| x.name <=> y.name }%>
+    </div>
+</div>

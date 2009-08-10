@@ -1,8 +1,13 @@
-<div class="hq_rsrc">
-    
-        Resource: <%= hq_proc_hq_rsrc_select(HqRsrc.by_name, hq_rsrc.id) %>
-        <% if params[:action] == 'edit' -%>
-        <span class="remove"><%= link_to_function "remove", "$(this).up('.hq_rsrc').remove()" %></span>
-		<% end -%>
+<table class="indextable">
+    <tr>
 
-</div>
+        <th class="detail">
+            Select Resources
+        </th>
+    </tr>
+    <tr>
+        <td class="detail">
+            <%= assign_hq_proc_hq_rsrc_select %>
+        </td>
+    </tr>
+</table>

@@ -2,7 +2,7 @@
    
     
     <p>
-        <%= assign_hq_vserver_ppt_class_select(ppt_class.new_record? ? 0 : ppt_class.id) %>
+        <%= assign_hq_vserver_ppt_class_select(ppt_class ?  ppt_class.id : 0) %>
         <% if params[:action] == 'edit' -%>
 		<span class="remove"><%= link_to_function "remove", "$(this).up('.ppt_class').remove()" %></span>
 		<% end -%>

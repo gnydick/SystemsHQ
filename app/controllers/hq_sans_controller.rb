@@ -6,7 +6,7 @@ class HqSansController < ApplicationController
   # GET /hq_sans.xml
   @page = ''
   def index
-    @objects = HqSan.by_site(@hq_site).paginate :page => params[:page], :per_page => 10
+    @objects = HqSan.by_site(@hq_site).paginate :page => params[:page], :per_page => 20
     
     
     

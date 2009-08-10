@@ -1,0 +1,14 @@
+physassets:
+  view: true
+  position: 3
+  name: Physical Assets
+  
+sysarch:
+  view: true
+  position: 2
+  name: Systems Architecture
+  
+sysmgmt:
+  view: true
+  position: 1
+  name: Systems Management

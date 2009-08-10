@@ -1,2 +1,20 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+_use a key /legend
+r  Mouse  Over  title  to  give description  of  what  that Section is II What are resources?"
+deferred - add acts_as_auditable
+deferred - add entity relationship documentation
+deferred - user guide
+fixed - order the nav lists in order of hierarchy
+fixed - Make puppet assignment multi select
+fixed - Make resource assignment multi select
+fixed - filter processes by Application and task
+deferred - filter resources by Application and task, additionally
+
+Things To  See 
+-dependencies - 
+-description of each application
+- links between apps/systems through resources
+- Explore link between deployed system and puppet class
+- how do I answer "Where is a resource (now)?"

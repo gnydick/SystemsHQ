@@ -6,14 +6,20 @@ class HqDiskarraysController < ApplicationController
   # GET /hq_diskarrays.xml
   
   def index
+    @filters = Hash.new
     
+    HqDiskarray.filters.each do |filter|
+      value = params[filter.to_s+'_id'].to_i
+      @filters[filter.to_s] = Array.new
+      if value > 0
+        @filters[filter.to_s] = eval(filter.to_s.camelize).find(value).id
+      else
+        @filters[filter.to_s] = eval(filter.to_s.camelize).all.collect(&:id)
+      end
+    end
     
-    rack_id = params[:hq_rack_id].to_i > 0 ? params[:hq_rack_id].to_i : HqRack.by_site(@hq_site).collect(&:id)
-    san_id = params[:hq_san_id].to_i > 0 ? params[:hq_san_id].to_i : HqSan.by_site(@hq_site).collect(&:id)
-    
-    hq_diskarrays = HqDiskarray.by_rack(rack_id).by_san(san_id)
-    
-    @objects = hq_diskarrays.paginate :page => params[:page], :per_page => 10
+    hq_diskarrays = HqDiskarray.by_rack(@filters['hq_rack']).by_san(@filters['hq_san'])
+    @objects = hq_diskarrays.paginate :page => params[:page], :per_page => 20
     
     respond_to do |format|
       format.html { render :template => 'reflected/index' }

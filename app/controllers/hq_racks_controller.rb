@@ -5,12 +5,19 @@ class HqRacksController < ApplicationController
   # GET /hq_racks.xml
   def index
     
-    cage_id = params[:hq_cage_id].to_i > 0 ? params[:hq_cage_id].to_i : HqCage.by_site(@hq_site).collect(&:id)
+    @filters = Hash.new
+    HqRack.filters.each do |filter|
+      value = params[filter.to_s+'_id'].to_i
+      @filters[filter.to_s] = Array.new
+      if value > 0
+        @filters[filter.to_s] = eval(filter.to_s.camelize).find(value).id
+      else
+        @filters[filter.to_s] = eval(filter.to_s.camelize).all.collect(&:id)
+      end
+    end
     
-    
-    hq_racks = HqRack.by_cage(cage_id)
-    
-    @objects = hq_racks.paginate :page => params[:page], :per_page => 10
+    hq_racks = HqRack.by_cage(@filters['hq_cage'])
+    @objects = hq_racks.paginate :page => params[:page], :per_page => 20
     respond_to do |format|
       format.html { render :template => 'reflected/index' }
       format.xml  { render :xml => @objects }

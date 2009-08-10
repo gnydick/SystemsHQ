@@ -30,7 +30,7 @@ class HqSitesController < ApplicationController
   # GET /hq_sites
   # GET /hq_sites.xml
   def index
-    @objects = HqSite.all(:order => 'name ASC').paginate :page => params[:page], :per_page => 10
+    @objects = HqSite.all(:order => 'name ASC').paginate :page => params[:page], :per_page => 20
     
     
     

@@ -5,7 +5,5 @@
     <td class="command">
         <%= progress_edit_link 'Edit', eval('edit_'+item.class.name.underscore+'_path'+'(item)') %>
     </td>
-		<td class="command">
-        <%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
-    </td>
+    <%= render :partial => item.class.name.underscore.pluralize+'/line/command', :object => item %>
 </tr>

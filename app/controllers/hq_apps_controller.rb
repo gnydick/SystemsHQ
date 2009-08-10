@@ -6,12 +6,19 @@ class HqAppsController < ApplicationController
   # GET /hq_apps.xml
   @page = ''
   def index
-    @objects = HqApp.all(:order => 'name ASC').paginate :page => params[:page], :per_page => 10
+     @filters = Hash.new
+    HqApp.filters.each do |filter|
+      value = params[filter.to_s+'_id'].to_i
+      @filters[filter.to_s] = Array.new
+      if value > 0
+        @filters[filter.to_s] = eval(filter.to_s.camelize).find(value).id
+      else
+        @filters[filter.to_s] = eval(filter.to_s.camelize).all.collect(&:id)
+      end
+    end
     
-    system_id = params[:hq_system_id].to_i > 0 ? params[:hq_system_id].to_i : HqSystem.all.collect(&:id)
-    hq_apps = HqApp.by_system(system_id)
-    @objects = hq_apps.paginate :page => params[:page], :per_page => 10
-    
+    hq_apps = HqApp.by_system(@filters['hq_system'])
+    @objects = hq_apps.paginate :page => params[:page], :per_page => 20
     
     respond_to do |format|
       format.html { render :template => 'reflected/index' }
@@ -60,6 +67,8 @@ class HqAppsController < ApplicationController
     @hq_app = HqApp.new(params[:hq_app])
     params[:hq_app][:new_hq_task_attributes] ||= {}
     params[:hq_app][:existing_hq_task_attributes] ||= {}
+    params[:hq_app][:new_ppt_class_attributes] ||= {}
+    params[:hq_app][:existing_ppt_class_attributes] ||= {}
     
     respond_to do |format|
       if @hq_app.save
@@ -85,6 +94,8 @@ class HqAppsController < ApplicationController
     
     params[:hq_app][:new_hq_task_attributes] ||= {}
     params[:hq_app][:existing_hq_task_attributes] ||= {}
+    params[:hq_app][:new_ppt_class_attributes] ||= {}
+    params[:hq_app][:existing_ppt_class_attributes] ||= {}
     
     
     @hq_app = HqApp.find(params[:id])

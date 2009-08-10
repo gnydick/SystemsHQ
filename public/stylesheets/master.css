@@ -58,21 +58,11 @@ input.button {
 }
 
 .container {
-    /*
-     width: 838px;
-     */
-    /*
-     float: left;
-     */
-    /*
-     position: absolute;
-     */
-    display: block;
+    display: inline;
 }
 
-
 #closecontainer {
-	height: 30px;
+    height: 30px;
 }
 
 .closebutton {
@@ -114,18 +104,34 @@ input.button {
     padding: 0px;
 }
 
+.endofpage {
+    clear: both;
+}
+
+.inlineeditortitle {
+    float: left;
+    position: relative;
+}
+
+.inlineeditorcontent {
+    clear: left;
+    position: relative;
+}
+
 .title {
     margin: 0px;
     padding-left: 6px;
     padding-right: 16px;
-    padding-top: 6px;
+    padding-top: 3px;
+	padding-bottom: 0px;
     background-color: #BBBBB3;
     border-bottom: 2px solid #7C7E66;
     border-left: 2px solid #544F3B;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    font-size: .8em;
-    height: 1.8em;
+    font-size: .9em;
+	height: 1.3em;
+    
 }
 
 .title div.label {
@@ -202,6 +208,7 @@ input.button {
     padding: 4px;
     margin: 0px;
     background-color: #EFF0E6;
+    clear: both;
     /*
      width: 831px;
      */
@@ -234,6 +241,9 @@ input.button {
     margin: 3px 0px 2px 1px;
 }
 
+#preview_detail .indextable {
+	width: 799px;
+}
 .indextable tr {
     border-collapse: collapse;
     border: solid 1px #7C7E66;
@@ -418,7 +428,8 @@ td.detail a, td.detail a:active, td.detail a:focus, td.detail a:hover, td.detail
 #leftnav li {
     list-style: none;
     font-size: .8em;
-    padding: 0;
+    padding-bottom: 3px;
+    font-style: italic;
 }
 
 #main {
@@ -437,4 +448,33 @@ td.detail a, td.detail a:active, td.detail a:focus, td.detail a:hover, td.detail
     margin: 2px 0px 0px 0px;
     padding: 0px;
     width: 840px;
+}
+
+#ppt_nodes {
+    padding: 0px;
+    margin: 0px;
+}
+
+#ppt_nodes div, #ppt_nodes span {
+    overflow: hidden;
+}
+
+#ppt_nodes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.odd {
+    background-color: #79706B;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+}
+
+.even {
+    background-color: #A49078;
+    height: 200px;
+    overflow: hidden;
+    float: left;
 }

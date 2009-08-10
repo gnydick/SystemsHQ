@@ -4,9 +4,20 @@ class HqServersController < ApplicationController
   # GET /hq_servers
   # GET /hq_servers.xml
   def index
-    rack_id = params[:hq_rack_id].to_i > 0 ? params[:hq_rack_id].to_i : HqRack.by_site(@hq_site).collect(&:id)
-    hq_servers = HqServer.by_rack(rack_id)
-    @objects = hq_servers.paginate :page => params[:page], :per_page => 10
+    @filters = Hash.new
+    HqServer.filters.each do |filter|
+      value = params[filter.to_s+'_id'].to_i
+      @filters[filter.to_s] = Array.new
+      if value > 0
+        @filters[filter.to_s] = eval(filter.to_s.camelize).find(value).id
+      else
+        @filters[filter.to_s] = eval(filter.to_s.camelize).all.collect(&:id)
+      end
+    end
+    
+    hq_servers = HqServer.by_rack(@filters['hq_rack'])
+    @objects = hq_servers.paginate :page => params[:page], :per_page => 20
+    
     respond_to do |format|
       format.html { render :template => 'reflected/index' }
       format.xml  { render :xml => @objects }

@@ -2,6 +2,12 @@
 module ApplicationHelper
   
   ##### start links ##### 
+  def toggle_blind_link(name, id)
+    link_to_function name, visual_effect(:toggle_blind, id)
+  end
+  
+  
+  
   def progress_link(name, url)
     link_to_remote(name, :url => url, :method => :get, 
     :loading => visual_effect(:appear,'spinner'),
@@ -86,10 +92,8 @@ module ApplicationHelper
   
   
   def filter_select(prefix, collection, selected = {})
-    options = options_for_select([["All", ""]])
-    
+    options = options_for_select([["No Filter", ""]])
     options += options_from_collection_for_select(collection, :id, :name, selected.to_i)
-    
     return select_tag(prefix, options, {:onchange => "this.form.submit()"})
   end
   
@@ -139,15 +143,18 @@ module ApplicationHelper
   
   
   def inline_collection_select(prefix,key,collection_class, selected = {}, options = {}, html_options = {})
-    options = '<optgroup label="PleaseChoose"><option></optgroup>'
-    options = options + options_from_collection_for_select(eval(collection_class).all(:order => 'name ASC'), :id, :name, selected)
+    finder =  eval(collection_class).columns.include?('template') ? 'template' : 'all'
+    options = '<optgroup label="PleaseChoose"><option></optgroup>'    
+    options = options + options_from_collection_for_select(eval(collection_class).send(finder+"(:order => 'name ASC')"), :id, :name, selected) if eval(collection_class).columns.include?('name')
+    options = options + options_from_collection_for_select(eval(collection_class).send(finder), :id, :name, selected) unless eval(collection_class).columns.include?('name')
     return select_tag(prefix+"[#{key}]", options)
   end  
   
   def inline_grouped_collection_select(prefix,key,collection_classes, listitem, selected = {}, options = {}, html_options = {})
+    finder =  eval(col_class).columns.include?('template') ? 'template' : 'all'
     group_options = '<optgroup label="PleaseChoose"><option>Please Choose</option></optgroup>'
     collection_classes.each do |col_class|
-      group_options = group_options + option_groups_from_collection_for_select(col_class.all, listitems, :name, :id, :name, :selected => selected) 
+      group_options = group_options + option_groups_from_collection_for_select(col_class.send('finder'), listitems, :name, :id, :name, :selected => selected) 
     end
     return select_tag(prefix+"[#{key}]", group_options)
   end
@@ -157,32 +164,35 @@ module ApplicationHelper
   
   def belongs_to_select(form,owner)
     
-    select = form.collection_select(owner.name.to_s.underscore+'_id', 
+    select = form.collection_select(owner.name.to_s.underscore+'_id',
     owner.all(:order => :name), :id, :name, {:prompt => true})
     return select
   end
   
   def polymorphic_belongs_to_select(form,owner)
+    finder = eval(owner).columns.include?('template') ? 'template' : 'all'
     select = form.label(@object.send(owner.to_sym).screen_name)+'<br />'
     select = select + form.collection_select(owner.underscore+'_id', 
-    owner.all(:order => :name), :id, :name, {:prompt => true})+'<br />'
+    owner.send(finder+'(:order => :name)'), :id, :name, {:prompt => true})+'<br />'
     return select
   end
   
   
   def has_many_select(form, owned)
+    finder = eval(owned).columns.include?('template') ? 'template' : 'all'
     select = form.label(owned.screen_name)+'<br />'
     select = select + form.collection_select(owned.to_s.pluralize.underscore.to_sym,
-                                             owned.all(:order => :name), :id, :name,
+                                             owned.send(finder+'(:order => :name)'), :id, :name,
     {:selected => @object.send(owned.to_s.underscore.pluralize.to_sym).collect {|x| x.id }},
     {:size => 10, :multiple => :true  })+'<br />'
     return select
   end
   
   def has_many_exclusive_select(form, owned)
+    finder = eval(owned).columns.include?('template') ? 'template' : 'all'
     select = form.label(owned.screen_name)+'<br />'
     select = select + form.collection_select(owned.to_s.pluralize.underscore.to_sym,
-                                             owned.all(:conditions => "#{@CcObjectClass.to_s.underscore}_id is null", :order => :name), :id, :name,
+                                             owned.send(finder+'(:conditions => "#{@CcObjectClass.to_s.underscore}_id is null", :order => :name)'), :id, :name,
     {:selected => @object.send(owned.to_s.underscore.pluralize.to_sym).collect {|x| x.id }},
     {:size => 10, :multiple => :true})+'<br />'
     return select

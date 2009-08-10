@@ -1,9 +1,12 @@
 <div class="line">
 <% new_or_existing = @object.new_record? ? 'new' : 'existing' %>
 <% prefix = "#{@object.class.name.to_s.underscore}" %>
-<% keys = @object.attributes.keys.reject {|y|  y.match('id$').nil? == false or y == 'position' or y.match('_type').nil? == false or y.match('_at').nil? == false} -%>
+<% keys = @object.attributes.keys.reject {|y|  y.match('template') or y.match('id$').nil? == false or y == 'position' or y.match('_type').nil? == false or y.match('_at').nil? == false} -%>
+<table>
 <% keys.each do |key| -%>
-<%= label_tag prefix+"[#{key}]", key %>: <%= text_field_tag prefix+"[#{key}]",  @object.send(key), :size => 45 %><br />
+<tr>
+<td><%= label_tag prefix+"[#{key}]", key %>:</td><td> <%= text_field_tag prefix+"[#{key}]",  @object.send(key), :size => 45 %></td>
+</tr>
 <% end -%>
-
+</table>
 </div>

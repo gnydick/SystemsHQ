@@ -4,7 +4,7 @@ class HqNicsController < ApplicationController
   # GET /hq_nics.xml
   def index
     @hq_nichaving = find_nichaving
-    @hq_nics = HqNic.paginate :page => params[:page], :per_page => 10
+    @hq_nics = HqNic.paginate :page => params[:page], :per_page => 20
     
     respond_to do |format|
       format.html { render :template => 'shared/index' }

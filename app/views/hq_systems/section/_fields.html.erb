@@ -1,0 +1,13 @@
+<div id="hq_deployed_system_container" class="container">
+    <div class="title">
+        <%= link_to_function 'Deployed Systems', visual_effect(:toggle_blind, :hq_deployed_systems_editor) %>
+    </div>
+    <div id="hq_deployed_systems_editor" style="display:none;" class="editor">
+	<% if params[:action] == 'edit' -%>
+        
+		<% end -%>
+        <div id="hq_deployed_systems" class="content">
+        	<%= render :partial => 'hq_systems/line/hq_deployed_system', :collection => @object.hq_deployed_systems %>
+        </div>
+    </div>
+</div>

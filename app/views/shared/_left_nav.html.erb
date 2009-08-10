@@ -1,4 +1,4 @@
-<% SyshqNavSection.display.each do |section| -%>
+<% SyshqNavSection.displayed_sections.each do |section| -%>
 <ul><%= section.name %>
 	<% section.displayed_items.each do |item| -%>
     <li>

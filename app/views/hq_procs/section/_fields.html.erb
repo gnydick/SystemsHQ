@@ -2,12 +2,10 @@
     <div class="title">
          <%= link_to_function 'Resources', visual_effect(:toggle_blind, :hq_rsrcs_editor) %>
     </div>
-    <div id="hq_rsrcs_editor" class="editor">
-    	<% if params[:action] == 'edit' %>
-    	<%= assign_hq_proc_hq_rsrc_link "Assign a Resource" %>
-		<% end -%>
-        <div id="hq_rsrcs" class="content">            
-            <%= render :partial => 'hq_procs/line/hq_rsrc', :collection => @hq_proc.rsrcs %>
-        </div>
-    </div>
+    
+    	
+                    
+            <%= render :partial => 'hq_procs/line/hq_rsrc' %>
+        
+   
 </div>

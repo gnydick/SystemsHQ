@@ -1,16 +1,18 @@
-<div class="ppt_node">
-    <% new_or_existing = ppt_node.new_record? ? 'new' : 'existing' %>
-    <% prefix = "ppt_class[#{new_or_existing}_ppt_node_attributes][#{ppt_node.id}]" %>
-    <% fields_for prefix, ppt_node do |ppt_node_form| -%>
-    <p>
- 
-            <%= ppt_node.puppetized_node.name %>
-			
-           
- 
-        <% if params[:action] == 'edit' -%>
-        <span class="remove"><%= link_to_function "remove", "$(this).up('.ppt_node').remove()" %></span>
-        <% end -%>
-    </p>
-    <% end -%>
-</div>
+<table class="indextable">
+    <tr>
+        <th class="detail">
+            Select Virtual Servers
+        </th>
+        <th class="detail">
+            Select Servers
+        </th>
+    </tr>
+    <tr>
+        <td class="detail">
+            <%= assign_ppt_class_ppt_node_hq_vserver_select(@object.ppt_nodes.select{ |x| x.puppetized_node_type='HqVServer'}.collect(&:puppetized_node_id)) %>
+        </td>
+        <td  class="detail">
+            <%= assign_ppt_class_ppt_node_hq_server_select(@object.ppt_nodes.select{ |x| x.puppetized_node_type='HqServer'}.collect(&:puppetized_node_id)) %>
+        </td>
+    </tr>
+</table>

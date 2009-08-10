@@ -1,0 +1,1394 @@
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:21:32) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 349ms (View: 291, DB: 44) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#show (for 216.254.76.59 at 2009-08-10 18:21:35) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009812908"}
+Rendering reflected/show
+Completed in 118ms (View: 100, DB: 14) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812908?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqSystemsController#index (for 216.254.76.59 at 2009-08-10 18:32:42) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 104ms (View: 51, DB: 51) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 18:32:45) [GET]
+  Parameters: {"id"=>"541585496"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 67ms (View: 50, DB: 13) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/541585496/report]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:34:19) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 65ms (View: 49, DB: 5) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:34:31) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691061"}
+Rendering reflected/edit
+Completed in 28ms (View: 21, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691061/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#update (for 216.254.76.59 at 2009-08-10 18:35:06) [PUT]
+  Parameters: {"commit"=>"Update", "hq_app"=>{"name"=>"EventsHTTPd Sandbox", "hq_system_id"=>"541585496", "new_hq_task_attributes"=>[{"name"=>"Events Sandbox Server Writes and Rotates Logs"}], "existing_hq_task_attributes"=>{"1009812941"=>{"name"=>"Collect Sandbox EventsHTTPd logs"}}, "existing_ppt_class_attributes"=>{"208026069"=>{"name"=>"testprodads"}}}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691061"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691061/edit?template=reflected%2Fedit
+Completed in 119ms (DB: 11) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691061]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:35:07) [GET]
+  Parameters: {"id"=>"830691061", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 107ms (View: 102, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691061/edit?template=reflected%2Fedit]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:35:09) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 134ms (View: 122, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:35:11) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 46ms (View: 38, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:35:14) [GET]
+  Parameters: {"hq_app_id"=>"830691061"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 21ms (View: 14, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?hq_app_id=830691061]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:35:17) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009812971"}
+Rendering reflected/edit
+Completed in 13ms (View: 9, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812971/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#update (for 216.254.76.59 at 2009-08-10 18:35:38) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009812971", "hq_task"=>{"name"=>"Events Sandbox Server Writes and Rotates Logs", "position"=>"2", "new_hq_proc_attributes"=>[{"name"=>"events sandbox: apache + rotatelogs2"}], "hq_app_id"=>"830691061"}}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812971/edit?template=reflected%2Fedit
+Completed in 16ms (DB: 4) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812971]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:35:38) [GET]
+  Parameters: {"id"=>"1009812971", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 17ms (View: 14, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812971/edit?template=reflected%2Fedit]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:35:44) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 42ms (View: 34, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:35:50) [GET]
+  Parameters: {"hq_task_id"=>"", "hq_app_id"=>"830691061"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 24ms (View: 16, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=830691061&hq_task_id=]
+
+
+Processing HqProcsController#show (for 216.254.76.59 at 2009-08-10 18:35:54) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903661"}
+Rendering reflected/show
+Completed in 17ms (View: 11, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903661?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:35:57) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903661"}
+Rendering reflected/edit
+Completed in 13ms (View: 10, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903661/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#update (for 216.254.76.59 at 2009-08-10 18:36:20) [PUT]
+  Parameters: {"commit"=>"Update", "hq_proc"=>{"hq_task_id"=>"1009812971", "name"=>"events sandbox: apache + rotatelogs2", "position"=>"1", "assigned_hq_rsrc"=>["1061357801", "1061357821", "1061357841"]}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903661"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903661/edit?template=reflected%2Fedit
+Completed in 19ms (DB: 6) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903661]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:36:20) [GET]
+  Parameters: {"id"=>"1006903661", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 16ms (View: 13, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903661/edit?template=reflected%2Fedit]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 18:36:24) [GET]
+  Parameters: {"id"=>"541585496"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 40ms (View: 27, DB: 9) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/541585496/report]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:37:40) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 35ms (View: 31, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:37:48) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 116ms (View: 112, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:37:51) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"213128114"}
+Rendering reflected/edit
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/213128114/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#new (for 216.254.76.59 at 2009-08-10 18:38:13) [GET]
+Rendering template within layouts/application
+Rendering reflected/new
+Completed in 20ms (View: 18, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/new]
+
+
+Processing HqAppsController#create (for 216.254.76.59 at 2009-08-10 18:38:44) [POST]
+  Parameters: {"commit"=>"Create", "hq_app"=>{"name"=>"Stage Stormcaster", "hq_system_id"=>"541585496", "new_ppt_class_attributes"=>[{"name"=>"stgcaster"}]}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps
+Completed in 13ms (DB: 6) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/create]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:38:44) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 116ms (View: 112, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#show (for 216.254.76.59 at 2009-08-10 18:38:47) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691171"}
+Rendering reflected/show
+Completed in 12ms (View: 9, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691171?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:38:55) [GET]
+  Parameters: {"hq_system_id"=>"541585496"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 24ms (View: 20, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps?hq_system_id=541585496]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:38:59) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691171"}
+Rendering reflected/edit
+Completed in 13ms (View: 10, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691171/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqSystemsController#index (for 216.254.76.59 at 2009-08-10 18:39:15) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 17ms (View: 15, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 18:39:17) [GET]
+  Parameters: {"id"=>"868334771"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 117ms (View: 104, DB: 9) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/868334771/report]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 18:39:19) [GET]
+  Parameters: {"id"=>"541585496"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 43ms (View: 28, DB: 14) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/541585496/report]
+
+
+Processing HqAppsController#update (for 216.254.76.59 at 2009-08-10 18:39:47) [PUT]
+  Parameters: {"commit"=>"Update", "hq_app"=>{"name"=>"Stormcaster Stage", "hq_system_id"=>"541585496", "new_hq_task_attributes"=>[{"name"=>"Stormcaster Stage Server Writes and Rotates Logs: "}, {"name"=>"Collect Stage Impression logs"}], "existing_ppt_class_attributes"=>{"961780691"=>{"name"=>"stgcaster"}}}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691171"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691171/edit?template=reflected%2Fedit
+Completed in 18ms (DB: 6) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691171]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:39:47) [GET]
+  Parameters: {"id"=>"830691171", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 18ms (View: 15, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691171/edit?template=reflected%2Fedit]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:39:49) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 117ms (View: 111, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:39:53) [GET]
+  Parameters: {"hq_app_id"=>"830691171"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 16ms (View: 12, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?hq_app_id=830691171]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:39:55) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009812991"}
+Rendering reflected/edit
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812991/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#update (for 216.254.76.59 at 2009-08-10 18:40:32) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009812991", "hq_task"=>{"name"=>"Collect Stage Impression logs", "position"=>"2", "new_hq_proc_attributes"=>[{"name"=>"runMove.sh - stage impressions"}], "hq_app_id"=>"830691171"}}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812991/edit?template=reflected%2Fedit
+Completed in 14ms (DB: 4) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812991]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:40:32) [GET]
+  Parameters: {"id"=>"1009812991", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 99ms (View: 96, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812991/edit?template=reflected%2Fedit]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:40:36) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 40ms (View: 35, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:40:39) [GET]
+  Parameters: {"hq_app_id"=>"830691171"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?hq_app_id=830691171]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:40:49) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009812981"}
+Rendering reflected/edit
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812981/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#update (for 216.254.76.59 at 2009-08-10 18:41:04) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009812981", "hq_task"=>{"name"=>"Stormcaster Stage Server Writes and Rotates Logs: ", "position"=>"1", "new_hq_proc_attributes"=>[{"name"=>"stage tomcat via log4j"}], "hq_app_id"=>"830691171"}}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812981/edit?template=reflected%2Fedit
+Completed in 87ms (DB: 4) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812981]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:41:04) [GET]
+  Parameters: {"id"=>"1009812981", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 15ms (View: 12, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812981/edit?template=reflected%2Fedit]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:41:05) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 43ms (View: 36, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:41:11) [GET]
+  Parameters: {"hq_task_id"=>"1009812991", "hq_app_id"=>""}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 22ms (View: 16, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=&hq_task_id=1009812991]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:41:13) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903671"}
+Rendering reflected/edit
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903671/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#update (for 216.254.76.59 at 2009-08-10 18:41:34) [PUT]
+  Parameters: {"commit"=>"Update", "hq_proc"=>{"hq_task_id"=>"1009812991", "name"=>"runMove.sh - stage impressions", "position"=>"1", "assigned_hq_rsrc"=>["72548489", "136771504"]}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903671"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903671/edit?template=reflected%2Fedit
+Completed in 16ms (DB: 6) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903671]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:41:34) [GET]
+  Parameters: {"id"=>"1006903671", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 17ms (View: 13, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903671/edit?template=reflected%2Fedit]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:41:36) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 129ms (View: 122, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:41:42) [GET]
+  Parameters: {"hq_task_id"=>"1009812981", "hq_app_id"=>""}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 93ms (View: 88, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=&hq_task_id=1009812981]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:41:44) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903681"}
+Rendering reflected/edit
+Completed in 11ms (View: 8, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903681/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#update (for 216.254.76.59 at 2009-08-10 18:41:52) [PUT]
+  Parameters: {"commit"=>"Update", "hq_proc"=>{"hq_task_id"=>"1009812981", "name"=>"stage tomcat via log4j", "position"=>"1", "assigned_hq_rsrc"=>["72548489"]}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903681"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903681/edit?template=reflected%2Fedit
+Completed in 14ms (DB: 4) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903681]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:41:52) [GET]
+  Parameters: {"id"=>"1006903681", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 20ms (View: 16, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903681/edit?template=reflected%2Fedit]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:41:54) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 41ms (View: 34, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:41:58) [GET]
+  Parameters: {"hq_task_id"=>"1009812961", "hq_app_id"=>""}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 19ms (View: 13, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=&hq_task_id=1009812961]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:42:00) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903651"}
+Rendering reflected/edit
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903651/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:42:16) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 49ms (View: 40, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:42:24) [GET]
+  Parameters: {"hq_task_id"=>"1009812913", "hq_app_id"=>""}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 19ms (View: 13, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=&hq_task_id=1009812913]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:42:26) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903486"}
+Rendering reflected/edit
+Completed in 11ms (View: 8, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903486/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#update (for 216.254.76.59 at 2009-08-10 18:42:34) [PUT]
+  Parameters: {"commit"=>"Update", "hq_proc"=>{"hq_task_id"=>"1009812913", "name"=>"runMove.sh - impressions", "position"=>"1", "assigned_hq_rsrc"=>["72548489", "136771504"]}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903486"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903486/edit?template=reflected%2Fedit
+Completed in 17ms (DB: 5) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903486]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:42:34) [GET]
+  Parameters: {"id"=>"1006903486", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 16ms (View: 12, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903486/edit?template=reflected%2Fedit]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 18:42:37) [GET]
+  Parameters: {"id"=>"541585496"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 117ms (View: 105, DB: 11) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/541585496/report]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:42:52) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 114ms (View: 107, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:42:56) [GET]
+  Parameters: {"hq_task_id"=>"1009812971", "hq_app_id"=>""}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 23ms (View: 17, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=&hq_task_id=1009812971]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:42:58) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903661"}
+Rendering reflected/edit
+Completed in 13ms (View: 10, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903661/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:43:07) [GET]
+  Parameters: {"hq_task_id"=>"1009812981", "hq_app_id"=>""}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 21ms (View: 15, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=&hq_task_id=1009812981]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:43:08) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903681"}
+Rendering reflected/edit
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903681/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:43:21) [GET]
+  Parameters: {"hq_task_id"=>"1009812961", "hq_app_id"=>""}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 18ms (View: 13, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=&hq_task_id=1009812961]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:43:24) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903651"}
+Rendering reflected/edit
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903651/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#update (for 216.254.76.59 at 2009-08-10 18:43:31) [PUT]
+  Parameters: {"commit"=>"Update", "hq_proc"=>{"hq_task_id"=>"1009812961", "name"=>"tomcat via log4j", "position"=>"1", "assigned_hq_rsrc"=>["72548489"]}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903651"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903651/edit?template=reflected%2Fedit
+Completed in 13ms (DB: 4) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903651]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:43:31) [GET]
+  Parameters: {"id"=>"1006903651", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 16ms (View: 12, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903651/edit?template=reflected%2Fedit]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 18:43:33) [GET]
+  Parameters: {"id"=>"541585496"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 37ms (View: 28, DB: 7) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/541585496/report]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:45:01) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 45ms (View: 36, DB: 7) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:45:03) [GET]
+  Parameters: {"hq_system_id"=>"541585496"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 24ms (View: 20, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps?hq_system_id=541585496]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:45:06) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691051"}
+Rendering reflected/edit
+Completed in 13ms (View: 9, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691051/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#update (for 216.254.76.59 at 2009-08-10 18:45:22) [PUT]
+  Parameters: {"commit"=>"Update", "hq_app"=>{"name"=>"Stormcenter Preview Ads", "hq_system_id"=>"541585496", "new_hq_task_attributes"=>[{"name"=>"Events prv Server Writes and Rotates Logs"}], "existing_hq_task_attributes"=>{"1009812931"=>{"name"=>"Collect prv EventsHTTPd logs"}}, "existing_ppt_class_attributes"=>{"295752531"=>{"name"=>"prvads"}}}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691051"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691051/edit?template=reflected%2Fedit
+Completed in 106ms (DB: 6) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691051]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:45:23) [GET]
+  Parameters: {"id"=>"830691051", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 100ms (View: 97, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691051/edit?template=reflected%2Fedit]
+
+
+Processing HqAppsController#update (for 216.254.76.59 at 2009-08-10 18:45:27) [PUT]
+  Parameters: {"commit"=>"Update", "hq_app"=>{"name"=>"Stormcenter Preview Ads", "hq_system_id"=>"541585496", "existing_hq_task_attributes"=>{"1009813001"=>{"name"=>"Events prv Server Writes and Rotates Logs"}, "1009812931"=>{"name"=>"Collect prv EventsHTTPd logs"}}, "existing_ppt_class_attributes"=>{"295752531"=>{"name"=>"prvads"}}}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691051"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691051/edit?template=reflected%2Fedit
+Completed in 24ms (DB: 3) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691051]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:45:28) [GET]
+  Parameters: {"id"=>"830691051", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 17ms (View: 14, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691051/edit?template=reflected%2Fedit]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:45:33) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 40ms (View: 35, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:45:41) [GET]
+  Parameters: {"hq_app_id"=>"830691051"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 17ms (View: 13, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?hq_app_id=830691051]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:45:44) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009813001"}
+Rendering reflected/edit
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009813001/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#update (for 216.254.76.59 at 2009-08-10 18:45:58) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009813001", "hq_task"=>{"name"=>"Events prv Server Writes and Rotates Logs", "position"=>"2", "new_hq_proc_attributes"=>[{"name"=>"events prv: apache + rotatelogs2"}], "hq_app_id"=>"830691051"}}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009813001/edit?template=reflected%2Fedit
+Completed in 12ms (DB: 4) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009813001]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:45:58) [GET]
+  Parameters: {"id"=>"1009813001", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 92ms (View: 88, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009813001/edit?template=reflected%2Fedit]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:46:02) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 122ms (View: 113, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 18:46:08) [GET]
+  Parameters: {"hq_task_id"=>"", "hq_app_id"=>"830691051"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 19ms (View: 14, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?hq_app_id=830691051&hq_task_id=]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:46:10) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903691"}
+Rendering reflected/edit
+Completed in 12ms (View: 9, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903691/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#update (for 216.254.76.59 at 2009-08-10 18:46:35) [PUT]
+  Parameters: {"commit"=>"Update", "hq_proc"=>{"hq_task_id"=>"1009813001", "name"=>"events prv: apache + rotatelogs2", "position"=>"1", "assigned_hq_rsrc"=>["1061357861", "1061357871", "1061357921", "1061357881", "1061357891", "1061357901"]}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1006903691"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903691/edit?template=reflected%2Fedit
+Completed in 39ms (DB: 13) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903691]
+
+
+Processing HqProcsController#edit (for 216.254.76.59 at 2009-08-10 18:46:35) [GET]
+  Parameters: {"id"=>"1006903691", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 93ms (View: 89, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/1006903691/edit?template=reflected%2Fedit]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 18:47:09) [GET]
+  Parameters: {"id"=>"541585496"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 41ms (View: 29, DB: 10) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/541585496/report]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 18:48:58) [GET]
+  Parameters: {"id"=>"541585496"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 120ms (View: 111, DB: 7) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/541585496/report]
+
+
+Processing HqServersController#index (for 216.254.76.59 at 2009-08-10 18:50:54) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 43ms (View: 32, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_servers]
+
+
+Processing HqServersController#show (for 216.254.76.59 at 2009-08-10 18:50:59) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"680436620"}
+Rendering reflected/show
+Completed in 378ms (View: 278, DB: 96) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_servers/680436620?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqVserversController#index (for 216.254.76.59 at 2009-08-10 18:51:22) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 60ms (View: 45, DB: 7) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_vservers]
+
+
+Processing HqVserversController#show (for 216.254.76.59 at 2009-08-10 18:51:23) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"415293337"}
+Rendering reflected/show
+Completed in 28ms (View: 19, DB: 5) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_vservers/415293337?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing PptClassesController#index (for 216.254.76.59 at 2009-08-10 18:51:42) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 32ms (View: 26, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes]
+
+
+Processing PptClassesController#show (for 216.254.76.59 at 2009-08-10 18:51:47) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"833173687"}
+Rendering reflected/show
+Completed in 18ms (View: 13, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/833173687?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:54:37) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 118ms (View: 113, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:54:39) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 37ms (View: 33, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#show (for 216.254.76.59 at 2009-08-10 18:54:41) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/show
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:54:47) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 13ms (View: 11, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:54:58) [POST]
+  Parameters: {"hq_tasks"=>["1009812951", "798476085"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+
+ActionView::MissingTemplate (Missing template hq_tasks/order.erb in view path app/views):
+  app/controllers/hq_tasks_controller.rb:11:in `order'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/500.html (500 Internal Server Error)
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:55:05) [POST]
+  Parameters: {"hq_tasks"=>["798476085", "1009812951"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+
+ActionView::MissingTemplate (Missing template hq_tasks/order.erb in view path app/views):
+  app/controllers/hq_tasks_controller.rb:11:in `order'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/500.html (500 Internal Server Error)
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:55:08) [POST]
+  Parameters: {"hq_tasks"=>["1009812951", "798476085"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+
+ActionView::MissingTemplate (Missing template hq_tasks/order.erb in view path app/views):
+  app/controllers/hq_tasks_controller.rb:11:in `order'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/500.html (500 Internal Server Error)
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:55:13) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 40ms (View: 35, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:55:19) [GET]
+  Parameters: {"hq_app_id"=>"17707337"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 17ms (View: 13, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?hq_app_id=17707337]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:55:22) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1009812951"}
+Rendering reflected/edit
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/1009812951/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:55:30) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 38ms (View: 33, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:55:31) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 37ms (View: 32, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:55:33) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 128ms (View: 40, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 18:55:35) [GET]
+  Parameters: {"hq_app_id"=>"339652240"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 124ms (View: 108, DB: 14) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?hq_app_id=339652240]
+
+
+Processing HqTasksController#edit (for 216.254.76.59 at 2009-08-10 18:55:37) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"768406099"}
+Rendering reflected/edit
+Completed in 91ms (View: 86, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/768406099/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqProcsController#order (for 216.254.76.59 at 2009-08-10 18:55:40) [POST]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "hq_procs"=>["1006903474", "1006903485", "817523604", "985923182", "1006903475", "1006903472", "1006903473", "1006903476", "1006903477", "1006903478", "1006903479", "1006903480", "1006903481", "1006903484"]}
+Rendering reflected/order
+Completed in 128ms (View: 1, DB: 13) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/order]
+
+
+Processing HqProcsController#order (for 216.254.76.59 at 2009-08-10 18:55:43) [POST]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "hq_procs"=>["1006903485", "1006903474", "817523604", "985923182", "1006903475", "1006903472", "1006903473", "1006903476", "1006903477", "1006903478", "1006903479", "1006903480", "1006903481", "1006903484"]}
+Rendering reflected/order
+Completed in 125ms (View: 1, DB: 11) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs/order]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 18:56:18) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 44ms (View: 39, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 18:56:22) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 14ms (View: 11, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:56:39) [POST]
+  Parameters: {"hq_tasks"=>["798476085", "1009812951"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+
+ActionView::MissingTemplate (Missing template hq_tasks/order.erb in view path app/views):
+  app/controllers/hq_tasks_controller.rb:11:in `order'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/500.html (500 Internal Server Error)
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:56:57) [POST]
+  Parameters: {"hq_tasks"=>["1009812951", "798476085"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+
+ActionView::MissingTemplate (Missing template hq_tasks/order.erb in view path app/views):
+  app/controllers/hq_tasks_controller.rb:11:in `order'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/500.html (500 Internal Server Error)
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:58:16) [POST]
+  Parameters: {"hq_tasks"=>["798476085", "1009812951"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+
+ActiveRecord::RecordNotFound (Couldn't find HqProc with ID=798476085):
+  app/controllers/hq_tasks_controller.rb:6:in `order'
+  app/controllers/hq_tasks_controller.rb:5:in `each_index'
+  app/controllers/hq_tasks_controller.rb:5:in `order'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/404.html (404 Not Found)
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:58:18) [POST]
+  Parameters: {"hq_tasks"=>["1009812951", "798476085"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+
+ActiveRecord::RecordNotFound (Couldn't find HqProc with ID=1009812951):
+  app/controllers/hq_tasks_controller.rb:6:in `order'
+  app/controllers/hq_tasks_controller.rb:5:in `each_index'
+  app/controllers/hq_tasks_controller.rb:5:in `order'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/404.html (404 Not Found)
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:58:27) [POST]
+  Parameters: {"hq_tasks"=>["798476085", "1009812951"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+
+ActiveRecord::RecordNotFound (Couldn't find HqProc with ID=798476085):
+  app/controllers/hq_tasks_controller.rb:6:in `order'
+  app/controllers/hq_tasks_controller.rb:5:in `each_index'
+  app/controllers/hq_tasks_controller.rb:5:in `order'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/404.html (404 Not Found)
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:59:03) [POST]
+  Parameters: {"hq_tasks"=>["1009812951", "798476085"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+Rendering reflected/order
+Completed in 82ms (View: 1, DB: 40) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/order]
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 18:59:07) [POST]
+  Parameters: {"hq_tasks"=>["798476085", "1009812951"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+Rendering reflected/order
+Completed in 36ms (View: 1, DB: 6) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/order]
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 19:28:33) [POST]
+  Parameters: {"hq_tasks"=>["1009812951", "798476085"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+Rendering reflected/order
+Completed in 37ms (View: 1, DB: 8) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/order]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:28:33) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 142ms (View: 130, DB: 6) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:28:43) [GET]
+  Parameters: {"hq_system_id"=>"541585496"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 118ms (View: 109, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps?hq_system_id=541585496]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 19:28:46) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 27ms (View: 21, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 19:28:50) [POST]
+  Parameters: {"hq_tasks"=>["798476085", "1009812951"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+Rendering reflected/order
+Completed in 18ms (View: 1, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/order]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:28:53) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 39ms (View: 34, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 19:28:56) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 86ms (View: 84, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 19:28:59) [POST]
+  Parameters: {"hq_tasks"=>["1009812951", "798476085"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+Rendering reflected/order
+Completed in 93ms (View: 1, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/order]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:29:01) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 42ms (View: 32, DB: 7) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 19:29:08) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#order (for 216.254.76.59 at 2009-08-10 19:29:11) [POST]
+  Parameters: {"hq_tasks"=>["798476085", "1009812951"], "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k="}
+Rendering reflected/order
+Completed in 19ms (View: 1, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/order]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:29:13) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 112ms (View: 108, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 19:29:15) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 14ms (View: 11, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:55:24) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 45ms (View: 39, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#destroy (for 216.254.76.59 at 2009-08-10 19:55:37) [DELETE]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691061"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps
+Completed in 5ms (DB: 3) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691061]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:55:37) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 51ms (View: 46, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#destroy (for 216.254.76.59 at 2009-08-10 19:56:05) [DELETE]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691171"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps
+Completed in 5ms (DB: 3) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691171]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:56:05) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 34ms (View: 30, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#destroy (for 216.254.76.59 at 2009-08-10 19:56:13) [DELETE]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"830691051"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps
+Completed in 5ms (DB: 3) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/830691051]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:56:13) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 119ms (View: 115, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#show (for 216.254.76.59 at 2009-08-10 19:56:14) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/show
+Completed in 17ms (View: 14, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing PptClassesController#index (for 216.254.76.59 at 2009-08-10 19:56:21) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 123ms (View: 30, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes]
+
+
+Processing PptClassesController#show (for 216.254.76.59 at 2009-08-10 19:56:23) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"295752531"}
+Rendering reflected/show
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #11 of app/views/reflected/_belongsshow.html.erb:
+8:         
+9:         <div id="belongs_to" class="content">
+10:             
+11: 			<%= @object.send(owner.name.to_s.underscore).name %>
+12:         </div>
+13:     </div>
+14: </div>
+
+    app/views/reflected/_belongsshow.html.erb:11
+    app/views/reflected/_belongsshow.html.erb:1:in `each'
+    app/views/reflected/_belongsshow.html.erb:1
+    app/views/reflected/_show.html.erb:12
+    app/views/reflected/show.js.rjs:1:in `_run_rjs_app47views47reflected47show46js46rjs'
+    app/views/reflected/show.js.rjs:1:in `_run_rjs_app47views47reflected47show46js46rjs'
+    app/controllers/ppt_classes_controller.rb:25:in `show'
+    app/controllers/ppt_classes_controller.rb:24:in `show'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/500.html (500 Internal Server Error)
+
+
+Processing PptClassesController#show (for 216.254.76.59 at 2009-08-10 19:56:26) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"580663062"}
+Rendering reflected/show
+Completed in 97ms (View: 90, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/580663062?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing PptClassesController#edit (for 216.254.76.59 at 2009-08-10 19:56:35) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"295752531"}
+Rendering reflected/edit
+Completed in 20ms (View: 15, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/295752531/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing PptClassesController#index (for 216.254.76.59 at 2009-08-10 19:56:55) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 26ms (View: 23, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:56:57) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 34ms (View: 30, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing PptClassesController#index (for 216.254.76.59 at 2009-08-10 19:56:59) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 33ms (View: 24, DB: 7) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:57:01) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 110ms (View: 107, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 19:57:05) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 17ms (View: 14, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing PptClassesController#index (for 216.254.76.59 at 2009-08-10 19:58:18) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 121ms (View: 118, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes]
+
+
+Processing PptClassesController#destroy (for 216.254.76.59 at 2009-08-10 19:58:25) [DELETE]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"295752531"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/ppt_classes
+Completed in 8ms (DB: 3) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/295752531]
+
+
+Processing PptClassesController#index (for 216.254.76.59 at 2009-08-10 19:58:25) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 25ms (View: 22, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:58:28) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 37ms (View: 33, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#show (for 216.254.76.59 at 2009-08-10 19:58:29) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/show
+Completed in 15ms (View: 12, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 19:58:33) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 90ms (View: 88, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#update (for 216.254.76.59 at 2009-08-10 19:58:38) [PUT]
+  Parameters: {"commit"=>"Update", "hq_app"=>{"name"=>"EventsHTTPd", "hq_system_id"=>"541585496", "existing_hq_task_attributes"=>{"798476085"=>{"name"=>"Collect EventsHTTPd logs"}, "1009812951"=>{"name"=>"Events Server Writes and Rotates Logs"}}, "existing_ppt_class_attributes"=>{"833173687"=>{"name"=>"ads"}, "961780641"=>{"name"=>"dmoads"}, "580663062"=>{"name"=>"stgads"}}, "new_ppt_class_attributes"=>[{"name"=>"prvads"}]}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?template=reflected%2Fedit
+Completed in 119ms (DB: 5) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 19:58:39) [GET]
+  Parameters: {"id"=>"17707337", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 28ms (View: 22, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?template=reflected%2Fedit]
+
+
+Processing PptClassesController#index (for 216.254.76.59 at 2009-08-10 19:58:41) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 30ms (View: 27, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes]
+
+
+Processing PptClassesController#show (for 216.254.76.59 at 2009-08-10 19:58:43) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"961780701"}
+Rendering reflected/show
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #11 of app/views/reflected/_belongsshow.html.erb:
+8:         
+9:         <div id="belongs_to" class="content">
+10:             
+11: 			<%= @object.send(owner.name.to_s.underscore).name %>
+12:         </div>
+13:     </div>
+14: </div>
+
+    app/views/reflected/_belongsshow.html.erb:11
+    app/views/reflected/_belongsshow.html.erb:1:in `each'
+    app/views/reflected/_belongsshow.html.erb:1
+    app/views/reflected/_show.html.erb:12
+    app/views/reflected/show.js.rjs:1:in `_run_rjs_app47views47reflected47show46js46rjs'
+    app/views/reflected/show.js.rjs:1:in `_run_rjs_app47views47reflected47show46js46rjs'
+    app/controllers/ppt_classes_controller.rb:25:in `show'
+    app/controllers/ppt_classes_controller.rb:24:in `show'
+
+Rendering /srv/www/vhosts/opsportal/rails/SystemsHQ/public/500.html (500 Internal Server Error)
+
+
+Processing PptClassesController#edit (for 216.254.76.59 at 2009-08-10 19:58:46) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"961780701"}
+Rendering reflected/edit
+Completed in 17ms (View: 12, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/961780701/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing PptClassesController#update (for 216.254.76.59 at 2009-08-10 19:58:59) [PUT]
+  Parameters: {"commit"=>"Update", "ppt_class"=>{"name"=>"prvads", "assigned_ppt_node_hq_vserver"=>["1064408525"], "hq_env_id"=>"271171948", "hq_app_id"=>"17707337"}, "authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"961780701"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/961780701/edit?template=reflected%2Fedit
+Completed in 12ms (DB: 4) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/961780701]
+
+
+Processing PptClassesController#edit (for 216.254.76.59 at 2009-08-10 19:58:59) [GET]
+  Parameters: {"id"=>"961780701", "template"=>"reflected/edit"}
+Rendering template within layouts/application
+Rendering reflected/edit
+Completed in 17ms (View: 13, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/961780701/edit?template=reflected%2Fedit]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:59:01) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 109ms (View: 105, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 19:59:04) [GET]
+  Parameters: {"hq_system_id"=>"541585496"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 28ms (View: 25, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps?hq_system_id=541585496]
+
+
+Processing HqAppsController#show (for 216.254.76.59 at 2009-08-10 19:59:11) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/show
+Completed in 12ms (View: 9, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 19:59:17) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 42ms (View: 36, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#show (for 216.254.76.59 at 2009-08-10 19:59:32) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"798476085"}
+Rendering reflected/show
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks/798476085?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqSystemsController#index (for 216.254.76.59 at 2009-08-10 20:29:44) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 101ms (View: 96, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems]
+
+
+Processing HqSystemsController#report (for 216.254.76.59 at 2009-08-10 20:29:48) [GET]
+  Parameters: {"id"=>"541585496"}
+Rendering template within layouts/application
+Rendering hq_systems/report
+Completed in 113ms (View: 103, DB: 6) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_systems/541585496/report]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:30:28) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 161ms (View: 146, DB: 8) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:30:35) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 54ms (View: 41, DB: 5) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=2]
+
+
+Processing HqRsrcsController#destroy (for 216.254.76.59 at 2009-08-10 20:30:40) [DELETE]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1061357861"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs
+Completed in 8ms (DB: 3) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs/1061357861]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:30:40) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 48ms (View: 35, DB: 6) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:30:47) [GET]
+  Parameters: {"hq_proc_id"=>"1006903661"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 23ms (View: 15, DB: 5) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?hq_proc_id=1006903661]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 20:30:50) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 51ms (View: 40, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 20:30:54) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 42ms (View: 33, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?page=2]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 20:31:02) [GET]
+  Parameters: {"page"=>"1"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 140ms (View: 131, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?page=1]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:31:11) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 41ms (View: 35, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:31:13) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 46ms (View: 36, DB: 5) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=2]
+
+
+Processing HqRsrcsController#destroy (for 216.254.76.59 at 2009-08-10 20:31:17) [DELETE]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"1061357801"}
+Redirected to http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs
+Completed in 5ms (DB: 3) | 302 Found [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs/1061357801]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:31:17) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 123ms (View: 37, DB: 8) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:31:20) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 45ms (View: 36, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=2]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:33:36) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 44ms (View: 34, DB: 6) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=2]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:33:45) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 45ms (View: 35, DB: 6) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=2]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:33:48) [GET]
+  Parameters: {"page"=>"3"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 109ms (View: 102, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=3]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:34:56) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 120ms (View: 113, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=2]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:34:57) [GET]
+  Parameters: {"page"=>"1"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 117ms (View: 109, DB: 4) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=1]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:35:01) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 44ms (View: 37, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=2]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:35:03) [GET]
+  Parameters: {"page"=>"3"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 33ms (View: 27, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=3]
+
+
+Processing HqRsrcsController#index (for 216.254.76.59 at 2009-08-10 20:35:36) [GET]
+  Parameters: {"page"=>"3"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 36ms (View: 28, DB: 5) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_rsrcs?page=3]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 20:35:37) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 42ms (View: 34, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 20:35:42) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 40ms (View: 33, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?page=2]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 20:36:00) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 39ms (View: 32, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?page=2]
+
+
+Processing HqProcsController#index (for 216.254.76.59 at 2009-08-10 20:36:03) [GET]
+  Parameters: {"page"=>"1"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 118ms (View: 111, DB: 3) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_procs?page=1]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 20:36:05) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 117ms (View: 112, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 20:36:13) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 95ms (View: 90, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?page=2]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 20:36:15) [GET]
+  Parameters: {"page"=>"1"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 40ms (View: 35, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?page=1]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 20:38:12) [GET]
+  Parameters: {"page"=>"1"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 40ms (View: 35, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?page=1]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 20:38:14) [GET]
+  Parameters: {"page"=>"2"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 36ms (View: 20, DB: 13) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?page=2]
+
+
+Processing HqTasksController#index (for 216.254.76.59 at 2009-08-10 20:38:16) [GET]
+  Parameters: {"page"=>"1"}
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 114ms (View: 109, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_tasks?page=1]
+
+
+Processing PptClassesController#index (for 216.254.76.59 at 2009-08-10 20:39:24) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 32ms (View: 29, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes]
+
+
+Processing PptClassesController#show (for 216.254.76.59 at 2009-08-10 20:39:26) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"961780701"}
+Rendering reflected/show
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/ppt_classes/961780701?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]
+
+
+Processing HqAppsController#index (for 216.254.76.59 at 2009-08-10 20:39:33) [GET]
+Rendering template within layouts/application
+Rendering reflected/index
+Completed in 36ms (View: 32, DB: 2) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps]
+
+
+Processing HqAppsController#edit (for 216.254.76.59 at 2009-08-10 20:39:40) [GET]
+  Parameters: {"authenticity_token"=>"FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k=", "id"=>"17707337"}
+Rendering reflected/edit
+Completed in 89ms (View: 86, DB: 1) | 200 OK [http://opsportal.linkstorm.net/SystemsHQ/hq_apps/17707337/edit?authenticity_token=FuiiK2hNPR4LQQiH5A3xga0JJQHXDcXR7dej7amAB0k%3D]

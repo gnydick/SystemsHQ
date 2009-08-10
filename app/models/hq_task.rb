@@ -1,6 +1,6 @@
 class HqTask < ActiveRecord::Base
   acts_as_list :scope => :hq_app, :order => "position"
-  named_scope :by_application, lambda { |app| {:conditions => ['hq_app_id in (?)', app], :order => 'name ASC' }}
+  named_scope :by_app, lambda { |app| {:conditions => ['hq_app_id in (?)', app], :order => 'name ASC' }}
   
   @@screen_name = 'Task'
   

@@ -10,7 +10,7 @@ class HqProcsController < ApplicationController
     
     respond_to do |format|      
       format.js   { render :template => 'reflected/order' } if request.xhr? 
-      format.html { render :template => 'reflected/index' }      
+      format.html { render :template => 'reflected/order' }      
     end
   end
   
@@ -20,7 +20,23 @@ class HqProcsController < ApplicationController
   # GET /hq_procs.xml
   @page = ''
   def index
-    @objects = HqProc.all(:order => 'name ASC').paginate :page => params[:page], :per_page => 10
+    @filters = Hash.new
+    
+    HqProc.filters.each do |filter|
+      value = params[filter.to_s+'_id'].to_i
+      @filters[filter.to_s] = Array.new
+      if value > 0
+        @filters[filter.to_s] = eval(filter.to_s.camelize).find(value).id
+      else
+        @filters[filter.to_s] = eval(filter.to_s.camelize).all.collect(&:id)
+      end
+    end
+    
+
+    
+    
+    hq_procs = HqProc.by_app(@filters['hq_app']).by_task(@filters['hq_task'])
+    @objects = hq_procs.paginate :page => params[:page], :per_page => 20
     
     
     
@@ -36,7 +52,7 @@ class HqProcsController < ApplicationController
     @object = @hq_proc = HqProc.find(params[:id])
     
     respond_to do |format|
-      format.js  {render :template => 'reflected/show' }if request.xhr?
+      format.js  {render :template => 'reflected/show' } if request.xhr?
       format.html # show.html.erb
       format.xml  { render :xml => @hq_proc }
     end

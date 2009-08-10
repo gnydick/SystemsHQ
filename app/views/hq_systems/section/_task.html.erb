@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="title">
+        <%= task.name %><%= toggle_blind_link(': Processes', "processes_#{task.id}") %>
+    </div>
+    <div id="<%= "processes_#{task.id}" %>" class="editor" style="display:none;">
+        <%= render :partial => 'hq_systems/section/process', :collection => task.hq_procs.sort {|x,y| x.name <=> y.name } %>
+    </div>
+</div>

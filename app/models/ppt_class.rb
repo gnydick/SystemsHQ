@@ -4,7 +4,7 @@ class PptClass < ActiveRecord::Base
   
   
   
-  @@screen_name = 'Puppet Class'
+  @@screen_name = 'Server Role'
   
   def screen_name
     return @@screen_name
@@ -24,7 +24,8 @@ class PptClass < ActiveRecord::Base
   
   has_many :ppt_nodes, :dependent => :destroy
   
-  
+  belongs_to :hq_env
+  belongs_to :hq_app
   
   validates_associated  :ppt_nodes
   validates_presence_of :name

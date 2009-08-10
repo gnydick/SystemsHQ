@@ -5,9 +5,19 @@ class HqVserversController < ApplicationController
   # GET /hq_vservers
   # GET /hq_vservers.xml
   def index   
-    server_id = params[:hq_server_id].to_i > 0 ? params[:hq_server_id].to_i : HqServer.by_site(@hq_site).collect(&:id)
-    hq_vservers = HqVserver.by_server(server_id)
-    @objects = hq_vservers.paginate :page => params[:page], :per_page => 10
+    @filters = Hash.new
+    HqVserver.filters.each do |filter|
+      value = params[filter.to_s+'_id'].to_i
+      @filters[filter.to_s] = Array.new
+      if value > 0
+        @filters[filter.to_s] = eval(filter.to_s.camelize).find(value).id
+      else
+        @filters[filter.to_s] = eval(filter.to_s.camelize).all.collect(&:id)
+      end
+    end
+    
+    hq_vservers = HqVserver.by_server(@filters['hq_server'])
+    @objects = hq_vservers.paginate :page => params[:page], :per_page => 20
     respond_to do |format|
       format.html { render :template => 'reflected/index' }
       format.xml  { render :xml => @objects }

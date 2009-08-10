@@ -9,9 +9,10 @@ class HqRsrc < ActiveRecord::Base
   def self.screen_name
     return @@screen_name
   end
-
+  
   def self.excluded_from_reflected
-    Array.new
+    excludes = Array.new
+    excludes << :hq_rsrc_usages
   end
   
   def self.filters
@@ -21,6 +22,9 @@ class HqRsrc < ActiveRecord::Base
   
   named_scope :by_name, :order => 'name ASC'
   
+  named_scope :by_proc, lambda {|proc| {:conditions => ['id in (select distinct(u.hq_rsrc_id) from hq_rsrc_usages u where hq_proc_id in (?))', proc],
+    :order => 'name ASC'}}
+  
   validates_associated :hq_rsrc_usages
   validates_presence_of :name
   
@@ -29,7 +33,7 @@ class HqRsrc < ActiveRecord::Base
   
   
   
-   def new_hq_rsrc_usage_attributes=(hq_rsrc_usage_attributes)
+  def new_hq_rsrc_usage_attributes=(hq_rsrc_usage_attributes)
     hq_rsrc_usage_attributes.each do |attributes|
       hq_rsrc_usages.build(attributes)
     end

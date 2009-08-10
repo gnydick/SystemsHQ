@@ -1,76 +1,76 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-<% for I in 11..20 %>
-
-node_ads<%= I %>:
-  ppt_class: ads
-  puppetized_node: ads<%= I %>.lw.ls.bak
-  puppetized_node_type: HqVserver
-
-<% end %>
-
-
-<% for I in 11..14 %>
-
-node_caster<%= I %>:
-  ppt_class: caster
-  puppetized_node: caster<%= I %>.lw.ls.bak
-  puppetized_node_type: HqVserver
-
-<% end %>
-
-
-<% for I in 11..16 %>
-
-node_etl<%= I %>:
-  ppt_class: etl
-  puppetized_node: etl<%= I %>.lw.ls.bak
-  puppetized_node_type: HqVserver
-
-<% end %>
-
-<% for I in 14..15 %>
-
-node_ldap<%= I %>:
-  ppt_class: ldap
-  puppetized_node: ldap<%= I %>.lw.ls.bak
-  puppetized_node_type: HqVserver
-
-<% end %>
-
-
-<% for I in 11..13 %>
-node_ns<%= I %>:
-  ppt_class: ns
-  puppetized_node: ns<%= I %>.lw.ls.bak
-  puppetized_node_type: HqVserver
-
-<% end %>
-
-
-<% for I in 3..5 %>
-node_ns<%= I %>:
-  ppt_class: ns
-  puppetized_node: ns<%= I %>.lw.ls.bak
-  puppetized_node_type: HqVserver
-
-<% end %>
-
-<% for I in 13..15 %>
-node_img<%= I %>:
-  ppt_class: img
-  puppetized_node: img<%= I %>.lw.ls.bak
-  puppetized_node_type: HqVserver
-
-<% end %>
-
-<% for I in 11..14 %>
-node_click<%= I %>:
-  ppt_class: click
-  puppetized_node: click<%= I %>.lw.ls.bak
-  puppetized_node_type: HqVserver
-
-<% end %>
+## Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+#
+#<% for I in 11..20 %>
+#
+#node_ads<%= I %>:
+#  ppt_class: ads
+#  puppetized_node: ads<%= I %>.lw.ls.bak
+#  puppetized_node_type: HqVserver
+#
+#<% end %>
+#
+#
+#<% for I in 11..14 %>
+#
+#node_caster<%= I %>:
+#  ppt_class: caster
+#  puppetized_node: caster<%= I %>.lw.ls.bak
+#  puppetized_node_type: HqVserver
+#
+#<% end %>
+#
+#
+#<% for I in 11..16 %>
+#
+#node_etl<%= I %>:
+#  ppt_class: etl
+#  puppetized_node: etl<%= I %>.lw.ls.bak
+#  puppetized_node_type: HqVserver
+#
+#<% end %>
+#
+#<% for I in 14..15 %>
+#
+#node_ldap<%= I %>:
+#  ppt_class: ldap
+#  puppetized_node: ldap<%= I %>.lw.ls.bak
+#  puppetized_node_type: HqVserver
+#
+#<% end %>
+#
+#
+#<% for I in 11..13 %>
+#node_ns<%= I %>:
+#  ppt_class: ns
+#  puppetized_node: ns<%= I %>.lw.ls.bak
+#  puppetized_node_type: HqVserver
+#
+#<% end %>
+#
+#
+#<% for I in 3..5 %>
+#node_ns<%= I %>:
+#  ppt_class: ns
+#  puppetized_node: ns<%= I %>.lw.ls.bak
+#  puppetized_node_type: HqVserver
+#
+#<% end %>
+#
+#<% for I in 13..15 %>
+#node_img<%= I %>:
+#  ppt_class: img
+#  puppetized_node: img<%= I %>.lw.ls.bak
+#  puppetized_node_type: HqVserver
+#
+#<% end %>
+#
+#<% for I in 11..14 %>
+#node_click<%= I %>:
+#  ppt_class: click
+#  puppetized_node: click<%= I %>.lw.ls.bak
+#  puppetized_node_type: HqVserver
+#
+#<% end %>
 
 <% for VS in [["app1","install11.lw.ls.bak","10.64.177.126"],["app6","reports16.lw.ls.bak","10.64.177.81"],
 ["app5","repdev15.lw.ls.bak","10.64.177.85"],["app6","mon16.lw.ls.bak","10.64.177.16"],["app1","ads11.lw.ls.bak","10.64.177.21"],
@@ -94,11 +94,11 @@ node_click<%= I %>:
 ["app6","ns6.lw.ls.bak","10.64.177.14"],["app5","mx15.lw.ls.bak","10.64.177.45"],["app6","mx16.lw.ls.bak","10.64.177.46"],
 ["app5","devcaster15.lw.ls.bak","10.64.177.75"],["app4","ca14.lw.ls.bak","10.64.177.34"],["app5","ldap15.lw.ls.bak","10.64.177.35"],
 ["app4","ldap14.lw.ls.bak","10.64.177.44"],["app6","uatcaster16.lw.ls.bak","10.64.177.76"],["app2","www12.lw.ls.bak","10.64.177.72"]] %>
-<% for CLASS in ['ppt','nrpe','krb5','ldapclient','netsnmp','nrpe','resolv','routes','sshd','sudo'] %>
+<% CLASS=VS[1].gsub(/[\d]{1,}.lw.ls.bak/,'')  %>
 node_<%= CLASS %><%= VS[1] %>:
   ppt_class: <%= CLASS %>
   puppetized_node: <%= VS[1] %>
   puppetized_node_type: HqVserver
   
 <% end %>
-<% end %>
+

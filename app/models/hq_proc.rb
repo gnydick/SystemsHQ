@@ -1,6 +1,19 @@
 class HqProc < ActiveRecord::Base
   acts_as_list :scope => :hq_task, :order => "position"
   
+  named_scope :by_app, lambda { |app| { :joins => :hq_task,
+  :conditions => ['hq_tasks.hq_app_id in (?)', app], :order => 'hq_tasks.name, hq_procs.name ASC'  }}
+  
+  named_scope :by_task, lambda { |task| {  :conditions => ['hq_task_id in (?)', task], :order => 'name ASC'  }}
+  
+  
+  
+  
+  def self.filters
+    filters = Array.new
+    filters << :hq_app
+    filters << :hq_task
+  end
   
   
   @@screen_name = 'Process'
@@ -54,7 +67,7 @@ class HqProc < ActiveRecord::Base
       end
     end
   end
- 
+  
   def rsrcs
     hq_rsrcs.sort {|x,y| x.name <=> y.name }
   end
@@ -66,6 +79,6 @@ class HqProc < ActiveRecord::Base
     end
   end
   
-
+  
   
 end

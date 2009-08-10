@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :hq_deployed_systems
   map.resources :syshq_nav_section_items
-
+  
   map.resources :syshq_nav_sections
-
+  
   
   map.resources :ppt_classes
   
@@ -12,11 +13,11 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :hq_vlans
   map.resources :hq_sans
-
+  
   map.resources :hq_slices
-
+  
   map.resources :hq_diskarrays
-
+  
   map.site "/hq_sites/select", :controller => 'hq_sites', :action => 'select', :method => :get
   
   map.resources :hq_procs
@@ -29,7 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :hq_apps, :has_many => :hq_tasks
   
-  map.resources :hq_systems
+  map.resources :hq_systems, :member => { :report => :get }
   
   map.resources :hq_vservers
   

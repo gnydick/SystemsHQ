@@ -21,6 +21,9 @@ class HqSite < ActiveRecord::Base
   has_many :hq_switches
   has_many :hq_diskarrays
   
+  has_many :hq_deployed_systems
+  has_many :hq_deployed_applications, :through => :hq_deployed_systems
+  
   validates_associated :hq_cages
   validates_presence_of :name
   
@@ -28,7 +31,6 @@ class HqSite < ActiveRecord::Base
   after_update :save_hq_switches
   after_update :save_hq_servers
   after_update :save_hq_diskarrays
-  
   
   
  ######## Racks 

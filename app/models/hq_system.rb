@@ -1,9 +1,17 @@
 class HqSystem < ActiveRecord::Base
-
+  
+  
+ 
+  has_many :hq_deployed_systems
+  
+  
   def self.excluded_from_reflected
-    Array.new
+    excludes = Array.new
+    excludes << :hq_deployed_systems
+    excludes << :hq_systems
+    excludes << :hq_template
   end
-
+  
   
   @@screen_name = 'System'
   
@@ -24,7 +32,7 @@ class HqSystem < ActiveRecord::Base
   after_update :save_hq_apps
   
   
-    
+  
   ##### apps #### this one works
   def assigned_hq_app=(assigned_hq_apps)
     hq_apps.each do |hq_app|
@@ -36,7 +44,7 @@ class HqSystem < ActiveRecord::Base
     
   end
   ############
-
+  
   
   def new_hq_app_attributes=(hq_app_attributes)
     hq_app_attributes.each do |attributes|

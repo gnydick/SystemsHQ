@@ -1,5 +1,18 @@
 class HqApp < ActiveRecord::Base
-  named_scope :by_system, lambda { |system| {:conditions => ['hq_system_id in (?)', system], :order => 'name ASC' }}  
+  
+  
+  named_scope :by_system, lambda { |system| {:conditions => ['hq_system_id in (?)', system], :order => 'name ASC' }}
+
+  
+  #  def self.find(*args)
+  #    with_scope(:find=>{ :conditions=>'template=1' }) do
+  #      super(*args)
+  #    end
+  #  end
+  
+  
+ 
+  
   
   @@screen_name = 'Application'
   
@@ -14,6 +27,8 @@ class HqApp < ActiveRecord::Base
   def self.excluded_from_reflected
     excludes = Array.new
     excludes << :hq_tasks
+    excludes << :hq_apps
+    excludes << :hq_deployed_apps
   end
   
   def self.filters
@@ -24,6 +39,7 @@ class HqApp < ActiveRecord::Base
   belongs_to :hq_system
   has_many :hq_tasks, :order => :position
   
+  has_many :ppt_classes
   
   validates_associated :hq_tasks
   validates_presence_of :name
@@ -59,5 +75,30 @@ class HqApp < ActiveRecord::Base
   
   
   
+  def new_ppt_class_attributes=(ppt_class_attributes)
+    ppt_class_attributes.each do |attributes|      
+      ppt_classes.build(attributes)
+      ppt_classes.each {|x| x.hq_app_id = id}
+      
+    end
+  end
+  
+  def existing_ppt_class_attributes=(ppt_class_attributes)
+    ppt_classes.reject(&:new_record?).each do |ppt_class|
+      attributes = ppt_class_attributes[ppt_class.id.to_s]
+      if attributes
+        ppt_class.attributes = attributes
+        ppt_class.destroy if ppt_class.invalid?
+      else
+        ppt_classes.delete(ppt_class)
+      end
+    end
+  end
+  
+  def save_ppt_classs
+    ppt_classs.each do |ppt_class|      
+      ppt_class.save(false)
+    end
+  end
   
 end

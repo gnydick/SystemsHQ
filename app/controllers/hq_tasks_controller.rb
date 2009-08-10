@@ -1,7 +1,7 @@
 class HqTasksController < ApplicationController
   before_filter :set_globals
   
-   def order
+  def order
     params[:hq_tasks].each_index do |i|
       hq_task = HqTask.find(params[:hq_tasks][i])
       hq_task.position = i + 1
@@ -9,8 +9,8 @@ class HqTasksController < ApplicationController
     end
     
     respond_to do |format|      
-      format.js    if request.xhr? 
-      format.html { render :template => 'reflected/index' }      
+      format.js   { render :template => 'reflected/order' } if request.xhr? 
+      format.html { render :template => 'reflected/order' }      
     end
   end
   
@@ -18,9 +18,19 @@ class HqTasksController < ApplicationController
   # GET /hq_tasks
   # GET /hq_tasks.xml
   def index
-    app_id = params[:hq_app_id].to_i > 0 ? params[:hq_app_id].to_i : HqApp.all.collect(&:id)
-    hq_tasks = HqTask.by_application(app_id)
-    @objects = hq_tasks.paginate :page => params[:page], :per_page => 10
+    @filters = Hash.new
+    HqTask.filters.each do |filter|
+      value = params[filter.to_s+'_id'].to_i
+      @filters[filter.to_s] = Array.new
+      if value > 0
+        @filters[filter.to_s] = eval(filter.to_s.camelize).find(value).id
+      else
+        @filters[filter.to_s] = eval(filter.to_s.camelize).all.collect(&:id)
+      end
+    end
+    
+    hq_tasks = HqTask.by_app(@filters['hq_app'])
+    @objects = hq_tasks.paginate :page => params[:page], :per_page => 20
     respond_to do |format|
       format.html { render :template => 'reflected/index' }
       format.xml  { render :xml => @objects }

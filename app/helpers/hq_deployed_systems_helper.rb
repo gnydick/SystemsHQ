@@ -1,0 +1,2 @@
+module HqDeployedSystemsHelper
+end

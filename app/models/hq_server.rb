@@ -39,6 +39,7 @@ class HqServer < ActiveRecord::Base
   def self.filters
     filters = Array.new
     filters << :hq_rack
+    return filters
   end
   
   

@@ -1,0 +1,8 @@
+<div class="container" >
+    <div class="title">
+        <%= application.name %><%= toggle_blind_link(': Tasks', "tasks_#{application.id}") %>
+    </div>
+    <div id="<%= "tasks_#{application.id}" %>" class="editor" style="display:none;">
+        <%= render :partial => 'hq_systems/section/task', :collection => application.hq_tasks.sort {|x,y| x.name <=> y.name } %>
+    </div>
+</div>

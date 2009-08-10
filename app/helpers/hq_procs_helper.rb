@@ -27,15 +27,11 @@ module HqProcsHelper
   
   
   
-  def assign_hq_proc_hq_rsrc_select
-    options = options_for_select([['Please Choose','']])
-    hq_proc_hq_rsrc_select(HqRsrc.by_name,nil,options)
+  def assign_hq_proc_hq_rsrc_select(selected=[])    
+    options = options_from_collection_for_select(HqRsrc.all(:order => 'name ASC'), :id, :name, @object.hq_rsrcs.collect(&:id))
+    select_tag("hq_proc[assigned_hq_rsrc][]", options, :multiple => true, :size => 10)
   end
-  
-  def hq_proc_hq_rsrc_select(hq_rsrcs, selected = {}, options = '')
-    rsrcs = options + options_from_collection_for_select(hq_rsrcs, :id, :name, selected)
-    select_tag("hq_proc[assigned_hq_rsrc][]", rsrcs)  
-  end
+ 
   
   
 end

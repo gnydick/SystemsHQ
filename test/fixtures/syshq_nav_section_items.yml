@@ -1,0 +1,126 @@
+physassets_Sites:
+  syshq_nav_section: physassets
+  view: true
+  position: 1
+  name: Sites 
+  cntrlr: hq_sites
+
+physassets_Racks:
+  syshq_nav_section: physassets
+  view: true
+  position: 2
+  name: Racks 
+  cntrlr: hq_racks
+  
+physassets_Firewalls:
+  syshq_nav_section: physassets
+  view: true
+  position: 3
+  name: Firewalls 
+  cntrlr: hq_firewalls
+
+physassets_LoadBalancers:
+  syshq_nav_section: physassets
+  view: true
+  position: 4
+  name: Load Balancers 
+  cntrlr: hq_loadbalancers
+
+physassets_Switches:
+  syshq_nav_section: physassets
+  view: true
+  position: 5
+  name: Switches 
+  cntrlr: hq_switches
+
+physassets_VLANs:
+  syshq_nav_section: physassets
+  view: true
+  position: 6
+  name: VLANs 
+  cntrlr: hq_vlans
+
+physassets_SAN:
+  syshq_nav_section: physassets
+  view: true
+  position: 7
+  name: SAN 
+  cntrlr: hq_sans
+
+physassets_DiskArrays:
+  syshq_nav_section: physassets
+  view: true
+  position: 8
+  name: Disk Arrays
+  cntrlr: hq_diskarrays
+  
+physassets_Servers:
+  syshq_nav_section: physassets
+  view: true
+  position: 9
+  name: Servers 
+  cntrlr: hq_servers
+
+physassets_VirtualServers:
+  syshq_nav_section: physassets
+  view: true
+  position: 10
+  name: Virtual Servers 
+  cntrlr: hq_vservers
+
+
+
+
+
+
+
+sysarch_1_Systems:
+  syshq_nav_section: sysarch
+  view: true
+  position: 1
+  name: Systems 
+  cntrlr: hq_systems
+
+sysarch_2_Applications:
+  syshq_nav_section: sysarch
+  view: true
+  position: 2
+  name: Applications 
+  cntrlr: hq_apps
+
+sysarch_3_Tasks:
+  syshq_nav_section: sysarch
+  view: true
+  position: 3
+  name: Tasks 
+  cntrlr: hq_tasks
+
+sysarch_4_Processes:
+  syshq_nav_section: sysarch
+  view: true
+  position: 4
+  name: Processes 
+  cntrlr: hq_procs
+
+sysarch_5_Resources:
+  syshq_nav_section: sysarch
+  view: true
+  position: 5
+  name: Resources
+  cntrlr: hq_rsrcs
+  
+sysarch_6_PuppetClasses:
+  syshq_nav_section: sysmgmt
+  view: true
+  position: 2
+  name: Server Roles
+  cntrlr: ppt_classes
+  
+  
+sysarch_6_DeploySystems:
+  syshq_nav_section: sysmgmt
+  view: true
+  position: 1
+  name: Deploy Systems
+  cntrlr: hq_deployed_systems
+  

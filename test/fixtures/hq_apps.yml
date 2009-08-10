@@ -6,6 +6,14 @@ eventshttpd:
   hq_system: dads
   name: EventsHTTPd
   
+eventshttpdsandbox:
+  hq_system: dads
+  name: EventsHTTPd Sandbox
+  
+stormcenterpreview:
+  hq_system: dads
+  name: Stormcenter Preview Ad Server
+  
 caster:
   hq_system: dads
   name: Stormcaster
@@ -33,3 +41,15 @@ nagios:
 nagiosconfig:
   hq_system: infra
   name: Nagios Configuration Tool
+  
+all_app:
+  hq_system: all
+  name: All Applications
+  
+shared_app:
+  hq_system: shared_sys
+  name: Shared 
+  
+ldap:
+  hq_system: shared_sys
+  name: LDAP

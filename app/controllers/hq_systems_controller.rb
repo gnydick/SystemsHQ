@@ -1,12 +1,20 @@
 class HqSystemsController < ApplicationController
-  
-  
   before_filter :set_globals
+  
+  
+  
+  def report
+    @object = @hq_system = HqSystem.find(params[:id])
+  end
+  
+  
+  
+  
+  
   # GET /hq_systems
   # GET /hq_systems.xml
-  @page = ''
   def index
-    @objects = HqSystem.all(:order => 'name ASC').paginate :page => params[:page], :per_page => 10
+    @objects = HqSystem.all(:order => 'name ASC').paginate :page => params[:page], :per_page => 20
     
     
     
@@ -24,7 +32,7 @@ class HqSystemsController < ApplicationController
     respond_to do |format|
       format.js  {render :template => 'reflected/show' }if request.xhr?
       format.html # show.html.erb
-      format.xml  { render :xml => @hq_system }
+      format.xml  { render :xml => @object }
     end
   end
   

@@ -1,0 +1,2 @@
+class SyshqNavSectionItemsController < ApplicationController
+end

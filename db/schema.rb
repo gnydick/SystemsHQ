@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090808163337) do
+ActiveRecord::Schema.define(:version => 20090808231339) do
 
   create_table "hq_apps", :force => true do |t|
     t.integer  "hq_system_id"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(:version => 20090808163337) do
     t.integer  "hq_netconnection_id"
     t.integer  "hq_nic_id"
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hq_deployed_systems", :force => true do |t|
+    t.integer  "hq_site_id"
+    t.integer  "hq_env_id"
+    t.integer  "hq_system_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -58,6 +66,15 @@ ActiveRecord::Schema.define(:version => 20090808163337) do
 
   create_table "hq_netconnections", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hq_networkgears", :force => true do |t|
+    t.integer  "hq_site_id"
+    t.integer  "hq_rack_id"
+    t.string   "name"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -190,6 +207,8 @@ ActiveRecord::Schema.define(:version => 20090808163337) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "hq_env_id"
+    t.integer  "hq_app_id"
   end
 
   create_table "ppt_nodes", :force => true do |t|

@@ -8,7 +8,7 @@ class PptClassesController < ApplicationController
     
     
     
-    @objects = PptClass.all(:order => :name).paginate :page => params[:page], :per_page => 10
+    @objects = PptClass.all(:order => :name).paginate :page => params[:page], :per_page => 20
     
     respond_to do |format|
       format.html { render :template => 'reflected/index' }
@@ -115,7 +115,7 @@ class PptClassesController < ApplicationController
   def set_globals
     @CcObjectClass = PptClass
     @hq_site = HqSite.find(cookies[:hq_site_id])
-    @screen_name = 'Puppet Class'
+    @screen_name = 'Server Role'
     @symbol_name = 'ppt_class'
     @symbols_name = 'ppt_classes'
   end

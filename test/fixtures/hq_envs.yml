@@ -8,3 +8,10 @@ stage:
 
 demo:
   name: Demo
+   
+  
+all_env:
+  name: All
+  
+shared_env:
+  name: Shared Across Some

@@ -1,50 +1,51 @@
-ads:
+ppt_ads:
   name: ads
+  hq_env: prod
+  hq_app: eventshttpd
 
-stgads:
+ppt_stgads:
   name: stgads
+  hq_env: stage
+  hq_app: eventshttpd
 
-prvads:
+ppt_prvads:
   name: prvads
+  hq_env: prod
+  hq_app: eventshttpd
 
-testprodads:
+ppt_testprodads:
   name: testprodads
-
-caster:
+  hq_env: prod
+  hq_app: eventshttpdsandbox
+  
+ppt_caster:
   name: caster
+  hq_env: prod
+  hq_app: Stormcaster
 
-routes:
-  name: routes
 
-sudo:
-  name: sudo
-
-hosts:
-  name: hosts
-
-ldapclient:
-  name: ldapclient
-  
-krb5:
-  name: krb5
-
-pam:
-  name: pam
-  
-resolv:
-  name: resolv
-  
-sshd:
-  name: sshd
-  
-nrpe:
-  name: nrpe
-
-ppt:
-  name: ppt
-  
-netsnmp:
-  name: netsnmp
-
-click:
+ppt_click:
   name: click
+  hq_env: prod
+  hq_app: clickhttpd
+  
+ppt_hadb:
+  name: hadb
+  hq_env: shared_env
+  hq_app: shared_app
+  
+ppt_ldap:
+  name: ldap
+  hq_env: all_env
+  hq_app: shared_app
+  
+ppt_ns:
+  name: ns
+  hq_env: all_env
+  hq_app: shared_app
+  
+ppt_img:
+  name: img
+  hq_env: prod
+  hq_app: img
+  

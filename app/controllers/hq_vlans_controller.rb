@@ -5,7 +5,7 @@ class HqVlansController < ApplicationController
   # GET /hq_vlans.xml
   def index     
     hq_vlans = HqVlan.all(:order => :name)
-    @objects = hq_vlans.paginate :page => params[:page], :per_page => 10
+    @objects = hq_vlans.paginate :page => params[:page], :per_page => 20
     respond_to do |format|
       format.html { render :template => 'reflected/index' }
       format.xml  { render :xml => @objects }
