@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090808231339) do
+ActiveRecord::Schema.define(:version => 20090811203622) do
 
   create_table "hq_apps", :force => true do |t|
     t.integer  "hq_system_id"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   create_table "hq_cages", :force => true do |t|

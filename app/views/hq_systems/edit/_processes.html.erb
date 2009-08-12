@@ -1,0 +1,35 @@
+<div id="tableContainer" class="tableContainer">
+    <table class="scrollTable" width="100%" cellspacing="0" cellpadding="0" border="0">
+        <thead class="fixedHeader">
+            <tr class="alternateRow">
+                <th width="20">
+                    <%= check_box_tag 'selectall' %>
+                </th>
+                <th>
+                    Processes
+                </th>
+                <th>
+                </th>
+                <th>
+                    Tools
+                </th>
+            </tr>
+        </thead>
+        <tbody class="scrollContent">
+            <% processes.each do |proc| -%>
+            <tr class="<%= cycle('normalRow','alternateRow') %>">
+                <td width="20">
+                    <%= check_box_tag 'selected' %>
+                </td>
+                <td>
+                    <%= proc.name %>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <% end -%>
+        </tbody>
+    </table>
+</div>

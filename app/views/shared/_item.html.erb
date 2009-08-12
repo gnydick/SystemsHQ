@@ -3,7 +3,8 @@
         <%= progress_link(item.name.to_s, item) %>
     </td>
     <td class="command">
-        <%= progress_edit_link 'Edit', eval('edit_'+item.class.name.underscore+'_path'+'(item)') %>
+        <%#= progress_edit_link 'Edit', eval('edit_'+item.class.name.underscore+'_path'+'(item)') %>
+		<%= link_to 'Edit',eval('edit_'+item.class.name.underscore+'_path'+'(item)') %>
     </td>
     <%= render :partial => item.class.name.underscore.pluralize+'/line/command', :object => item %>
 </tr>

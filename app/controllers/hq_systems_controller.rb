@@ -48,10 +48,8 @@ class HqSystemsController < ApplicationController
   
   # GET /hq_systems/1/edit
   def edit
-    @object = @hq_system = HqSystem.find(params[:id])
     
-    
-    
+    @object = @hq_system = HqSystem.find(params[:id])           
     @hq_slices = HqSlice.by_site(cookies[:hq_site_id])
     respond_to do |format|
       format.js { render :template => 'reflected/edit' } if request.xhr?

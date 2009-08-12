@@ -1,6 +1,16 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   
+  ###### partial picker ##
+  def smart_partial(name)
+    if (File.exist?(File.join(RAILS_ROOT,'app/views',controller_name,'_'+name+'.html.erb')))
+      return name
+    else
+      return "reflected/#{name}"
+    end
+  end
+  #######################
+  
   ##### start links ##### 
   def toggle_blind_link(name, id)
     link_to_function name, visual_effect(:toggle_blind, id)

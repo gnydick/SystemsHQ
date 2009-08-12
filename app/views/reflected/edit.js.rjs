@@ -1,4 +1,4 @@
 #page.replace_html 'activity', :partial => 'reflected/edit'
 #page.insert_html :top, 'activity', :partial => 'reflected/ed/closebutton'
-page.replace_html 'maincontent', :partial => 'reflected/edit'
+page.replace_html 'maincontent', :partial => smart_partial('edit')
 
