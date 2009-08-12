@@ -71,15 +71,6 @@ ActiveRecord::Schema.define(:version => 20090811203622) do
     t.datetime "updated_at"
   end
 
-  create_table "hq_networkgears", :force => true do |t|
-    t.integer  "hq_site_id"
-    t.integer  "hq_rack_id"
-    t.string   "name"
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "hq_nics", :force => true do |t|
     t.integer  "hq_remotenic_id"
     t.integer  "hq_nichaving_id"

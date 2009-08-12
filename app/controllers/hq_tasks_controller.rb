@@ -1,6 +1,9 @@
 class HqTasksController < ApplicationController
   before_filter :set_globals
   
+
+  
+  
   def order
     params[:hq_tasks].each_index do |i|
       hq_task = HqTask.find(params[:hq_tasks][i])

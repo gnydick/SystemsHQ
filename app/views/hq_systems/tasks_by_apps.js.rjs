@@ -1,0 +1,2 @@
+page.replace_html 'tasks', :partial => 'hq_systems/edit/tasks'
+page.replace_html 'processes', :partial => 'hq_systems/edit/processes'

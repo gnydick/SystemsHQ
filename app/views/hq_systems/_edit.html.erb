@@ -1,10 +1,14 @@
 <div class="editor">
     <%= @object.name %>
 </div>
-<%= render :partial => 'hq_systems/edit/applications', :object => @object.hq_apps.sort {|x,y| x.name <=> y.name} %>
-<%= render :partial => 'hq_systems/edit/tasks', :object => @object.hq_apps.collect {|x| x.hq_tasks}.flatten.sort {|y,z| y.name <=> z.name } %>
-<%= render :partial => 'hq_systems/edit/processes', :object => @object.hq_apps.collect {|x| x.hq_tasks}.flatten.collect {|y| y.hq_procs}.flatten.sort {|z,a| z.name <=> a.name }%>
-<%= render :partial => 'hq_systems/edit/resources', :object => @object.hq_apps.collect {|x| x.hq_tasks}.flatten.collect {|y| y.hq_procs}.flatten.collect {|z| z.hq_rsrcs}.flatten.uniq.sort {|a,b| a.name <=> b.name } %>
-
-
-
+ <% remote_form_for(@object, :url => {:action => :tasks_by_apps}, :html => {:method => :get}) do |f| -%>
+<div id="applications">
+    <%= render :partial => 'hq_systems/edit/applications', :object => @object.hq_apps.sort {|x,y| x.name <=> y.name} %>
+</div>
+<div id="tasks">
+</div>
+<div id="processes">
+</div>
+<div id="resources">
+</div>
+<% end -%>

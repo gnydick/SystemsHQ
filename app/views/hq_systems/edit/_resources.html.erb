@@ -16,10 +16,10 @@
             </tr>
         </thead>
         <tbody class="scrollContent">
-            <% resources.each do |rsrc| -%>
+            <% @resources.each do |rsrc| -%>
             <tr class="<%= cycle('normalRow','alternateRow') %>">
                 <td width="20">
-                    <%= check_box_tag 'selected' %>
+                    <%= check_box_tag 'hq_rsrc_ids[]', rsrc.id %>
                 </td>
                 <td>
                     <%= rsrc.name %>

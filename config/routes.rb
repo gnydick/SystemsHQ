@@ -1,5 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :hq_deployed_systems
+  map.resources :hq_deployed_systems, :member => {:tasks_by_apps => :get, :procs_by_tasks => :get, :rsrcs_by_procs => :get}
+  
+  
   map.resources :syshq_nav_section_items
   
   map.resources :syshq_nav_sections

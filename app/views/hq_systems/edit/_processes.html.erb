@@ -16,10 +16,10 @@
             </tr>
         </thead>
         <tbody class="scrollContent">
-            <% processes.each do |proc| -%>
+            <% @processes.each do |proc| -%>
             <tr class="<%= cycle('normalRow','alternateRow') %>">
                 <td width="20">
-                    <%= check_box_tag 'selected' %>
+                    <%= check_box_tag 'hq_proc_ids[]', proc.id %>
                 </td>
                 <td>
                     <%= proc.name %>
@@ -33,3 +33,4 @@
         </tbody>
     </table>
 </div>
+<%= submit_to_remote 'rsrcs_by_procs', 'Filter', :url => { :action => 'rsrcs_by_procs' } %>

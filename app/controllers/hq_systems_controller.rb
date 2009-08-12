@@ -8,8 +8,19 @@ class HqSystemsController < ApplicationController
   end
   
   
+  def tasks_by_apps    
+    @object = HqSystem.find(params[:hq_system][:id])
+    @tasks = HqTask.by_app(params[:hq_app_ids])
+    @processes = HqProc.by_app(params[:hq_app_ids])
+  end
   
+  def procs_by_tasks    
+    @processes = HqProc.by_task(params[:hq_task_ids])
+  end
   
+  def rsrcs_by_procs    
+    @resources = HqRsrc.by_proc(params[:hq_proc_ids])
+  end
   
   # GET /hq_systems
   # GET /hq_systems.xml

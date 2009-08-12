@@ -1,9 +1,10 @@
 <div id="tableContainer" class="tableContainer">
+    <%= hidden_field :hq_system, :id %>
     <table class="scrollTable" width="100%" cellspacing="0" cellpadding="0" border="0">
         <thead class="fixedHeader">
             <tr class="alternateRow">
                 <th width="20">
-                    <%= check_box_tag 'selectall', :onclick => 'SelectAll("", this.checked)' %>
+                    <%= check_box_tag 'selectall' %>
                 </th>
                 <th>
                     Applications
@@ -20,7 +21,7 @@
             <% applications.each do |app| -%>
             <tr class="<%= cycle('normalRow','alternateRow') %>">
                 <td width="20">
-                    <%= check_box_tag 'selected' %>
+                    <%= check_box_tag 'hq_app_ids[]', app.id %>
                 </td>
                 <td>
                     <%= app.name %>
@@ -35,3 +36,4 @@
         </tbody>
     </table>
 </div>
+<%= submit_to_remote 'tasks_by_apps', 'Filter', :url => { :action => 'tasks_by_apps' } %>
