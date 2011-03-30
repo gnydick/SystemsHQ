@@ -19,60 +19,47 @@ physassets_Firewalls:
   name: Firewalls 
   cntrlr: hq_firewalls
 
-physassets_LoadBalancers:
-  syshq_nav_section: physassets
-  view: true
-  position: 4
-  name: Load Balancers 
-  cntrlr: hq_loadbalancers
-
 physassets_Switches:
   syshq_nav_section: physassets
   view: true
-  position: 5
+  position: 4
   name: Switches 
   cntrlr: hq_switches
 
 physassets_VLANs:
   syshq_nav_section: physassets
   view: true
-  position: 6
+  position: 5
   name: VLANs 
   cntrlr: hq_vlans
 
 physassets_SAN:
   syshq_nav_section: physassets
   view: true
-  position: 7
+  position: 6
   name: SAN 
   cntrlr: hq_sans
 
 physassets_DiskArrays:
   syshq_nav_section: physassets
   view: true
-  position: 8
+  position: 7
   name: Disk Arrays
   cntrlr: hq_diskarrays
   
 physassets_Servers:
   syshq_nav_section: physassets
   view: true
-  position: 9
+  position: 8
   name: Servers 
   cntrlr: hq_servers
 
 physassets_VirtualServers:
   syshq_nav_section: physassets
   view: true
-  position: 10
+  position: 9
   name: Virtual Servers 
   cntrlr: hq_vservers
-
-
-
-
-
-
 
 sysarch_1_Systems:
   syshq_nav_section: sysarch

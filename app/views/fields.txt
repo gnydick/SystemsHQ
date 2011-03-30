@@ -1,9 +1,0 @@
-hq_apps/section/_fields.html.erb
-hq_procs/section/_fields.html.erb
-hq_racks/section/_fields.html.erb
-hq_rsrcs/section/_fields.html.erb
-hq_sans/section/_fields.html.erb
-hq_sites/section/_fields.html.erb
-hq_slices/section/_fields.html.erb
-hq_systems/section/_fields.html.erb
-hq_tasks/section/_fields.html.erb
